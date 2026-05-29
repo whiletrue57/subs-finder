@@ -60,9 +60,9 @@ jobs:
             echo "TG secrets 未配置, 跳过通知"
             exit 0
           fi
+          TEXT="$(printf '❌ subs-finder 运行失败\nRepo: %s\nRun:  %s/%s/actions/runs/%s' \
+            "$GITHUB_REPOSITORY" "$GITHUB_SERVER_URL" "$GITHUB_REPOSITORY" "$GITHUB_RUN_ID")"
           curl -sS --max-time 30 \
             -d "chat_id=${TG_CHAT_ID}" \
-            --data-urlencode "text=❌ subs-finder 运行失败
-Repo: ${GITHUB_REPOSITORY}
-Run:  ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}" \
+            --data-urlencode "text=${TEXT}" \
             "https://api.telegram.org/bot${TG_BOT_TOKEN}/sendMessage"

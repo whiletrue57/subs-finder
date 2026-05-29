@@ -2,8 +2,9 @@ name: subs-finder
 
 on:
   schedule:
-    # 每周一凌晨 (UTC 周日 19:17 = 北京时间周一 03:17)
-    - cron: '17 19 * * 0'
+    # 每天跑一次。
+    # 23:45 留 ~30min 缓冲给 Actions 排队延迟。注意: Actions cron 为 UTC。
+    - cron: '45 23 * * *'
   workflow_dispatch: {}
 
 # 让步骤里的 git push 能写回仓库

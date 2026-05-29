@@ -1,0 +1,68 @@
+name: subs-finder
+
+on:
+  schedule:
+    # 每周一凌晨 (UTC 周日 19:17 = 北京时间周一 03:17)
+    - cron: '17 19 * * 0'
+  workflow_dispatch: {}
+
+# 让步骤里的 git push 能写回仓库
+permissions:
+  contents: write
+
+concurrency:
+  group: subs-finder
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+
+      - name: Install deps
+        run: pip install -r requirements.txt
+
+      - name: Run subs-finder
+        env:
+          # 优先用 PAT (Code Search 配额高); 没配就回落到内置 GITHUB_TOKEN
+          GH_SEARCH_TOKEN: ${{ secrets.GH_SEARCH_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python find_clash.py --top 15 --max-age-days 30
+
+      - name: Commit if changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add output/
+          if git diff --staged --quiet; then
+            echo "no changes, nothing to commit"
+          else
+            git commit -m "chore: update clash-latest [skip ci]"
+            git push
+          fi
+
+      - name: Notify Telegram on failure
+        if: failure()
+        env:
+          TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
+          TG_CHAT_ID: ${{ secrets.TG_CHAT_ID }}
+        run: |
+          if [ -z "$TG_BOT_TOKEN" ] || [ -z "$TG_CHAT_ID" ]; then
+            echo "TG secrets 未配置, 跳过通知"
+            exit 0
+          fi
+          curl -sS --max-time 30 \
+            -d "chat_id=${TG_CHAT_ID}" \
+            --data-urlencode "text=❌ subs-finder 运行失败
+Repo: ${GITHUB_REPOSITORY}
+Run:  ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}" \
+            "https://api.telegram.org/bot${TG_BOT_TOKEN}/sendMessage"

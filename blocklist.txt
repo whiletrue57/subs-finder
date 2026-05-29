@@ -4,20 +4,39 @@
 #   owner/repo/path/to/file.yaml            -> 拉黑指定文件
 #   https://raw.githubusercontent.com/...   -> 直接粘 raw URL 也行 (会自动拆 owner/repo/path)
 
-# 节点全挂或长期没有可用节点
-asgharkapk/Sub-Config-Extractor/output_configs/clash/hamedp-71/_Sub_Checker_Creator_final.yaml
-DheMasker/Happy-Surfing/peasoftcdn.yaml
-https://raw.githubusercontent.com/asgharkapk/Sub-Config-Extractor/main/output_configs/clash/hamedp-71/_Sub_Checker_Creator_final.yaml
-https://raw.githubusercontent.com/DheMasker/Happy-Surfing/main/peasoftcdn.yaml
-https://raw.githubusercontent.com/weg2025/AutoSearchPublicNodes/main/snippets/nodes.meta.yml
-https://raw.githubusercontent.com/dongchengjie/airport/main/subs/kooker.yaml
-https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/snippets/nodes.meta.yml
-
-# 模板/规则配置, proxies 为空, 用户需自填
+AIsouler/MyClash/Config/mihomoConfig.yaml
 AilnBen/clash-config/config.yaml
 ChiaoYenta/THE_OPENCLASH_OVERWRITE_AUTO_CONSTRUCTION/processed_configs/local/cleaner_config/dustinwin_ruleset_config.yaml
-AIsouler/MyClash/Config/mihomoConfig.yaml
+DheMasker/Happy-Surfing/peasoftcdn.yaml
 HenryChiao/MIHOMO_YAMLS/THEYAMLS/General_Config/666OS/OneTouch_Config.yaml
 Voya9e/Clash-meta-Config/Config.yaml
+asgharkapk/Sub-Config-Extractor/output_configs/clash/hamedp-71/_Sub_Checker_Creator_final.yaml
 clone-fan/Mihomo_Yaml/yaml/mosdns+mihomo_config.yaml
+https://app.sublink.works/x/e3E9WMs
+https://pai.yt/clash
+https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/DarcProxy/clash.yaml
+https://raw.githubusercontent.com/56dl/subs-checker/main/output/all.yaml
+https://raw.githubusercontent.com/DheMasker/Happy-Surfing/main/anaercdn.yaml
+https://raw.githubusercontent.com/DheMasker/Happy-Surfing/main/busymilkcdn.yaml
+https://raw.githubusercontent.com/DheMasker/Happy-Surfing/main/mahdiblandsni.yaml
+https://raw.githubusercontent.com/DheMasker/Happy-Surfing/main/peasoftcdn.yaml
+https://raw.githubusercontent.com/Flikify/Free-Node/main/clash.yaml
+https://raw.githubusercontent.com/Gektor66/fastK/main/mix_100_clash.yaml
+https://raw.githubusercontent.com/Gektor66/fastK/main/src_GitHub_ByeWhite_clash.yaml
+https://raw.githubusercontent.com/Gektor66/fastK/main/src_NowMeow_clash.yaml
+https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/main/all_configs.txt
+https://raw.githubusercontent.com/acymz/AutoVPN/main/data/V2.txt
+https://raw.githubusercontent.com/anaer/Sub/main/proxies.yaml
+https://raw.githubusercontent.com/asgharkapk/Sub-Config-Extractor/main/output_configs/clash/Ruk1ng001.yaml
+https://raw.githubusercontent.com/asgharkapk/Sub-Config-Extractor/main/output_configs/clash/hamedp-71/_Sub_Checker_Creator_final.yaml
+https://raw.githubusercontent.com/beck-8/sub-urls/refs/heads/main/sub.txt
+https://raw.githubusercontent.com/dongchengjie/airport/main/subs/kooker.yaml
+https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/main/Clash/BLACK_SS%2BAll_RUS.yaml
+https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/snippets/nodes.meta.yml
+https://raw.githubusercontent.com/sakha1370/OpenRay/main/output_iran/converted/iran_top100_clash_config.yaml
+https://raw.githubusercontent.com/shuaidaoya/FreeNodes/refs/heads/main/nodes/all.yaml
+https://raw.githubusercontent.com/ssrsub/ssr/master/clash.yaml
+https://raw.githubusercontent.com/weg2025/AutoSearchPublicNodes/main/snippets/nodes.meta.yml
+https://raw.githubusercontent.com/xiaoji235/airport-free/main/clash/naidounode.txt
+https://sub.xn--9swa.com/rynulwyh9r583ym16/4b21a892-026d-4d44-be8e-9f7e7bca3c7d
 lwb-2021/nix-config/os/universal/proxy/mihomo-config.yaml

@@ -11,6 +11,7 @@ import argparse
 import hashlib
 import json
 import os
+import re
 import sys
 import time
 import urllib.parse
@@ -51,6 +52,22 @@ COMMIT_WORKERS = 8  # 并发拉 file-level commit 时间
 
 DEFAULT_BLOCKLIST = Path(__file__).parent / "blocklist.txt"
 RAW_PREFIX = "https://raw.githubusercontent.com/"
+
+# 已知"日更带日期文件名"的源: 这类仓库每天生成一个新文件 (无固定 latest),
+# GitHub Code Search 对它们命中不稳, 改为直接列目录取日期最大的文件。
+#   owner/repo : 仓库
+#   branch     : 分支
+#   dir        : 目录 (相对仓库根)
+#   pattern    : 带一个捕获组的正则, 组内是用于排序的日期串 (YYYYMMDD 等可字典序比较的格式)
+KNOWN_DAILY_SOURCES = [
+    {
+        "owner": "danmaifu",
+        "repo": "mianfeijiedian",
+        "branch": "main",
+        "dir": "feed",
+        "pattern": r"^clash-(\d{8})\.yaml$",
+    },
+]
 
 
 def load_blocklist(path: Path) -> tuple[set[str], set[tuple[str, str, str]]]:
@@ -193,6 +210,60 @@ def count_proxies(text: str) -> int:
 def should_skip(path: str, repo_full: str) -> bool:
     lower = (path + " " + repo_full).lower()
     return any(p in lower for p in SKIP_PATTERNS)
+
+
+def resolve_daily_sources(headers: dict, block_repos: set[str], block_files: set[tuple[str, str, str]]) -> dict:
+    """对每个已知日更源, 列目录取日期最大的文件, 直接产出 candidate entry。
+
+    返回 {(owner, repo, path): entry}, 与 collect_candidates 同构, 便于合并。
+    用 GitHub Contents API 列目录, 不依赖 Code Search (它对带日期文件名命中不稳)。
+    """
+    found: dict[tuple[str, str, str], dict] = {}
+    for src in KNOWN_DAILY_SOURCES:
+        owner, repo, branch = src["owner"], src["repo"], src["branch"]
+        dir_path, pattern = src["dir"], src["pattern"]
+        regex = re.compile(pattern)
+        url = f"{GITHUB_API}/repos/{owner}/{repo}/contents/{dir_path}"
+        try:
+            r = requests.get(url, headers=headers, params={"ref": branch}, timeout=30)
+        except requests.RequestException as e:
+            print(f"[daily] {owner}/{repo}: request failed ({e})", file=sys.stderr)
+            continue
+        if r.status_code != 200:
+            print(f"[daily] {owner}/{repo}: list {dir_path} -> HTTP {r.status_code}", file=sys.stderr)
+            continue
+        try:
+            items = r.json()
+        except ValueError:
+            continue
+        if not isinstance(items, list):
+            print(f"[daily] {owner}/{repo}: unexpected response (dir too large?)", file=sys.stderr)
+            continue
+        best_name, best_key = None, None
+        for it in items:
+            name = it.get("name", "")
+            m = regex.match(name)
+            if not m:
+                continue
+            key = m.group(1)
+            if best_key is None or key > best_key:
+                best_key, best_name = key, name
+        if not best_name:
+            print(f"[daily] {owner}/{repo}: no file matched {pattern}", file=sys.stderr)
+            continue
+        path = f"{dir_path}/{best_name}" if dir_path else best_name
+        if is_blocked(owner, repo, path, block_repos, block_files):
+            print(f"[daily] {owner}/{repo}/{path}: blocked, skip", file=sys.stderr)
+            continue
+        cand_key = (owner, repo, path)
+        found[cand_key] = {
+            "owner": owner,
+            "repo": repo,
+            "path": path,
+            "default_branch": branch,
+        }
+        print(f"[daily] {owner}/{repo}: latest -> {path}", file=sys.stderr)
+    return found
 
 
 def collect_candidates(headers: dict, max_age_days: int, block_repos: set[str], block_files: set[tuple[str, str, str]]) -> dict:
@@ -381,7 +452,10 @@ def main() -> int:
         print(f"[blocklist] loaded {len(block_repos)} repos, {len(block_files)} files", file=sys.stderr)
 
     candidates = collect_candidates(headers, args.max_age_days, block_repos, block_files)
-    print(f"[summary] {len(candidates)} unique candidate files", file=sys.stderr)
+    daily = resolve_daily_sources(headers, block_repos, block_files)
+    for k, v in daily.items():
+        candidates.setdefault(k, v)
+    print(f"[summary] {len(candidates)} unique candidate files ({len(daily)} from daily sources)", file=sys.stderr)
     if not candidates:
         return 2
     ordered = enrich_commit_dates(candidates, headers, args.max_age_days)

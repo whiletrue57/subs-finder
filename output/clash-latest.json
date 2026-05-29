@@ -1,13 +1,41 @@
 {
-  "generated_at": "2026-05-29T09:37:33+00:00",
-  "validated_count": 29,
+  "generated_at": "2026-05-29T10:48:53+00:00",
+  "validated_count": 21,
   "top": [
     {
-      "url": "https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-US.yaml",
-      "repo": "Au1rxx/free-vpn-subscriptions",
-      "path": "output/by-country/clash-US.yaml",
-      "nodes": 37,
-      "commit_date": "2026-05-29T09:27:09Z"
+      "url": "https://raw.githubusercontent.com/56dl/subs-checker/main/output/all.yaml",
+      "repo": "56dl/subs-checker",
+      "path": "output/all.yaml",
+      "nodes": 276,
+      "commit_date": "2026-05-29T10:11:57Z"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/DheMasker/Happy-Surfing/main/mahdiblandsni.yaml",
+      "repo": "DheMasker/Happy-Surfing",
+      "path": "mahdiblandsni.yaml",
+      "nodes": 111,
+      "commit_date": "2026-05-29T09:56:50Z"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/DheMasker/Happy-Surfing/main/busymilkcdn.yaml",
+      "repo": "DheMasker/Happy-Surfing",
+      "path": "busymilkcdn.yaml",
+      "nodes": 5,
+      "commit_date": "2026-05-29T09:56:50Z"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/DheMasker/Happy-Surfing/main/anaercdn.yaml",
+      "repo": "DheMasker/Happy-Surfing",
+      "path": "anaercdn.yaml",
+      "nodes": 213,
+      "commit_date": "2026-05-29T09:56:50Z"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/asgharkapk/Sub-Config-Extractor/main/output_configs/clash/Ruk1ng001.yaml",
+      "repo": "asgharkapk/Sub-Config-Extractor",
+      "path": "output_configs/clash/Ruk1ng001.yaml",
+      "nodes": 500,
+      "commit_date": "2026-05-29T09:30:17Z"
     },
     {
       "url": "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/main/Clash/BLACK_SS%2BAll_RUS.yaml",
@@ -24,88 +52,60 @@
       "commit_date": "2026-05-29T08:47:25Z"
     },
     {
-      "url": "https://raw.githubusercontent.com/yuan2pro/sub_merge/main/sub/merged_proxies_2.yaml",
-      "repo": "yuan2pro/sub_merge",
-      "path": "sub/merged_proxies_2.yaml",
-      "nodes": 65,
-      "commit_date": "2026-05-29T08:05:22Z"
+      "url": "https://raw.githubusercontent.com/sakha1370/OpenRay/main/output_iran/converted/iran_top100_clash_config.yaml",
+      "repo": "sakha1370/OpenRay",
+      "path": "output_iran/converted/iran_top100_clash_config.yaml",
+      "nodes": 66,
+      "commit_date": "2026-05-29T08:20:57Z"
     },
     {
-      "url": "https://raw.githubusercontent.com/YouAreHuman/updatePac/master/newpac.yaml",
-      "repo": "YouAreHuman/updatePac",
-      "path": "newpac.yaml",
-      "nodes": 5,
-      "commit_date": "2026-05-29T07:59:59Z"
+      "url": "https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/DarcProxy/clash.yaml",
+      "repo": "10ium/VpnClashFaCollector",
+      "path": "sub/final/DarcProxy/clash.yaml",
+      "nodes": 12,
+      "commit_date": "2026-05-28T22:30:45Z"
     },
     {
-      "url": "https://raw.githubusercontent.com/Roywaller/update-clash/main/clash.yaml",
-      "repo": "Roywaller/update-clash",
+      "url": "https://raw.githubusercontent.com/ssrsub/ssr/master/clash.yaml",
+      "repo": "ssrsub/ssr",
       "path": "clash.yaml",
-      "nodes": 16,
-      "commit_date": "2026-05-29T04:23:25Z"
+      "nodes": 168,
+      "commit_date": "2026-05-28T16:00:19Z"
     },
     {
-      "url": "https://raw.githubusercontent.com/YangLang116/auto_gen/master/clash/gen_clash_config.yaml",
-      "repo": "YangLang116/auto_gen",
-      "path": "clash/gen_clash_config.yaml",
-      "nodes": 381,
-      "commit_date": "2026-05-29T04:09:08Z"
+      "url": "https://raw.githubusercontent.com/anaer/Sub/main/proxies.yaml",
+      "repo": "anaer/Sub",
+      "path": "proxies.yaml",
+      "nodes": 263,
+      "commit_date": "2026-05-28T07:42:08Z"
     },
     {
-      "url": "https://raw.githubusercontent.com/DheMasker/Happy-Surfing/main/mahdiblandsni.yaml",
-      "repo": "DheMasker/Happy-Surfing",
-      "path": "mahdiblandsni.yaml",
-      "nodes": 111,
-      "commit_date": "2026-05-29T03:52:39Z"
+      "url": "https://raw.githubusercontent.com/Gektor66/fastK/main/mix_100_clash.yaml",
+      "repo": "Gektor66/fastK",
+      "path": "mix_100_clash.yaml",
+      "nodes": 100,
+      "commit_date": "2026-05-21T16:34:26Z"
     },
     {
-      "url": "https://raw.githubusercontent.com/DheMasker/Happy-Surfing/main/busymilkcdn.yaml",
-      "repo": "DheMasker/Happy-Surfing",
-      "path": "busymilkcdn.yaml",
-      "nodes": 5,
-      "commit_date": "2026-05-29T03:52:39Z"
+      "url": "https://raw.githubusercontent.com/Gektor66/fastK/main/src_NowMeow_clash.yaml",
+      "repo": "Gektor66/fastK",
+      "path": "src_NowMeow_clash.yaml",
+      "nodes": 28,
+      "commit_date": "2026-05-21T16:34:26Z"
     },
     {
-      "url": "https://raw.githubusercontent.com/DheMasker/Happy-Surfing/main/anaercdn.yaml",
-      "repo": "DheMasker/Happy-Surfing",
-      "path": "anaercdn.yaml",
-      "nodes": 213,
-      "commit_date": "2026-05-29T03:52:39Z"
+      "url": "https://raw.githubusercontent.com/Gektor66/fastK/main/src_GitHub_ByeWhite_clash.yaml",
+      "repo": "Gektor66/fastK",
+      "path": "src_GitHub_ByeWhite_clash.yaml",
+      "nodes": 219,
+      "commit_date": "2026-05-21T16:19:31Z"
     },
     {
-      "url": "https://raw.githubusercontent.com/fansiphone/pachong-tom/main/snippets/nodes_KR.meta.yml",
-      "repo": "fansiphone/pachong-tom",
-      "path": "snippets/nodes_KR.meta.yml",
-      "nodes": 5,
-      "commit_date": "2026-05-28T22:49:56Z"
-    },
-    {
-      "url": "https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/V2ray_official/clash.yaml",
-      "repo": "10ium/VpnClashFaCollector",
-      "path": "sub/final/V2ray_official/clash.yaml",
-      "nodes": 18,
-      "commit_date": "2026-05-28T22:30:45Z"
-    },
-    {
-      "url": "https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/v2FreeHub/clash.yaml",
-      "repo": "10ium/VpnClashFaCollector",
-      "path": "sub/final/v2FreeHub/clash.yaml",
-      "nodes": 5,
-      "commit_date": "2026-05-28T22:30:45Z"
-    },
-    {
-      "url": "https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/NetAccount/clash.yaml",
-      "repo": "10ium/VpnClashFaCollector",
-      "path": "sub/final/NetAccount/clash.yaml",
-      "nodes": 7,
-      "commit_date": "2026-05-28T22:30:45Z"
-    },
-    {
-      "url": "https://raw.githubusercontent.com/CHENHUI-X/sub/main/clash.yaml",
-      "repo": "CHENHUI-X/sub",
-      "path": "clash.yaml",
-      "nodes": 1036,
-      "commit_date": "2026-05-28T22:01:17Z"
+      "url": "https://raw.githubusercontent.com/FGWong/clash_config/main/xqc-proxies.yaml",
+      "repo": "FGWong/clash_config",
+      "path": "xqc-proxies.yaml",
+      "nodes": 11,
+      "commit_date": "2026-05-18T10:49:11Z"
     }
   ]
 }

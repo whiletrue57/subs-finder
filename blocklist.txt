@@ -1,0 +1,23 @@
+# subs-finder 黑名单 - 命中的候选直接跳过, 不进入 commit-time / raw 校验阶段
+# 格式 (一行一条, # 开头注释, 大小写不敏感):
+#   owner/repo                              -> 拉黑整个仓库
+#   owner/repo/path/to/file.yaml            -> 拉黑指定文件
+#   https://raw.githubusercontent.com/...   -> 直接粘 raw URL 也行 (会自动拆 owner/repo/path)
+
+# 节点全挂或长期没有可用节点
+asgharkapk/Sub-Config-Extractor/output_configs/clash/hamedp-71/_Sub_Checker_Creator_final.yaml
+DheMasker/Happy-Surfing/peasoftcdn.yaml
+https://raw.githubusercontent.com/asgharkapk/Sub-Config-Extractor/main/output_configs/clash/hamedp-71/_Sub_Checker_Creator_final.yaml
+https://raw.githubusercontent.com/DheMasker/Happy-Surfing/main/peasoftcdn.yaml
+https://raw.githubusercontent.com/weg2025/AutoSearchPublicNodes/main/snippets/nodes.meta.yml
+https://raw.githubusercontent.com/dongchengjie/airport/main/subs/kooker.yaml
+https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/snippets/nodes.meta.yml
+
+# 模板/规则配置, proxies 为空, 用户需自填
+AilnBen/clash-config/config.yaml
+ChiaoYenta/THE_OPENCLASH_OVERWRITE_AUTO_CONSTRUCTION/processed_configs/local/cleaner_config/dustinwin_ruleset_config.yaml
+AIsouler/MyClash/Config/mihomoConfig.yaml
+HenryChiao/MIHOMO_YAMLS/THEYAMLS/General_Config/666OS/OneTouch_Config.yaml
+Voya9e/Clash-meta-Config/Config.yaml
+clone-fan/Mihomo_Yaml/yaml/mosdns+mihomo_config.yaml
+lwb-2021/nix-config/os/universal/proxy/mihomo-config.yaml

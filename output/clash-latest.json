@@ -1,111 +1,111 @@
 {
-  "generated_at": "2026-05-30T01:33:43+00:00",
+  "generated_at": "2026-05-31T01:55:07+00:00",
   "validated_count": 30,
   "top": [
     {
-      "url": "https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/main/snippets/nodes_US.yml",
-      "repo": "chengaopan/AutoMergePublicNodes",
-      "path": "snippets/nodes_US.yml",
-      "nodes": 11,
-      "commit_date": "2026-05-30T01:23:54Z"
+      "url": "https://raw.githubusercontent.com/khbmgh/clasher/main/hysteria2.yaml",
+      "repo": "khbmgh/clasher",
+      "path": "hysteria2.yaml",
+      "nodes": 27,
+      "commit_date": "2026-05-31T01:33:53Z"
     },
     {
-      "url": "https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/main/snippets/nodes_HK.yml",
-      "repo": "chengaopan/AutoMergePublicNodes",
-      "path": "snippets/nodes_HK.yml",
-      "nodes": 5,
-      "commit_date": "2026-05-30T01:23:54Z"
+      "url": "https://raw.githubusercontent.com/devojony/ClashSub/master/clash/proxies.yaml",
+      "repo": "devojony/ClashSub",
+      "path": "clash/proxies.yaml",
+      "nodes": 439,
+      "commit_date": "2026-05-31T01:21:06Z"
     },
     {
-      "url": "https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/main/snippets/nodes_US.meta.yml",
-      "repo": "chengaopan/AutoMergePublicNodes",
-      "path": "snippets/nodes_US.meta.yml",
-      "nodes": 15,
-      "commit_date": "2026-05-30T01:23:54Z"
+      "url": "https://raw.githubusercontent.com/danmaifu/mianfeijiedian/main/feed/clash-20260531.yaml",
+      "repo": "danmaifu/mianfeijiedian",
+      "path": "feed/clash-20260531.yaml",
+      "nodes": 58,
+      "commit_date": "2026-05-31T00:59:03Z"
     },
     {
-      "url": "https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/main/snippets/nodes.yml",
-      "repo": "chengaopan/AutoMergePublicNodes",
-      "path": "snippets/nodes.yml",
-      "nodes": 25,
-      "commit_date": "2026-05-30T01:23:54Z"
+      "url": "https://raw.githubusercontent.com/Delta-Kronecker/V2ray-Config/main/config/batches/sni_clash_advanced/batch_002.yaml",
+      "repo": "Delta-Kronecker/V2ray-Config",
+      "path": "config/batches/sni_clash_advanced/batch_002.yaml",
+      "nodes": 500,
+      "commit_date": "2026-05-31T00:30:33Z"
     },
     {
-      "url": "https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/main/snippets/nodes.meta.yml",
-      "repo": "chengaopan/AutoMergePublicNodes",
-      "path": "snippets/nodes.meta.yml",
-      "nodes": 46,
-      "commit_date": "2026-05-30T01:23:54Z"
+      "url": "https://raw.githubusercontent.com/yuan2pro/sub_merge/main/sub/merged_proxies_1.yaml",
+      "repo": "yuan2pro/sub_merge",
+      "path": "sub/merged_proxies_1.yaml",
+      "nodes": 103,
+      "commit_date": "2026-05-31T00:20:28Z"
     },
     {
-      "url": "https://raw.githubusercontent.com/FarEastSea/schedule/master/free/node_freeclashnode.yaml",
-      "repo": "FarEastSea/schedule",
-      "path": "free/node_freeclashnode.yaml",
-      "nodes": 150,
-      "commit_date": "2026-05-30T00:56:55Z"
-    },
-    {
-      "url": "https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/clash.yaml",
-      "repo": "Au1rxx/free-vpn-subscriptions",
-      "path": "output/clash.yaml",
-      "nodes": 118,
-      "commit_date": "2026-05-30T00:30:39Z"
-    },
-    {
-      "url": "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/main/Clash/Vless-Reality-White-Lists-Rus-Mobile-2.yaml",
-      "repo": "igareck/vpn-configs-for-russia",
-      "path": "Clash/Vless-Reality-White-Lists-Rus-Mobile-2.yaml",
-      "nodes": 20,
-      "commit_date": "2026-05-30T00:24:53Z"
-    },
-    {
-      "url": "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/main/Clash/WHITE-CIDR-RU-all.yaml",
-      "repo": "igareck/vpn-configs-for-russia",
-      "path": "Clash/WHITE-CIDR-RU-all.yaml",
-      "nodes": 170,
-      "commit_date": "2026-05-30T00:24:53Z"
-    },
-    {
-      "url": "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/main/Clash/WHITE-SNI-RU-all.yaml",
-      "repo": "igareck/vpn-configs-for-russia",
-      "path": "Clash/WHITE-SNI-RU-all.yaml",
-      "nodes": 60,
-      "commit_date": "2026-05-30T00:24:53Z"
-    },
-    {
-      "url": "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/main/Clash/WHITE-CIDR-RU-checked.yaml",
-      "repo": "igareck/vpn-configs-for-russia",
-      "path": "Clash/WHITE-CIDR-RU-checked.yaml",
-      "nodes": 70,
-      "commit_date": "2026-05-30T00:24:53Z"
-    },
-    {
-      "url": "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/main/Clash/Vless-Reality-White-Lists-Rus-Mobile.yaml",
-      "repo": "igareck/vpn-configs-for-russia",
-      "path": "Clash/Vless-Reality-White-Lists-Rus-Mobile.yaml",
-      "nodes": 150,
-      "commit_date": "2026-05-30T00:24:53Z"
+      "url": "https://raw.githubusercontent.com/xolirx/xolirx-vpn-api/main/data/clash.yaml",
+      "repo": "xolirx/xolirx-vpn-api",
+      "path": "data/clash.yaml",
+      "nodes": 225,
+      "commit_date": "2026-05-30T23:19:13Z"
     },
     {
       "url": "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/main/Clash/BLACK_SS%2BAll_RUS.yaml",
       "repo": "igareck/vpn-configs-for-russia",
       "path": "Clash/BLACK_SS+All_RUS.yaml",
-      "nodes": 43,
-      "commit_date": "2026-05-30T00:09:24Z"
+      "nodes": 60,
+      "commit_date": "2026-05-30T22:46:51Z"
     },
     {
-      "url": "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/main/Clash/BLACK_VLESS_RUS_mobile.yaml",
-      "repo": "igareck/vpn-configs-for-russia",
-      "path": "Clash/BLACK_VLESS_RUS_mobile.yaml",
-      "nodes": 150,
-      "commit_date": "2026-05-30T00:09:23Z"
+      "url": "https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/main/snippets/nodes.meta.yml",
+      "repo": "chengaopan/AutoMergePublicNodes",
+      "path": "snippets/nodes.meta.yml",
+      "nodes": 47,
+      "commit_date": "2026-05-30T22:30:02Z"
     },
     {
-      "url": "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/main/Clash/BLACK_VLESS_RUS.yaml",
-      "repo": "igareck/vpn-configs-for-russia",
-      "path": "Clash/BLACK_VLESS_RUS.yaml",
-      "nodes": 183,
-      "commit_date": "2026-05-30T00:09:23Z"
+      "url": "https://raw.githubusercontent.com/fansiphone/pachong-tom/main/snippets/nodes_SG.meta.yml",
+      "repo": "fansiphone/pachong-tom",
+      "path": "snippets/nodes_SG.meta.yml",
+      "nodes": 11,
+      "commit_date": "2026-05-30T22:13:43Z"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/DheMasker/Happy-Surfing/main/Airuopsni.yaml",
+      "repo": "DheMasker/Happy-Surfing",
+      "path": "Airuopsni.yaml",
+      "nodes": 118,
+      "commit_date": "2026-05-30T22:01:52Z"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/DheMasker/Happy-Surfing/main/anaerservername.yaml",
+      "repo": "DheMasker/Happy-Surfing",
+      "path": "anaerservername.yaml",
+      "nodes": 213,
+      "commit_date": "2026-05-30T22:01:52Z"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/MARAMBASHI/clash.yaml",
+      "repo": "10ium/VpnClashFaCollector",
+      "path": "sub/final/MARAMBASHI/clash.yaml",
+      "nodes": 19,
+      "commit_date": "2026-05-30T21:20:36Z"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/liketolivefree/kobabi/main/prov_clash.yaml",
+      "repo": "liketolivefree/kobabi",
+      "path": "prov_clash.yaml",
+      "nodes": 228,
+      "commit_date": "2026-05-30T13:55:19Z"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/go4sharing/sub/main/clash.yaml",
+      "repo": "go4sharing/sub",
+      "path": "clash.yaml",
+      "nodes": 33,
+      "commit_date": "2026-05-30T05:23:19Z"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/eeuuvcgg/8047169/main/20261029/20261029.yaml",
+      "repo": "eeuuvcgg/8047169",
+      "path": "20261029/20261029.yaml",
+      "nodes": 37,
+      "commit_date": "2026-05-30T04:05:50Z"
     }
   ]
 }

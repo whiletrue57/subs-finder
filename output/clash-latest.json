@@ -1,62 +1,83 @@
 {
-  "generated_at": "2026-06-02T02:05:46+00:00",
-  "validated_count": 25,
+  "generated_at": "2026-06-03T02:15:10+00:00",
+  "validated_count": 19,
   "top": [
-    {
-      "url": "https://raw.githubusercontent.com/devojony/ClashSub/master/clash/subs.yaml",
-      "repo": "devojony/ClashSub",
-      "path": "clash/subs.yaml",
-      "nodes": 428,
-      "commit_date": "2026-06-02T01:23:13Z"
-    },
     {
       "url": "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/main/Clash/BLACK_SS%2BAll_RUS.yaml",
       "repo": "igareck/vpn-configs-for-russia",
       "path": "Clash/BLACK_SS+All_RUS.yaml",
-      "nodes": 46,
-      "commit_date": "2026-06-02T00:08:01Z"
+      "nodes": 12,
+      "commit_date": "2026-06-03T02:05:39Z"
     },
     {
-      "url": "https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/filembad/clash.yaml",
-      "repo": "10ium/VpnClashFaCollector",
-      "path": "sub/final/filembad/clash.yaml",
-      "nodes": 411,
-      "commit_date": "2026-06-01T23:06:51Z"
+      "url": "https://raw.githubusercontent.com/lyqnihao/proxy/main/nodev2ray/output.yaml",
+      "repo": "lyqnihao/proxy",
+      "path": "nodev2ray/output.yaml",
+      "nodes": 213,
+      "commit_date": "2026-06-03T02:02:27Z"
     },
     {
-      "url": "https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/snippets/nodes_US.meta.yml",
+      "url": "https://raw.githubusercontent.com/julong111/noderobot/main/s/original/freenodes-clashfree-cleaner.yml",
+      "repo": "julong111/noderobot",
+      "path": "s/original/freenodes-clashfree-cleaner.yml",
+      "nodes": 199,
+      "commit_date": "2026-06-02T23:47:17Z"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/YangLang116/auto_gen/master/clash/gen_clash_config.yaml",
+      "repo": "YangLang116/auto_gen",
+      "path": "clash/gen_clash_config.yaml",
+      "nodes": 70,
+      "commit_date": "2026-06-02T23:04:37Z"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/snippets/nodes_HK.meta.yml",
       "repo": "peasoft/NoMoreWalls",
-      "path": "snippets/nodes_US.meta.yml",
-      "nodes": 20,
-      "commit_date": "2026-06-01T22:54:18Z"
+      "path": "snippets/nodes_HK.meta.yml",
+      "nodes": 10,
+      "commit_date": "2026-06-02T22:52:46Z"
     },
     {
-      "url": "https://raw.githubusercontent.com/shaoyouvip/free/main/all.yaml",
-      "repo": "shaoyouvip/free",
-      "path": "all.yaml",
-      "nodes": 50,
-      "commit_date": "2026-06-01T22:22:32Z"
+      "url": "https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/meliproxyy/clash.yaml",
+      "repo": "10ium/VpnClashFaCollector",
+      "path": "sub/final/meliproxyy/clash.yaml",
+      "nodes": 66,
+      "commit_date": "2026-06-02T22:46:33Z"
     },
     {
-      "url": "https://raw.githubusercontent.com/asgharkapk/Sub-Config-Extractor/main/output_configs/clash/10ium/V2ray-Config/Splitted-By-Protocol/hysteria2.txt.yaml",
+      "url": "https://raw.githubusercontent.com/kooker/FreeSubsCheck/main/mihomo.yaml",
+      "repo": "kooker/FreeSubsCheck",
+      "path": "mihomo.yaml",
+      "nodes": 95,
+      "commit_date": "2026-06-02T22:21:03Z"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/danmaifu/mianfeijiedian/main/feed/clash-20260603.yaml",
+      "repo": "danmaifu/mianfeijiedian",
+      "path": "feed/clash-20260603.yaml",
+      "nodes": 46,
+      "commit_date": "2026-06-02T22:09:03Z"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ywsqbw1234/vps-tools/main/0b899e16ee83cd430500efee3fb6924794db/clash.yaml",
+      "repo": "ywsqbw1234/vps-tools",
+      "path": "0b899e16ee83cd430500efee3fb6924794db/clash.yaml",
+      "nodes": 34,
+      "commit_date": "2026-06-02T14:50:56Z"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/asgharkapk/Sub-Config-Extractor/main/output_configs/clash/10ium/base64-encoder/peasoft_list_raw.yaml",
       "repo": "asgharkapk/Sub-Config-Extractor",
-      "path": "output_configs/clash/10ium/V2ray-Config/Splitted-By-Protocol/hysteria2.txt.yaml",
-      "nodes": 37,
-      "commit_date": "2026-06-01T21:40:34Z"
+      "path": "output_configs/clash/10ium/base64-encoder/peasoft_list_raw.yaml",
+      "nodes": 78,
+      "commit_date": "2026-06-02T10:17:31Z"
     },
     {
-      "url": "https://raw.githubusercontent.com/DheMasker/Happy-Surfing/main/peasoftsni.yaml",
-      "repo": "DheMasker/Happy-Surfing",
-      "path": "peasoftsni.yaml",
-      "nodes": 114,
-      "commit_date": "2026-06-01T21:34:43Z"
-    },
-    {
-      "url": "https://raw.githubusercontent.com/BiliRumble/NoMoreRules/master/snippets/nodes_US.meta.yml",
-      "repo": "BiliRumble/NoMoreRules",
-      "path": "snippets/nodes_US.meta.yml",
-      "nodes": 11,
-      "commit_date": "2026-06-01T19:50:29Z"
+      "url": "https://raw.githubusercontent.com/YFTree/ClashNodes/main/Clash/0.yaml",
+      "repo": "YFTree/ClashNodes",
+      "path": "Clash/0.yaml",
+      "nodes": 161,
+      "commit_date": "2026-06-02T05:09:19Z"
     },
     {
       "url": "https://raw.githubusercontent.com/kimcrowing/Proxy/main/combined_proxies.yaml",
@@ -66,46 +87,25 @@
       "commit_date": "2026-06-01T08:34:39Z"
     },
     {
-      "url": "https://raw.githubusercontent.com/danmaifu/mianfeijiedian/main/feed/clash-20260601.yaml",
-      "repo": "danmaifu/mianfeijiedian",
-      "path": "feed/clash-20260601.yaml",
-      "nodes": 47,
-      "commit_date": "2026-06-01T05:40:03Z"
+      "url": "https://raw.githubusercontent.com/clashnodeshare/clashnodeshare.github.io/main/uploads/2026/06/0-20260601.yaml",
+      "repo": "clashnodeshare/clashnodeshare.github.io",
+      "path": "uploads/2026/06/0-20260601.yaml",
+      "nodes": 162,
+      "commit_date": "2026-06-01T03:38:20Z"
     },
     {
-      "url": "https://raw.githubusercontent.com/rainfrog123/blue/master/linux/extra/network/blue.yml",
-      "repo": "rainfrog123/blue",
-      "path": "linux/extra/network/blue.yml",
-      "nodes": 92,
-      "commit_date": "2026-05-30T15:50:23Z"
-    },
-    {
-      "url": "https://raw.githubusercontent.com/haoliangli/ray-clash-rules/main/openclash-config.yaml",
+      "url": "https://raw.githubusercontent.com/haoliangli/ray-clash-rules/main/vps/eric-p2-neo.yaml",
       "repo": "haoliangli/ray-clash-rules",
-      "path": "openclash-config.yaml",
-      "nodes": 28,
+      "path": "vps/eric-p2-neo.yaml",
+      "nodes": 5,
       "commit_date": "2026-05-30T15:31:31Z"
     },
     {
-      "url": "https://raw.githubusercontent.com/liketolivefree/kobabi/main/prov_clash.yaml",
-      "repo": "liketolivefree/kobabi",
-      "path": "prov_clash.yaml",
-      "nodes": 228,
-      "commit_date": "2026-05-30T13:55:19Z"
-    },
-    {
-      "url": "https://raw.githubusercontent.com/eeuuvcgg/8047169/main/20261029/20261029.yaml",
-      "repo": "eeuuvcgg/8047169",
-      "path": "20261029/20261029.yaml",
-      "nodes": 37,
-      "commit_date": "2026-05-30T04:05:50Z"
-    },
-    {
-      "url": "https://raw.githubusercontent.com/freev2rayw/freev2rayw.github.io/main/uploads/2026/05/2-20260521.yaml",
-      "repo": "freev2rayw/freev2rayw.github.io",
-      "path": "uploads/2026/05/2-20260521.yaml",
-      "nodes": 21,
-      "commit_date": "2026-05-27T04:48:15Z"
+      "url": "https://raw.githubusercontent.com/clashzhuanxian/clashzhuanxian.github.io/main/uploads/2026/05/0-20260530.yaml",
+      "repo": "clashzhuanxian/clashzhuanxian.github.io",
+      "path": "uploads/2026/05/0-20260530.yaml",
+      "nodes": 150,
+      "commit_date": "2026-05-30T04:37:50Z"
     }
   ]
 }

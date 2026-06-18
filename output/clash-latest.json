@@ -1,111 +1,111 @@
 {
-  "generated_at": "2026-06-17T02:08:20+00:00",
-  "validated_count": 30,
+  "generated_at": "2026-06-18T02:06:11+00:00",
+  "validated_count": 25,
   "top": [
     {
-      "url": "https://raw.githubusercontent.com/Ruk1ng001/freeSub/main/clash.yaml",
-      "repo": "Ruk1ng001/freeSub",
-      "path": "clash.yaml",
-      "nodes": 354,
-      "commit_date": "2026-06-17T02:00:01Z"
+      "url": "https://raw.githubusercontent.com/danmaifu/mianfeijiedian/main/feed/clash-20260618.yaml",
+      "repo": "danmaifu/mianfeijiedian",
+      "path": "feed/clash-20260618.yaml",
+      "nodes": 41,
+      "commit_date": "2026-06-18T01:43:03Z"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/wangyingbo/v2rayse_sub/main/gist_config/qjlxg_aggregator_clash.yaml.yaml",
+      "repo": "wangyingbo/v2rayse_sub",
+      "path": "gist_config/qjlxg_aggregator_clash.yaml.yaml",
+      "nodes": 123,
+      "commit_date": "2026-06-18T01:30:10Z"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/devojony/ClashSub/master/clash/proxies.yaml",
+      "repo": "devojony/ClashSub",
+      "path": "clash/proxies.yaml",
+      "nodes": 449,
+      "commit_date": "2026-06-18T01:22:46Z"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/main/Clash/WHITE-CIDR-RU-all.yaml",
+      "repo": "igareck/vpn-configs-for-russia",
+      "path": "Clash/WHITE-CIDR-RU-all.yaml",
+      "nodes": 93,
+      "commit_date": "2026-06-18T00:42:49Z"
     },
     {
       "url": "https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/main/snippets/nodes.meta.yml",
       "repo": "chengaopan/AutoMergePublicNodes",
       "path": "snippets/nodes.meta.yml",
-      "nodes": 89,
-      "commit_date": "2026-06-16T23:52:02Z"
+      "nodes": 110,
+      "commit_date": "2026-06-17T23:53:29Z"
     },
     {
-      "url": "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/main/Clash/BLACK_VLESS_RUS_mobile.yaml",
-      "repo": "igareck/vpn-configs-for-russia",
-      "path": "Clash/BLACK_VLESS_RUS_mobile.yaml",
-      "nodes": 150,
-      "commit_date": "2026-06-16T23:28:22Z"
-    },
-    {
-      "url": "https://raw.githubusercontent.com/wenxig/free-nodes-sub/main/data/sub.yaml",
-      "repo": "wenxig/free-nodes-sub",
-      "path": "data/sub.yaml",
-      "nodes": 378,
-      "commit_date": "2026-06-16T23:21:02Z"
-    },
-    {
-      "url": "https://raw.githubusercontent.com/BiliRumble/NoMoreRules/master/list.meta.yml",
-      "repo": "BiliRumble/NoMoreRules",
-      "path": "list.meta.yml",
-      "nodes": 88,
-      "commit_date": "2026-06-16T22:46:30Z"
-    },
-    {
-      "url": "https://raw.githubusercontent.com/fansiphone/pachong-tom/main/snippets/nodes_TW.meta.yml",
-      "repo": "fansiphone/pachong-tom",
-      "path": "snippets/nodes_TW.meta.yml",
-      "nodes": 10,
-      "commit_date": "2026-06-16T21:21:23Z"
-    },
-    {
-      "url": "https://raw.githubusercontent.com/fansiphone/pachong-tom/main/snippets/nodes_SG.meta.yml",
-      "repo": "fansiphone/pachong-tom",
-      "path": "snippets/nodes_SG.meta.yml",
-      "nodes": 11,
-      "commit_date": "2026-06-16T21:21:23Z"
-    },
-    {
-      "url": "https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/snippets/nodes_HK.meta.yml",
-      "repo": "peasoft/NoMoreWalls",
-      "path": "snippets/nodes_HK.meta.yml",
-      "nodes": 6,
-      "commit_date": "2026-06-16T18:50:15Z"
-    },
-    {
-      "url": "https://raw.githubusercontent.com/shaoyouvip/free/main/all.yaml",
-      "repo": "shaoyouvip/free",
-      "path": "all.yaml",
-      "nodes": 20,
-      "commit_date": "2026-06-16T18:44:25Z"
-    },
-    {
-      "url": "https://raw.githubusercontent.com/weg2025/AutoSearchPublicNodes/main/snippets/nodes_HK.meta.yml",
-      "repo": "weg2025/AutoSearchPublicNodes",
-      "path": "snippets/nodes_HK.meta.yml",
-      "nodes": 6,
-      "commit_date": "2026-06-16T12:20:11Z"
-    },
-    {
-      "url": "https://raw.githubusercontent.com/asgharkapk/Sub-Config-Extractor/main/output_configs/clash/10ium/base64-encoder/ebrasha/_lite.yaml",
-      "repo": "asgharkapk/Sub-Config-Extractor",
-      "path": "output_configs/clash/10ium/base64-encoder/ebrasha/_lite.yaml",
-      "nodes": 153,
-      "commit_date": "2026-06-16T10:53:20Z"
-    },
-    {
-      "url": "https://raw.githubusercontent.com/danmaifu/mianfeijiedian/main/feed/clash-20260616.yaml",
-      "repo": "danmaifu/mianfeijiedian",
-      "path": "feed/clash-20260616.yaml",
-      "nodes": 41,
-      "commit_date": "2026-06-16T10:08:02Z"
-    },
-    {
-      "url": "https://raw.githubusercontent.com/YFTree/ClashNodes/main/Clash/0.yaml",
-      "repo": "YFTree/ClashNodes",
-      "path": "Clash/0.yaml",
+      "url": "https://raw.githubusercontent.com/nodefreev2ray/nodefreev2ray.github.io/main/uploads/2026/06/0-20260616.yaml",
+      "repo": "nodefreev2ray/nodefreev2ray.github.io",
+      "path": "uploads/2026/06/0-20260616.yaml",
       "nodes": 190,
-      "commit_date": "2026-06-16T06:03:41Z"
+      "commit_date": "2026-06-17T23:37:57Z"
     },
     {
-      "url": "https://raw.githubusercontent.com/vluma/free-vpn2clash/main/output/free-VPN.yaml",
-      "repo": "vluma/free-vpn2clash",
-      "path": "output/free-VPN.yaml",
-      "nodes": 15,
-      "commit_date": "2026-06-16T05:02:43Z"
+      "url": "https://raw.githubusercontent.com/nodefreev2ray/nodefreev2ray.github.io/main/uploads/2026/06/0-20260618.yaml",
+      "repo": "nodefreev2ray/nodefreev2ray.github.io",
+      "path": "uploads/2026/06/0-20260618.yaml",
+      "nodes": 187,
+      "commit_date": "2026-06-17T23:37:57Z"
     },
     {
-      "url": "https://raw.githubusercontent.com/awesome-vpn/awesome-vpn/master/clash.yaml",
-      "repo": "awesome-vpn/awesome-vpn",
-      "path": "clash.yaml",
-      "nodes": 135,
-      "commit_date": "2026-06-16T02:59:19Z"
+      "url": "https://raw.githubusercontent.com/BiliRumble/NoMoreRules/master/snippets/nodes_US.meta.yml",
+      "repo": "BiliRumble/NoMoreRules",
+      "path": "snippets/nodes_US.meta.yml",
+      "nodes": 11,
+      "commit_date": "2026-06-17T19:56:54Z"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/clash.yml",
+      "repo": "ermaozi/get_subscribe",
+      "path": "subscribe/clash.yml",
+      "nodes": 29,
+      "commit_date": "2026-06-15T03:06:22Z"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/v2ray-free/v2ray-free.github.io/main/uploads/2026/06/0-20260610.yaml",
+      "repo": "v2ray-free/v2ray-free.github.io",
+      "path": "uploads/2026/06/0-20260610.yaml",
+      "nodes": 205,
+      "commit_date": "2026-06-15T02:46:12Z"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/asgharkapk/Sub-Config-Extractor/main/output_configs/clash/hamedp-71_Clash_New.yaml",
+      "repo": "asgharkapk/Sub-Config-Extractor",
+      "path": "output_configs/clash/hamedp-71_Clash_New.yaml",
+      "nodes": 17,
+      "commit_date": "2026-06-13T09:13:28Z"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/zz-want2sleep/daily-gist/main/2026/6/12/mihomo.yaml",
+      "repo": "zz-want2sleep/daily-gist",
+      "path": "2026/6/12/mihomo.yaml",
+      "nodes": 696,
+      "commit_date": "2026-06-12T02:07:02Z"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/xingluoyuankong/outlook-auto-register/main/%E5%AE%9E%E9%AA%8C%E4%BC%98%E5%8C%96%E7%89%88%E6%9C%AC/%E9%82%AE%E7%AE%B1%E6%B3%A8%E5%86%8C/mihomo_runtime/worker_28903/config.yaml",
+      "repo": "xingluoyuankong/outlook-auto-register",
+      "path": "实验优化版本/邮箱注册/mihomo_runtime/worker_28903/config.yaml",
+      "nodes": 30,
+      "commit_date": "2026-06-06T19:30:50Z"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/zz-want2sleep/daily-gist/main/2026/6/5/mihomo.yaml",
+      "repo": "zz-want2sleep/daily-gist",
+      "path": "2026/6/5/mihomo.yaml",
+      "nodes": 678,
+      "commit_date": "2026-06-05T02:00:35Z"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/xingluoyuankong/outlook-auto-register/main/%E9%82%AE%E7%AE%B1%E6%B3%A8%E5%86%8C/mihomo_runtime/providers/sub_69.yaml",
+      "repo": "xingluoyuankong/outlook-auto-register",
+      "path": "邮箱注册/mihomo_runtime/providers/sub_69.yaml",
+      "nodes": 22,
+      "commit_date": "2026-06-04T15:47:33Z"
     }
   ]
 }

@@ -1,111 +1,69 @@
 {
-  "generated_at": "2026-07-05T01:27:03+00:00",
-  "validated_count": 30,
+  "generated_at": "2026-07-06T01:26:04+00:00",
+  "validated_count": 9,
   "top": [
     {
-      "url": "https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/clash.yml",
-      "repo": "ermaozi/get_subscribe",
-      "path": "subscribe/clash.yml",
-      "nodes": 26,
-      "commit_date": "2026-07-05T00:52:28Z"
+      "url": "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/main/Clash/Vless-Reality-White-Lists-Rus-Mobile-2.yaml",
+      "repo": "igareck/vpn-configs-for-russia",
+      "path": "Clash/Vless-Reality-White-Lists-Rus-Mobile-2.yaml",
+      "nodes": 90,
+      "commit_date": "2026-07-06T01:11:11Z"
     },
     {
-      "url": "https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-FR.yaml",
-      "repo": "Au1rxx/free-vpn-subscriptions",
-      "path": "output/by-country/clash-FR.yaml",
-      "nodes": 6,
-      "commit_date": "2026-07-05T00:35:41Z"
+      "url": "https://raw.githubusercontent.com/yuan2pro/sub_merge/main/sub/merged_proxies_1.yaml",
+      "repo": "yuan2pro/sub_merge",
+      "path": "sub/merged_proxies_1.yaml",
+      "nodes": 200,
+      "commit_date": "2026-07-06T00:27:29Z"
     },
     {
-      "url": "https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/clash.yaml",
-      "repo": "Au1rxx/free-vpn-subscriptions",
-      "path": "output/clash.yaml",
-      "nodes": 121,
-      "commit_date": "2026-07-05T00:35:41Z"
+      "url": "https://raw.githubusercontent.com/khbmgh/clasher/main/hysteria2.yaml",
+      "repo": "khbmgh/clasher",
+      "path": "hysteria2.yaml",
+      "nodes": 5,
+      "commit_date": "2026-07-05T23:29:27Z"
     },
     {
-      "url": "https://raw.githubusercontent.com/shaoyouvip/free/main/all.yaml",
-      "repo": "shaoyouvip/free",
-      "path": "all.yaml",
-      "nodes": 100,
-      "commit_date": "2026-07-05T00:07:52Z"
-    },
-    {
-      "url": "https://raw.githubusercontent.com/shaoyouvip/free/main/mihomo.yaml",
-      "repo": "shaoyouvip/free",
-      "path": "mihomo.yaml",
-      "nodes": 100,
-      "commit_date": "2026-07-05T00:07:52Z"
+      "url": "https://raw.githubusercontent.com/LeilaoMi/AutoMergePublicNodes-Optimized/main/output/verified.yaml",
+      "repo": "LeilaoMi/AutoMergePublicNodes-Optimized",
+      "path": "output/verified.yaml",
+      "nodes": 278,
+      "commit_date": "2026-07-05T19:30:22Z"
     },
     {
       "url": "https://raw.githubusercontent.com/danmaifu/mianfeijiedian/main/feed/clash-20260705.yaml",
       "repo": "danmaifu/mianfeijiedian",
       "path": "feed/clash-20260705.yaml",
       "nodes": 46,
-      "commit_date": "2026-07-05T00:07:02Z"
+      "commit_date": "2026-07-05T14:35:03Z"
     },
     {
-      "url": "https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/main/snippets/nodes.meta.yml",
-      "repo": "chengaopan/AutoMergePublicNodes",
-      "path": "snippets/nodes.meta.yml",
-      "nodes": 120,
-      "commit_date": "2026-07-04T23:27:05Z"
+      "url": "https://raw.githubusercontent.com/Ruk1ng001/freeSub/main/clash.yaml",
+      "repo": "Ruk1ng001/freeSub",
+      "path": "clash.yaml",
+      "nodes": 134,
+      "commit_date": "2026-07-05T14:00:01Z"
     },
     {
-      "url": "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/main/Clash/BLACK_SS%2BAll_RUS.yaml",
-      "repo": "igareck/vpn-configs-for-russia",
-      "path": "Clash/BLACK_SS+All_RUS.yaml",
-      "nodes": 199,
-      "commit_date": "2026-07-04T22:34:12Z"
+      "url": "https://raw.githubusercontent.com/AkkunYo/HysteriaNode/main/yaml/mihomo_ax3000t.yaml",
+      "repo": "AkkunYo/HysteriaNode",
+      "path": "yaml/mihomo_ax3000t.yaml",
+      "nodes": 353,
+      "commit_date": "2026-07-05T13:57:49Z"
     },
     {
-      "url": "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/main/Clash/Vless-Reality-White-Lists-Rus-Mobile-2.yaml",
-      "repo": "igareck/vpn-configs-for-russia",
-      "path": "Clash/Vless-Reality-White-Lists-Rus-Mobile-2.yaml",
-      "nodes": 18,
-      "commit_date": "2026-07-04T22:25:02Z"
+      "url": "https://raw.githubusercontent.com/walke2019/Auto-Sync/main/clash/sub2.yaml",
+      "repo": "walke2019/Auto-Sync",
+      "path": "clash/sub2.yaml",
+      "nodes": 140,
+      "commit_date": "2026-07-05T04:04:29Z"
     },
     {
-      "url": "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/main/Clash/WHITE-CIDR-RU-all.yaml",
-      "repo": "igareck/vpn-configs-for-russia",
-      "path": "Clash/WHITE-CIDR-RU-all.yaml",
-      "nodes": 168,
-      "commit_date": "2026-07-04T22:25:02Z"
-    },
-    {
-      "url": "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/main/Clash/Vless-Reality-White-Lists-Rus-Mobile.yaml",
-      "repo": "igareck/vpn-configs-for-russia",
-      "path": "Clash/Vless-Reality-White-Lists-Rus-Mobile.yaml",
-      "nodes": 150,
-      "commit_date": "2026-07-04T22:25:02Z"
-    },
-    {
-      "url": "https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/snippets/nodes_DE.meta.yml",
-      "repo": "peasoft/NoMoreWalls",
-      "path": "snippets/nodes_DE.meta.yml",
-      "nodes": 8,
-      "commit_date": "2026-07-04T21:44:35Z"
-    },
-    {
-      "url": "https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/snippets/nodes_SG.meta.yml",
-      "repo": "peasoft/NoMoreWalls",
-      "path": "snippets/nodes_SG.meta.yml",
-      "nodes": 6,
-      "commit_date": "2026-07-04T21:44:35Z"
-    },
-    {
-      "url": "https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/snippets/nodes_US.meta.yml",
-      "repo": "peasoft/NoMoreWalls",
-      "path": "snippets/nodes_US.meta.yml",
-      "nodes": 19,
-      "commit_date": "2026-07-04T21:44:35Z"
-    },
-    {
-      "url": "https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/snippets/nodes_HK.meta.yml",
-      "repo": "peasoft/NoMoreWalls",
-      "path": "snippets/nodes_HK.meta.yml",
-      "nodes": 7,
-      "commit_date": "2026-07-04T21:44:35Z"
+      "url": "https://raw.githubusercontent.com/v2ray-free/v2ray-free.github.io/main/uploads/2026/06/2-20260609.yaml",
+      "repo": "v2ray-free/v2ray-free.github.io",
+      "path": "uploads/2026/06/2-20260609.yaml",
+      "nodes": 10,
+      "commit_date": "2026-06-15T02:46:12Z"
     }
   ]
 }

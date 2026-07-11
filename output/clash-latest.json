@@ -1,111 +1,111 @@
 {
-  "generated_at": "2026-07-10T01:18:04+00:00",
-  "validated_count": 25,
+  "generated_at": "2026-07-11T01:11:34+00:00",
+  "validated_count": 30,
   "top": [
     {
       "url": "https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/main/snippets/nodes.meta.yml",
       "repo": "chengaopan/AutoMergePublicNodes",
       "path": "snippets/nodes.meta.yml",
-      "nodes": 118,
-      "commit_date": "2026-07-10T01:04:23Z"
+      "nodes": 116,
+      "commit_date": "2026-07-11T00:54:23Z"
     },
     {
       "url": "https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/main/snippets/nodes_HK.meta.yml",
       "repo": "chengaopan/AutoMergePublicNodes",
       "path": "snippets/nodes_HK.meta.yml",
+      "nodes": 10,
+      "commit_date": "2026-07-11T00:54:23Z"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/main/snippets/nodes_SG.meta.yml",
+      "repo": "chengaopan/AutoMergePublicNodes",
+      "path": "snippets/nodes_SG.meta.yml",
       "nodes": 7,
-      "commit_date": "2026-07-10T01:04:23Z"
+      "commit_date": "2026-07-11T00:54:23Z"
     },
     {
       "url": "https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/main/snippets/nodes_US.meta.yml",
       "repo": "chengaopan/AutoMergePublicNodes",
       "path": "snippets/nodes_US.meta.yml",
-      "nodes": 12,
-      "commit_date": "2026-07-10T01:04:23Z"
+      "nodes": 15,
+      "commit_date": "2026-07-11T00:54:23Z"
     },
     {
-      "url": "https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/clash.yml",
-      "repo": "ermaozi/get_subscribe",
-      "path": "subscribe/clash.yml",
-      "nodes": 18,
-      "commit_date": "2026-07-10T00:47:49Z"
+      "url": "https://raw.githubusercontent.com/khbmgh/clasher/main/hysteria2.yaml",
+      "repo": "khbmgh/clasher",
+      "path": "hysteria2.yaml",
+      "nodes": 8,
+      "commit_date": "2026-07-11T00:22:30Z"
     },
     {
       "url": "https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/clash.yaml",
       "repo": "Au1rxx/free-vpn-subscriptions",
       "path": "output/clash.yaml",
-      "nodes": 89,
-      "commit_date": "2026-07-10T00:22:56Z"
-    },
-    {
-      "url": "https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-US.yaml",
-      "repo": "Au1rxx/free-vpn-subscriptions",
-      "path": "output/by-country/clash-US.yaml",
-      "nodes": 48,
-      "commit_date": "2026-07-10T00:22:56Z"
+      "nodes": 150,
+      "commit_date": "2026-07-11T00:17:34Z"
     },
     {
       "url": "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/main/Clash/BLACK_SS%2BAll_RUS.yaml",
       "repo": "igareck/vpn-configs-for-russia",
       "path": "Clash/BLACK_SS+All_RUS.yaml",
-      "nodes": 37,
-      "commit_date": "2026-07-10T00:07:34Z"
+      "nodes": 41,
+      "commit_date": "2026-07-10T22:17:47Z"
     },
     {
       "url": "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/main/Clash/BLACK_VLESS_RUS_mobile.yaml",
       "repo": "igareck/vpn-configs-for-russia",
       "path": "Clash/BLACK_VLESS_RUS_mobile.yaml",
-      "nodes": 108,
-      "commit_date": "2026-07-10T00:07:33Z"
+      "nodes": 150,
+      "commit_date": "2026-07-10T22:17:47Z"
     },
     {
-      "url": "https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/main/snippets/nodes_DE.meta.yml",
-      "repo": "chengaopan/AutoMergePublicNodes",
-      "path": "snippets/nodes_DE.meta.yml",
-      "nodes": 5,
-      "commit_date": "2026-07-09T22:46:17Z"
+      "url": "https://raw.githubusercontent.com/DheMasker/Happy-Surfing/main/Airuopsni.yaml",
+      "repo": "DheMasker/Happy-Surfing",
+      "path": "Airuopsni.yaml",
+      "nodes": 118,
+      "commit_date": "2026-07-10T22:04:51Z"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/DheMasker/Happy-Surfing/main/tbbatbbcdn.yaml",
+      "repo": "DheMasker/Happy-Surfing",
+      "path": "tbbatbbcdn.yaml",
+      "nodes": 118,
+      "commit_date": "2026-07-10T22:04:51Z"
     },
     {
       "url": "https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/snippets/nodes_DE.meta.yml",
       "repo": "peasoft/NoMoreWalls",
       "path": "snippets/nodes_DE.meta.yml",
-      "nodes": 12,
-      "commit_date": "2026-07-09T22:10:13Z"
+      "nodes": 27,
+      "commit_date": "2026-07-10T21:47:26Z"
     },
     {
-      "url": "https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/snippets/nodes_SG.meta.yml",
+      "url": "https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/snippets/nodes_JP.meta.yml",
       "repo": "peasoft/NoMoreWalls",
-      "path": "snippets/nodes_SG.meta.yml",
-      "nodes": 6,
-      "commit_date": "2026-07-09T22:10:13Z"
+      "path": "snippets/nodes_JP.meta.yml",
+      "nodes": 5,
+      "commit_date": "2026-07-10T21:47:26Z"
     },
     {
-      "url": "https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/snippets/nodes_HK.meta.yml",
+      "url": "https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/snippets/nodes_US.meta.yml",
       "repo": "peasoft/NoMoreWalls",
-      "path": "snippets/nodes_HK.meta.yml",
-      "nodes": 8,
-      "commit_date": "2026-07-09T22:10:13Z"
+      "path": "snippets/nodes_US.meta.yml",
+      "nodes": 21,
+      "commit_date": "2026-07-10T21:47:26Z"
     },
     {
       "url": "https://raw.githubusercontent.com/R3ZARAHIMI/tg-v2ray-configs-every2h/main/Config-jo.yaml",
       "repo": "R3ZARAHIMI/tg-v2ray-configs-every2h",
       "path": "Config-jo.yaml",
-      "nodes": 145,
-      "commit_date": "2026-07-09T21:55:13Z"
+      "nodes": 166,
+      "commit_date": "2026-07-10T21:33:27Z"
     },
     {
-      "url": "https://raw.githubusercontent.com/atomhb/Auto_Update_Sub/main/sub.yaml",
-      "repo": "atomhb/Auto_Update_Sub",
-      "path": "sub.yaml",
-      "nodes": 130,
-      "commit_date": "2026-07-09T18:06:43Z"
-    },
-    {
-      "url": "https://raw.githubusercontent.com/yangxiaoge/tvbox_cust/master/clash/Clash3.yml",
-      "repo": "yangxiaoge/tvbox_cust",
-      "path": "clash/Clash3.yml",
-      "nodes": 8,
-      "commit_date": "2026-07-09T18:02:06Z"
+      "url": "https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/meliproxyy/clash.yaml",
+      "repo": "10ium/VpnClashFaCollector",
+      "path": "sub/final/meliproxyy/clash.yaml",
+      "nodes": 117,
+      "commit_date": "2026-07-10T21:22:13Z"
     }
   ]
 }

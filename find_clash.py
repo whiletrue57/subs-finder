@@ -10,6 +10,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import math
 import os
 import re
 import sys
@@ -49,6 +50,23 @@ SEARCH_SLEEP = 2.0
 DETAIL_SLEEP = 0.4
 MAX_FILE_BYTES = 5_000_000
 COMMIT_WORKERS = 8  # 并发拉 file-level commit 时间
+
+# 节点指纹只忽略展示/来源字段，其余连接参数全部参与哈希。
+# 这样能识别“同一节点、不同名称”，同时保留 ws path、Reality key 等关键差异。
+FINGERPRINT_IGNORED_KEYS = {
+    "name",
+    "sub_url",
+    "sub_tag",
+    "interface-name",
+    "routing-mark",
+}
+
+FINGERPRINT_KEY_ALIASES = {
+    "servername": "sni",
+    "obfs_password": "obfs-password",
+    "skip_cert_verify": "skip-cert-verify",
+    "client_fingerprint": "client-fingerprint",
+}
 
 DEFAULT_BLOCKLIST = Path(__file__).parent / "blocklist.txt"
 RAW_PREFIX = "https://raw.githubusercontent.com/"
@@ -190,21 +208,112 @@ def fetch_raw(owner: str, repo: str, default_branch: str | None, path: str) -> t
     return None, None
 
 
-def count_proxies(text: str) -> int:
+def parse_clash_proxies(text: str) -> tuple[list[dict], dict]:
+    """安全解析 Clash/Mihomo YAML，返回有效节点和配置形态信息。"""
     try:
         data = yaml.safe_load(text)
     except Exception:
-        return 0
+        return [], {}
     if not isinstance(data, dict):
-        return 0
+        return [], {}
     proxies = data.get("proxies")
     if not isinstance(proxies, list):
-        return 0
-    valid = 0
+        return [], {}
+    valid: list[dict] = []
     for p in proxies:
         if isinstance(p, dict) and p.get("type") and p.get("server") and p.get("port"):
-            valid += 1
-    return valid
+            valid.append(p)
+    shape = {
+        "has_proxy_groups": isinstance(data.get("proxy-groups"), list),
+        "has_rules": isinstance(data.get("rules"), list),
+    }
+    return valid, shape
+
+
+def _normalize_fingerprint_value(value):
+    """递归规范化 YAML 值，稳定处理映射顺序和字符串空白。"""
+    if isinstance(value, dict):
+        normalized = {}
+        for raw_key in sorted(value, key=str):
+            raw_value = value[raw_key]
+            key = FINGERPRINT_KEY_ALIASES.get(str(raw_key), str(raw_key))
+            if key in FINGERPRINT_IGNORED_KEYS:
+                continue
+            item = _normalize_fingerprint_value(raw_value)
+            if item is None or item == "" or item == [] or item == {}:
+                continue
+            normalized[key] = item
+        return {key: normalized[key] for key in sorted(normalized)}
+    if isinstance(value, list):
+        return [_normalize_fingerprint_value(item) for item in value]
+    if isinstance(value, str):
+        return value.strip()
+    return value
+
+
+def proxy_fingerprint(proxy: dict) -> str:
+    """生成与名称、来源无关的节点连接参数指纹。"""
+    canonical = _normalize_fingerprint_value(proxy)
+    if isinstance(canonical, dict):
+        for key in ("type", "server", "network", "sni"):
+            value = canonical.get(key)
+            if isinstance(value, str):
+                canonical[key] = value.lower()
+        port = canonical.get("port")
+        if isinstance(port, str) and port.isdigit():
+            canonical["port"] = int(port)
+    payload = json.dumps(canonical, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
+    return hashlib.sha256(payload.encode("utf-8")).hexdigest()
+
+
+def source_path_score(repo: str, path: str) -> float:
+    """根据仓库和路径命名估计其作为自动生成节点源的可能性。"""
+    text = f"{repo}/{path}".lower()
+    tokens = set(re.split(r"[^a-z0-9]+", text))
+    score = 0.45
+    if tokens & {"output", "outputs", "result", "results", "sub", "subs", "subscription", "subscribe", "snippets"}:
+        score += 0.18
+    if tokens & {"live", "alive", "valid", "checked", "checker", "speed", "nodes", "proxies", "proxy"}:
+        score += 0.22
+    if tokens & {"config", "configs", "rule", "rules", "overwrite"}:
+        score -= 0.20
+    return min(max(score, 0.0), 1.0)
+
+
+def source_size_score(nodes: int) -> float:
+    """偏好中等规模节点源，压低超大聚合文件带来的测试成本。"""
+    coverage = min(math.log1p(nodes) / math.log1p(100), 1.0)
+    if nodes <= 500:
+        bloat_penalty = 1.0
+    else:
+        bloat_penalty = max(math.sqrt(500 / nodes), 0.20)
+    return coverage * bloat_penalty
+
+
+def source_shape_score(shape: dict) -> float:
+    """纯节点片段优先；含完整规则的个人配置仍保留候选资格。"""
+    extras = int(bool(shape.get("has_proxy_groups"))) + int(bool(shape.get("has_rules")))
+    return (1.0, 0.75, 0.55)[extras]
+
+
+def source_freshness_score(commit_dt: datetime, max_age_days: int) -> float:
+    age = max((datetime.now(timezone.utc) - commit_dt).total_seconds(), 0.0)
+    window = max(max_age_days * 86400, 1)
+    return max(0.0, 1.0 - age / window)
+
+
+def static_source_score(repo: str, path: str, nodes: int, shape: dict, commit_dt: datetime, max_age_days: int) -> float:
+    """组合静态信号；实测反馈缺席时提供可解释的质量近似。"""
+    freshness = source_freshness_score(commit_dt, max_age_days)
+    size = source_size_score(nodes)
+    path_hint = source_path_score(repo, path)
+    shape_hint = source_shape_score(shape)
+    return 0.35 * freshness + 0.25 * size + 0.25 * path_hint + 0.15 * shape_hint
+
+
+def count_proxies(text: str) -> int:
+    proxies, _ = parse_clash_proxies(text)
+    return len(proxies)
 
 
 def should_skip(path: str, repo_full: str) -> bool:
@@ -356,7 +465,7 @@ def enrich_commit_dates(candidates: dict, headers: dict, max_age_days: int) -> l
 
 
 def evaluate(ordered: list[tuple], args, headers: dict) -> list[dict]:
-    target = max(args.top * 2, args.top + 5)
+    target = max(args.top * max(args.candidate_multiplier, 1), args.top + 10)
     valid: list[dict] = []
     seen_hashes: set[str] = set()
     total = len(ordered)
@@ -366,7 +475,8 @@ def evaluate(ordered: list[tuple], args, headers: dict) -> list[dict]:
         if not text:
             print(f"{prefix} [skip:no-raw]", file=sys.stderr)
             continue
-        nodes = count_proxies(text)
+        proxies, shape = parse_clash_proxies(text)
+        nodes = len(proxies)
         if nodes < args.min_proxies:
             print(f"{prefix} [skip:proxies={nodes}]", file=sys.stderr)
             continue
@@ -375,31 +485,94 @@ def evaluate(ordered: list[tuple], args, headers: dict) -> list[dict]:
             print(f"{prefix} [skip:dup-content]", file=sys.stderr)
             continue
         seen_hashes.add(h)
+        fingerprints = {proxy_fingerprint(proxy) for proxy in proxies}
+        if len(fingerprints) < args.min_proxies:
+            print(f"{prefix} [skip:unique-proxies={len(fingerprints)}]", file=sys.stderr)
+            continue
+        static_score = static_source_score(
+            f"{owner}/{repo}", path, len(fingerprints), shape, entry["commit_dt"], args.max_age_days
+        )
         valid.append({
             "url": raw_url,
             "repo": f"{owner}/{repo}",
             "path": path,
             "nodes": nodes,
+            "unique_nodes": len(fingerprints),
             "commit_date": entry["commit_date"],
+            "static_score": static_score,
+            "_fingerprints": fingerprints,
         })
-        print(f"{prefix} [ok nodes={nodes} date={entry['commit_date']}]", file=sys.stderr)
+        print(
+            f"{prefix} [ok nodes={nodes} unique={len(fingerprints)} "
+            f"static={static_score:.3f} date={entry['commit_date']}]",
+            file=sys.stderr,
+        )
         if len(valid) >= target:
-            print(f"  [early-stop] reached {target} validated", file=sys.stderr)
+            print(f"  [early-stop] reached candidate pool {target}", file=sys.stderr)
             break
         time.sleep(DETAIL_SLEEP)
-    valid.sort(key=lambda x: x["commit_date"], reverse=True)
     return valid
 
 
-def write_outputs(valid: list[dict], args) -> None:
+def select_sources(candidates: list[dict], args) -> list[dict]:
+    """按静态质量、节点增量和仓库多样性贪心选择最终来源。"""
+    remaining = list(candidates)
+    selected: list[dict] = []
+    covered: set[str] = set()
+    repo_counts: dict[str, int] = {}
+
+    while remaining and len(selected) < args.top:
+        best_idx = None
+        best_rank = None
+        best_metrics = None
+        for idx, candidate in enumerate(remaining):
+            repo = candidate["repo"]
+            repo_count = repo_counts.get(repo, 0)
+            if repo_count >= args.max_per_repo:
+                continue
+            fingerprints = candidate["_fingerprints"]
+            new_nodes = len(fingerprints - covered)
+            novelty = new_nodes / max(len(fingerprints), 1)
+            repo_diversity = 1.0 / (repo_count + 1)
+            score = 0.60 * candidate["static_score"] + 0.30 * novelty + 0.10 * repo_diversity
+            rank = (score, novelty, candidate["static_score"], candidate["commit_date"])
+            if best_rank is None or rank > best_rank:
+                best_idx = idx
+                best_rank = rank
+                best_metrics = (score, novelty, new_nodes)
+
+        if best_idx is None or best_metrics is None:
+            break
+        candidate = remaining.pop(best_idx)
+        score, novelty, new_nodes = best_metrics
+        fingerprints = candidate.pop("_fingerprints")
+        overlap_nodes = len(fingerprints) - new_nodes
+        candidate["score"] = round(score, 6)
+        candidate["static_score"] = round(candidate["static_score"], 6)
+        candidate["novelty_ratio"] = round(novelty, 6)
+        candidate["new_nodes"] = new_nodes
+        candidate["overlap_nodes"] = overlap_nodes
+        selected.append(candidate)
+        covered.update(fingerprints)
+        repo_counts[candidate["repo"]] = repo_counts.get(candidate["repo"], 0) + 1
+        print(
+            f"  [select {len(selected)}/{args.top}] {candidate['repo']}/{candidate['path']} "
+            f"score={score:.3f} novelty={novelty:.1%} new={new_nodes} overlap={overlap_nodes}",
+            file=sys.stderr,
+        )
+
+    return selected
+
+
+def write_outputs(selected: list[dict], validated_count: int, args) -> None:
     out_dir = Path(args.out_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
-    top = valid[: args.top]
+    top = selected[: args.top]
     now = datetime.now(timezone.utc).isoformat(timespec="seconds")
     lines = [
         "# auto-generated by subs-finder",
         f"# generated_at: {now}",
-        f"# top: {len(top)}  validated: {len(valid)}",
+        f"# top: {len(top)}  validated: {validated_count}",
         "# do not edit by hand; see subs-finder/find_clash.py",
         "",
     ]
@@ -416,7 +589,12 @@ def write_outputs(valid: list[dict], args) -> None:
         json.dumps(
             {
                 "generated_at": now,
-                "validated_count": len(valid),
+                "validated_count": validated_count,
+                "selection_policy": {
+                    "candidate_multiplier": args.candidate_multiplier,
+                    "max_per_repo": args.max_per_repo,
+                    "signals": ["freshness", "size", "path", "shape", "node_novelty", "repo_diversity"],
+                },
                 "top": top,
             },
             ensure_ascii=False,
@@ -432,6 +610,8 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--top", type=int, default=15)
     p.add_argument("--min-proxies", type=int, default=5)
     p.add_argument("--max-age-days", type=int, default=7)
+    p.add_argument("--candidate-multiplier", type=int, default=4)
+    p.add_argument("--max-per-repo", type=int, default=1)
     p.add_argument("--out-dir", default=str(Path(__file__).parent / "output"))
     p.add_argument("--blocklist", default=str(DEFAULT_BLOCKLIST))
     p.add_argument("--dry-run", action="store_true")
@@ -466,7 +646,11 @@ def main() -> int:
     print(f"[summary] {len(valid)} validated", file=sys.stderr)
     if not valid:
         return 3
-    write_outputs(valid, args)
+    selected = select_sources(valid, args)
+    print(f"[summary] {len(selected)} selected from {len(valid)} validated", file=sys.stderr)
+    if not selected:
+        return 3
+    write_outputs(selected, len(valid), args)
     return 0
 
 

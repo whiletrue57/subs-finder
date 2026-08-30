@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-29T04:22:18+00:00",
+  "generated_at": "2026-08-30T01:43:35+00:00",
   "validated_count": 60,
   "selection_policy": {
     "candidate_multiplier": 4,
@@ -15,29 +15,29 @@
   },
   "top": [
     {
-      "url": "https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-SG.yaml",
-      "repo": "Au1rxx/free-vpn-subscriptions",
-      "path": "output/by-country/clash-SG.yaml",
-      "nodes": 184,
-      "unique_nodes": 158,
-      "commit_date": "2026-08-29T04:18:40Z",
-      "static_score": 0.839977,
-      "score": 0.903986,
+      "url": "https://raw.githubusercontent.com/yuan2pro/sub_merge/main/sub/merged_proxies_3.yaml",
+      "repo": "yuan2pro/sub_merge",
+      "path": "sub/merged_proxies_3.yaml",
+      "nodes": 91,
+      "unique_nodes": 91,
+      "commit_date": "2026-08-30T01:34:24Z",
+      "static_score": 0.957376,
+      "score": 0.974426,
       "novelty_ratio": 1.0,
-      "new_nodes": 158,
+      "new_nodes": 91,
       "overlap_nodes": 0
     },
     {
-      "url": "https://raw.githubusercontent.com/aristapanell-cell/AriataPanel/main/config.yaml/combined/hysteria2/50.yaml",
-      "repo": "aristapanell-cell/AriataPanel",
-      "path": "config.yaml/combined/hysteria2/50.yaml",
-      "nodes": 50,
-      "unique_nodes": 50,
-      "commit_date": "2026-08-29T04:18:37Z",
-      "static_score": 0.707956,
-      "score": 0.824774,
+      "url": "https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/country/FI/clash-0001.yaml",
+      "repo": "Au1rxx/free-vpn-subscriptions",
+      "path": "output/country/FI/clash-0001.yaml",
+      "nodes": 201,
+      "unique_nodes": 134,
+      "commit_date": "2026-08-30T01:13:36Z",
+      "static_score": 0.839762,
+      "score": 0.903857,
       "novelty_ratio": 1.0,
-      "new_nodes": 50,
+      "new_nodes": 134,
       "overlap_nodes": 0
     }
   ]

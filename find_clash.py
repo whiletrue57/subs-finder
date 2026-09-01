@@ -68,8 +68,13 @@ FINGERPRINT_KEY_ALIASES = {
     "client_fingerprint": "client-fingerprint",
 }
 
+SUBS_CHECK_FEEDBACK_RE = re.compile(
+    r"订阅成功率过低:\s+(?P<url>\S+)\s+"
+    r"总节点数=(?P<total>\d+)\s+成功节点数=(?P<success>\d+)\s+"
+    r"成功占比=(?P<rate>[\d.]+)%"
+)
+
 DEFAULT_BLOCKLIST = Path(__file__).parent / "blocklist.txt"
-RAW_PREFIX = "https://raw.githubusercontent.com/"
 
 # 已知"日更带日期文件名"的源: 这类仓库每天生成一个新文件 (无固定 latest),
 # GitHub Code Search 对它们命中不稳, 改为直接列目录取日期最大的文件。
@@ -88,22 +93,56 @@ KNOWN_DAILY_SOURCES = [
 ]
 
 
+def parse_raw_github_url(raw_url: str) -> tuple[str, str, str] | None:
+    """解析 GitHub raw URL，返回解码后的 (owner, repo, file_path)。"""
+    try:
+        parsed = urllib.parse.urlsplit(raw_url.strip())
+    except ValueError:
+        return None
+    if parsed.hostname not in {"raw.githubusercontent.com", "raw.github.com"}:
+        return None
+    parts = [urllib.parse.unquote(part) for part in parsed.path.lstrip("/").split("/")]
+    if len(parts) < 4:
+        return None
+    owner, repo = parts[0], parts[1]
+    tail = parts[2:]
+    if len(tail) >= 4 and tail[0:2] == ["refs", "heads"]:
+        file_parts = tail[3:]
+    else:
+        file_parts = tail[1:]
+    if not owner or not repo or not file_parts:
+        return None
+    return owner, repo, "/".join(file_parts)
+
+
+def canonical_source_key(url: str) -> str:
+    """规范化来源 URL，用于关联 blocklist、候选文件和 subs-check 日志。"""
+    raw = parse_raw_github_url(url)
+    if raw:
+        owner, repo, file_path = raw
+        return f"github://{owner.lower()}/{repo.lower()}/{file_path.lower()}"
+    try:
+        parsed = urllib.parse.urlsplit(url.strip())
+    except ValueError:
+        return url.strip()
+    return urllib.parse.urlunsplit(
+        (parsed.scheme.lower(), parsed.netloc.lower(), parsed.path, parsed.query, "")
+    )
+
+
 def load_blocklist(path: Path) -> tuple[set[str], set[tuple[str, str, str]]]:
     """读取黑名单文件, 返回 (repo 集合, (owner,repo,path) 集合), 全部 lower-case。"""
     repos: set[str] = set()
     files: set[tuple[str, str, str]] = set()
     if not path.exists():
         return repos, files
-    for raw in path.read_text(encoding="utf-8").splitlines():
-        line = raw.strip()
+    for raw_line in path.read_text(encoding="utf-8").splitlines():
+        line = raw_line.strip()
         if not line or line.startswith("#"):
             continue
-        if line.startswith(RAW_PREFIX):
-            rest = line[len(RAW_PREFIX):]
-            parts = rest.split("/", 3)
-            if len(parts) < 4:
-                continue
-            owner, repo, _, file_path = parts
+        parsed_raw = parse_raw_github_url(line)
+        if parsed_raw:
+            owner, repo, file_path = parsed_raw
             files.add((owner.lower(), repo.lower(), file_path.lower()))
             continue
         parts = line.split("/", 2)
@@ -112,6 +151,41 @@ def load_blocklist(path: Path) -> tuple[set[str], set[tuple[str, str, str]]]:
         elif len(parts) == 3:
             files.add((parts[0].lower(), parts[1].lower(), parts[2].lower()))
     return repos, files
+
+
+def load_subs_check_feedback(source: str) -> dict[str, dict]:
+    """读取 subs-check 日志，按规范化来源聚合总节点数和成功节点数。"""
+    text = (
+        sys.stdin.read()
+        if source == "-"
+        else Path(source).read_text(encoding="utf-8", errors="replace")
+    )
+    feedback: dict[str, dict] = {}
+    for line in text.splitlines():
+        match = SUBS_CHECK_FEEDBACK_RE.search(line)
+        if not match:
+            continue
+        url = match.group("url")
+        key = canonical_source_key(url)
+        stats = feedback.setdefault(key, {"url": url, "total": 0, "success": 0, "runs": 0})
+        stats["total"] += int(match.group("total"))
+        stats["success"] += int(match.group("success"))
+        stats["runs"] += 1
+    for stats in feedback.values():
+        stats["rate"] = stats["success"] / max(stats["total"], 1)
+    return feedback
+
+
+def wilson_lower_bound(success: int, total: int, z: float = 1.96) -> float:
+    """计算二项分布成功率的 Wilson 置信区间下界。"""
+    if total <= 0:
+        return 0.0
+    p = success / total
+    z2 = z * z
+    denominator = 1 + z2 / total
+    centre = p + z2 / (2 * total)
+    margin = z * math.sqrt((p * (1 - p) + z2 / (4 * total)) / total)
+    return max(0.0, (centre - margin) / denominator)
 
 
 def is_blocked(owner: str, repo: str, path: str, repos: set[str], files: set[tuple[str, str, str]]) -> bool:
@@ -464,10 +538,16 @@ def enrich_commit_dates(candidates: dict, headers: dict, max_age_days: int) -> l
     return results
 
 
-def evaluate(ordered: list[tuple], args, headers: dict) -> list[dict]:
+def evaluate(
+    ordered: list[tuple],
+    args,
+    headers: dict,
+    feedback: dict[str, dict] | None = None,
+) -> list[dict]:
     target = max(args.top * max(args.candidate_multiplier, 1), args.top + 10)
     valid: list[dict] = []
     seen_hashes: set[str] = set()
+    feedback = feedback or {}
     total = len(ordered)
     for idx, ((owner, repo, path), entry) in enumerate(ordered, 1):
         prefix = f"  [{idx}/{total}] {owner}/{repo}/{path}"
@@ -479,6 +559,19 @@ def evaluate(ordered: list[tuple], args, headers: dict) -> list[dict]:
         nodes = len(proxies)
         if nodes < args.min_proxies:
             print(f"{prefix} [skip:proxies={nodes}]", file=sys.stderr)
+            continue
+        source_feedback = feedback.get(canonical_source_key(raw_url))
+        zero_min_nodes = max(getattr(args, "feedback_zero_min_nodes", 1), 1)
+        if (
+            source_feedback
+            and source_feedback["success"] == 0
+            and source_feedback["total"] >= zero_min_nodes
+        ):
+            print(
+                f"{prefix} [skip:feedback-zero total={source_feedback['total']} "
+                f"runs={source_feedback['runs']}]",
+                file=sys.stderr,
+            )
             continue
         h = hashlib.sha256(text.encode("utf-8", errors="ignore")).hexdigest()
         if h in seen_hashes:
@@ -492,16 +585,33 @@ def evaluate(ordered: list[tuple], args, headers: dict) -> list[dict]:
         static_score = static_source_score(
             f"{owner}/{repo}", path, len(fingerprints), shape, entry["commit_dt"], args.max_age_days
         )
-        valid.append({
-            "url": raw_url,
-            "repo": f"{owner}/{repo}",
-            "path": path,
-            "nodes": nodes,
-            "unique_nodes": len(fingerprints),
-            "commit_date": entry["commit_date"],
-            "static_score": static_score,
-            "_fingerprints": fingerprints,
-        })
+        valid.append(
+            {
+                "url": raw_url,
+                "repo": f"{owner}/{repo}",
+                "path": path,
+                "nodes": nodes,
+                "unique_nodes": len(fingerprints),
+                "commit_date": entry["commit_date"],
+                "static_score": static_score,
+                "_fingerprints": fingerprints,
+            }
+        )
+        if source_feedback:
+            feedback_rate = source_feedback["rate"]
+            feedback_score = min(
+                wilson_lower_bound(source_feedback["success"], source_feedback["total"]) / 0.05,
+                1.0,
+            )
+            valid[-1].update(
+                {
+                    "feedback_total": source_feedback["total"],
+                    "feedback_success": source_feedback["success"],
+                    "feedback_runs": source_feedback["runs"],
+                    "feedback_rate": round(feedback_rate, 6),
+                    "feedback_score": round(feedback_score, 6),
+                }
+            )
         print(
             f"{prefix} [ok nodes={nodes} unique={len(fingerprints)} "
             f"static={static_score:.3f} date={entry['commit_date']}]",
@@ -535,6 +645,7 @@ def select_sources(candidates: list[dict], args) -> list[dict]:
             novelty = new_nodes / max(len(fingerprints), 1)
             repo_diversity = 1.0 / (repo_count + 1)
             score = 0.60 * candidate["static_score"] + 0.30 * novelty + 0.10 * repo_diversity
+            score += 0.15 * candidate.get("feedback_score", 0.0)
             rank = (score, novelty, candidate["static_score"], candidate["commit_date"])
             if best_rank is None or rank > best_rank:
                 best_idx = idx
@@ -593,7 +704,16 @@ def write_outputs(selected: list[dict], validated_count: int, args) -> None:
                 "selection_policy": {
                     "candidate_multiplier": args.candidate_multiplier,
                     "max_per_repo": args.max_per_repo,
-                    "signals": ["freshness", "size", "path", "shape", "node_novelty", "repo_diversity"],
+                    "feedback_enabled": bool(getattr(args, "feedback_log", "")),
+                    "signals": [
+                        "freshness",
+                        "size",
+                        "path",
+                        "shape",
+                        "node_novelty",
+                        "repo_diversity",
+                        "subs_check_feedback",
+                    ],
                 },
                 "top": top,
             },
@@ -612,6 +732,8 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--max-age-days", type=int, default=7)
     p.add_argument("--candidate-multiplier", type=int, default=4)
     p.add_argument("--max-per-repo", type=int, default=1)
+    p.add_argument("--feedback-log", help="subs-check 日志路径；使用 - 从 stdin 读取")
+    p.add_argument("--feedback-zero-min-nodes", type=int, default=1)
     p.add_argument("--out-dir", default=str(Path(__file__).parent / "output"))
     p.add_argument("--blocklist", default=str(DEFAULT_BLOCKLIST))
     p.add_argument("--dry-run", action="store_true")
@@ -626,6 +748,15 @@ def main() -> int:
         print("ERROR: set GH_SEARCH_TOKEN or GITHUB_TOKEN", file=sys.stderr)
         return 1
     headers = make_headers(token)
+
+    feedback: dict[str, dict] = {}
+    if args.feedback_log:
+        try:
+            feedback = load_subs_check_feedback(args.feedback_log)
+        except OSError as e:
+            print(f"ERROR: cannot read feedback log: {e}", file=sys.stderr)
+            return 1
+        print(f"[feedback] loaded {len(feedback)} source stats from {args.feedback_log}", file=sys.stderr)
 
     block_repos, block_files = load_blocklist(Path(args.blocklist))
     if block_repos or block_files:
@@ -642,7 +773,7 @@ def main() -> int:
     if not ordered:
         print("[summary] no candidates passed file-level freshness filter", file=sys.stderr)
         return 3
-    valid = evaluate(ordered, args, headers)
+    valid = evaluate(ordered, args, headers, feedback)
     print(f"[summary] {len(valid)} validated", file=sys.stderr)
     if not valid:
         return 3

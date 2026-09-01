@@ -12,7 +12,9 @@ import hashlib
 import json
 import math
 import os
+import random
 import re
+import socket
 import sys
 import time
 import urllib.parse
@@ -50,6 +52,10 @@ SEARCH_SLEEP = 2.0
 DETAIL_SLEEP = 0.4
 MAX_FILE_BYTES = 5_000_000
 COMMIT_WORKERS = 8  # 并发拉 file-level commit 时间
+TCP_SAMPLE_SIZE = 10  # 每源随机抽几个节点做 TCP 探测
+TCP_TIMEOUT = 3  # 秒
+TCP_WORKERS = 10
+TCP_MIN_RATE = 0.40  # 采样通过率低于此值直接淘汰
 
 # 节点指纹只忽略展示/来源字段，其余连接参数全部参与哈希。
 # 这样能识别“同一节点、不同名称”，同时保留 ws path、Reality key 等关键差异。
@@ -340,6 +346,29 @@ def proxy_fingerprint(proxy: dict) -> str:
     return hashlib.sha256(payload.encode("utf-8")).hexdigest()
 
 
+def tcp_probe(server: str, port: int) -> bool:
+    """TCP 握手探测端口是否开放。"""
+    try:
+        sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        sock.settimeout(TCP_TIMEOUT)
+        result = sock.connect_ex((server, int(port)))
+        sock.close()
+        return result == 0
+    except Exception:
+        return False
+
+
+def tcp_sample_rate(proxies: list[dict]) -> float:
+    """随机抽样节点做 TCP 探测，返回端口开放比例。"""
+    if not proxies:
+        return 0.0
+    sample = random.sample(proxies, min(TCP_SAMPLE_SIZE, len(proxies)))
+    with ThreadPoolExecutor(max_workers=TCP_WORKERS) as ex:
+        futs = {ex.submit(tcp_probe, p["server"], p["port"]): p for p in sample}
+        alive = sum(1 for f in as_completed(futs) if f.result())
+    return alive / len(sample)
+
+
 def source_path_score(repo: str, path: str) -> float:
     """根据仓库和路径命名估计其作为自动生成节点源的可能性。"""
     text = f"{repo}/{path}".lower()
@@ -573,6 +602,11 @@ def evaluate(
                 file=sys.stderr,
             )
             continue
+        # TCP 采样：端口不通 = 必死，低于阈值直接淘汰
+        tcp_rate = tcp_sample_rate(proxies)
+        if tcp_rate < TCP_MIN_RATE:
+            print(f"{prefix} [skip:tcp-dead rate={tcp_rate:.0%}]", file=sys.stderr)
+            continue
         h = hashlib.sha256(text.encode("utf-8", errors="ignore")).hexdigest()
         if h in seen_hashes:
             print(f"{prefix} [skip:dup-content]", file=sys.stderr)
@@ -594,6 +628,7 @@ def evaluate(
                 "unique_nodes": len(fingerprints),
                 "commit_date": entry["commit_date"],
                 "static_score": static_score,
+                "tcp_rate": round(tcp_rate, 4),
                 "_fingerprints": fingerprints,
             }
         )
@@ -614,7 +649,7 @@ def evaluate(
             )
         print(
             f"{prefix} [ok nodes={nodes} unique={len(fingerprints)} "
-            f"static={static_score:.3f} date={entry['commit_date']}]",
+            f"tcp={tcp_rate:.0%} static={static_score:.3f} date={entry['commit_date']}]",
             file=sys.stderr,
         )
         if len(valid) >= target:
@@ -644,7 +679,7 @@ def select_sources(candidates: list[dict], args) -> list[dict]:
             new_nodes = len(fingerprints - covered)
             novelty = new_nodes / max(len(fingerprints), 1)
             repo_diversity = 1.0 / (repo_count + 1)
-            score = 0.60 * candidate["static_score"] + 0.30 * novelty + 0.10 * repo_diversity
+            score = 0.45 * candidate["static_score"] + 0.25 * novelty + 0.10 * repo_diversity + 0.20 * candidate.get("tcp_rate", 0.5)
             score += 0.15 * candidate.get("feedback_score", 0.0)
             rank = (score, novelty, candidate["static_score"], candidate["commit_date"])
             if best_rank is None or rank > best_rank:
@@ -668,7 +703,7 @@ def select_sources(candidates: list[dict], args) -> list[dict]:
         repo_counts[candidate["repo"]] = repo_counts.get(candidate["repo"], 0) + 1
         print(
             f"  [select {len(selected)}/{args.top}] {candidate['repo']}/{candidate['path']} "
-            f"score={score:.3f} novelty={novelty:.1%} new={new_nodes} overlap={overlap_nodes}",
+            f"score={score:.3f} tcp={candidate.get('tcp_rate', 0):.0%} novelty={novelty:.1%} new={new_nodes} overlap={overlap_nodes}",
             file=sys.stderr,
         )
 

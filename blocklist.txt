@@ -24,6 +24,7 @@ https://raw.githubusercontent.com/Flikify/Free-Node/main/clash.yaml
 https://raw.githubusercontent.com/Gektor66/fastK/main/mix_100_clash.yaml
 https://raw.githubusercontent.com/Gektor66/fastK/main/src_GitHub_ByeWhite_clash.yaml
 https://raw.githubusercontent.com/Gektor66/fastK/main/src_NowMeow_clash.yaml
+https://raw.githubusercontent.com/SeyedNG/proxy/main/configs/clash_config.yaml
 https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/main/all_configs.txt
 https://raw.githubusercontent.com/acymz/AutoVPN/main/data/V2.txt
 https://raw.githubusercontent.com/anaer/Sub/main/proxies.yaml
@@ -37,6 +38,7 @@ https://raw.githubusercontent.com/sakha1370/OpenRay/main/output_iran/converted/i
 https://raw.githubusercontent.com/shuaidaoya/FreeNodes/refs/heads/main/nodes/all.yaml
 https://raw.githubusercontent.com/ssrsub/ssr/master/clash.yaml
 https://raw.githubusercontent.com/weg2025/AutoSearchPublicNodes/main/snippets/nodes.meta.yml
+https://raw.githubusercontent.com/wenxig/free-nodes-sub/main/data/sub.yaml
 https://raw.githubusercontent.com/xiaoji235/airport-free/main/clash/naidounode.txt
 https://sub.xn--9swa.com/rynulwyh9r583ym16/4b21a892-026d-4d44-be8e-9f7e7bca3c7d
 lwb-2021/nix-config/os/universal/proxy/mihomo-config.yaml

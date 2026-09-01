@@ -37,13 +37,16 @@ jobs:
           # 优先用 PAT (Code Search 配额高); 没配就回落到内置 GITHUB_TOKEN
           GH_SEARCH_TOKEN: ${{ secrets.GH_SEARCH_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python find_clash.py --top 15 --max-age-days 7
+        run: |
+          python find_tg.py --out output/tg-nodes.yaml
+          python find_clash.py --top 15 --max-age-days 7
 
       - name: Commit if changed
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add output/
+          git add tg_channels.txt
           if git diff --staged --quiet; then
             echo "no changes, nothing to commit"
           else

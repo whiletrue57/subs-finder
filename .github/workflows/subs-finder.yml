@@ -39,7 +39,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           python find_tg.py --out output/tg-nodes.yaml
-          python find_clash.py --top 15 --max-age-days 7
+          python find_clash.py --top 15 --max-age-days 7 --max-per-repo 2
 
       - name: Commit if changed
         run: |

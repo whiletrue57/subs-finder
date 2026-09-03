@@ -2,47 +2,46 @@
 # 抓取 https://t.me/s/<name> 公开预览页，提取代理协议链接
 # 私有/邀请制频道会失败，死频道只记日志，保留不影响
 
-# --- 高产出频道（经 V2rayCollector / Epodonios 验证活跃）---
-# abc_configs: 每几秒一条，极高产（附带同名聚合仓库每 10 分钟更新）
-abc_configs
+# --- 高产出频道（run 33759485950 零产出的暂时注释，复活后取消注释）---
+# 注: abc_configs 经核验无公开预览页（t.me/s/ 跳转到联系人页），不可抓，勿加
 v2rayfree
 FreeV2rayn
 LetsGetVPN
-LetsGetProxy
+#LetsGetProxy
 persianvpnhub
-DailyV2RY
+#DailyV2RY
 FreakConfig
 free4allVPN
 FreeV2rays
-freev2rayssr
+#freev2rayssr
 FreeVlessVpn
-frev2rayng
-V2rayN_Free
+#frev2rayng
+#V2rayN_Free
 V2rayNG3
-v2rayng_org
-v2rayngvpn
-v2RayChannel
+#v2rayng_org
+#v2rayngvpn
+#v2RayChannel
 v2ray_for_free
-V2Ray_FreedomIran
-V2RAY_NEW
-V2RayOxygen
-V2RAY_VMESS_free
-vmess_vless_v2rayng
+#V2Ray_FreedomIran
+#V2RAY_NEW
+#V2RayOxygen
+#V2RAY_VMESS_free
+#vmess_vless_v2rayng
 VmessProtocol
-vmessiran
-ServerNett
+#vmessiran
+#ServerNett
 ShadowsocksM
-ShadowSocks_s
+#ShadowSocks_s
 PrivateVPNs
 proxystore11
-config_v2ray
+#config_v2ray
 configV2rayForFree
 configV2rayNG
 EliV2ray
-foxrayiran
+#foxrayiran
 FOX_VPN66
-God_CONFIG
-VPN_443
-VPNCUSTOMIZE
+#God_CONFIG
+#VPN_443
+#VPNCUSTOMIZE
 Easy_Free_VPN
 Outline_Vpn

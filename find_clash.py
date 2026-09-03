@@ -50,7 +50,7 @@ SKIP_PATTERNS = [
 
 PER_PAGE = 50
 MAX_PAGES = 3  # 10 queries x 3 pages x 50 = 1500 raw matches max
-SEARCH_SLEEP = 2.0
+SEARCH_SLEEP = 3.0  # 搜索请求间隔，压住 secondary rate limit（被限流罚睡更贵）
 DETAIL_SLEEP = 0.4
 MAX_FILE_BYTES = 5_000_000
 COMMIT_WORKERS = 8  # 并发拉 file-level commit 时间
@@ -651,6 +651,7 @@ def evaluate(
     args,
     headers: dict,
     feedback: dict[str, dict] | None = None,
+    evaluated: set[str] | None = None,
 ) -> list[dict]:
     target = max(args.top * max(args.candidate_multiplier, 1), args.top + 10)
     valid: list[dict] = []
@@ -659,6 +660,8 @@ def evaluate(
     total = len(ordered)
     for idx, ((owner, repo, path), entry) in enumerate(ordered, 1):
         prefix = f"  [{idx}/{total}] {owner}/{repo}/{path}"
+        if evaluated is not None:
+            evaluated.add(static_key(owner, repo, path))
         raw_url, text = fetch_raw(owner, repo, entry.get("default_branch"), path)
         if not text:
             print(f"{prefix} [skip:no-raw]", file=sys.stderr)
@@ -922,10 +925,13 @@ def main() -> int:
     if not ordered:
         print("[summary] no candidates passed file-level freshness filter", file=sys.stderr)
         return 3
-    valid = evaluate(ordered, args, headers, feedback)
+    evaluated: set[str] = set()
+    valid = evaluate(ordered, args, headers, feedback, evaluated)
     print(f"[summary] {len(valid)} validated", file=sys.stderr)
     valid_keys = {f"{v['repo']}/{v['path']}".lower() for v in valid}
-    new_health = update_static_health(health, probed_keys, valid_keys, today)
+    # 没排上探测（early-stop 截断）的源不计失败，避免误伤隔离
+    attempted = [k for k in probed_keys if k in evaluated]
+    new_health = update_static_health(health, attempted, valid_keys, today)
     if new_health != health and (new_health or health_path.exists()):
         health_path.parent.mkdir(parents=True, exist_ok=True)
         health_path.write_text(json.dumps(new_health, ensure_ascii=False, indent=2), encoding="utf-8")

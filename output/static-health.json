@@ -1,0 +1,12 @@
+{
+  "ruk1ng001/freesub/clash.yaml": {
+    "fails": 1,
+    "quarantined": false,
+    "last_probe": "2026-09-03"
+  },
+  "snapdragonlee/systemproxy/dist/clash_config.yaml": {
+    "fails": 1,
+    "quarantined": false,
+    "last_probe": "2026-09-03"
+  }
+}

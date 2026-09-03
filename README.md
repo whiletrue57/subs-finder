@@ -16,6 +16,7 @@
 - `find_clash.py` 的 `STATIC_SOURCES` 是 3 个已验证的聚合大源 (Au1rxx、Ruk1ng001、SnapdragonLee)，固定路径、不耗搜索配额，直接并入候选走同一新鲜度/解析/TCP/选源流水线。
 - 固定源连续 3 次没进 valid 就隔离跳过，状态记在 `output/static-health.json` (随 output 一起提交跨次生效)，隔离后每 7 天重探，恢复自动解除。
 - 看到 `[static] WARNING ... 已隔离` 日志，把那行 key 复制进 `blocklist.txt` 人肉拉黑。
+- TG 频道连续 3 次抓取成功但 0 解析自动注释 (`# AUTO-OFF 日期` 标记)，状态记在 `output/tg-health.json`，14 天后自动解注释重探；`--dry-run` 下不写任何文件。
 
 
 ```yaml

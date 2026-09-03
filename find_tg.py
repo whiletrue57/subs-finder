@@ -20,6 +20,7 @@ import socket
 import sys
 import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
+from datetime import date
 from html import unescape
 from pathlib import Path
 from urllib.parse import parse_qs, unquote, urlparse
@@ -42,6 +43,10 @@ MAX_PAGES = 3  # 每频道最多翻几页（首页 + before 翻页）
 TCP_TIMEOUT = 3  # 单节点 TCP 探测超时（秒）
 TCP_WORKERS = 20  # TCP 探测并发数
 UDP_TYPES = ("hysteria2", "tuic")  # 走 UDP/QUIC，TCP 探不到，直通不扣分
+
+DEAD_THRESHOLD = 3  # 连续零产出几次自动注释
+REVIVE_DAYS = 14  # 被注释几天后自动解注释重探
+AUTO_OFF_RE = re.compile(r"^\s*#\s*AUTO-OFF\s+(\d{4}-\d{2}-\d{2})\s+(\S+)\s*$")
 
 BEFORE_RE = re.compile(r'data-before="(\d+)"')
 
@@ -428,21 +433,86 @@ def parse_proxy_uri(uri: str) -> dict | None:
 # Telegram 频道抓取
 # ---------------------------------------------------------------------------
 
+def _normalize_channel(line: str) -> str | None:
+    """规范化一行频道名；注释/空行返回 None。"""
+    line = line.strip()
+    if not line or line.startswith("#"):
+        return None
+    line = line.lstrip("@")
+    if line.startswith("t.me/"):
+        line = line[5:]
+    if line.startswith("https://t.me/"):
+        line = line[13:]
+    return line or None
+
+
 def load_channels(path: Path) -> list[str]:
     """读取频道列表文件。"""
     channels: list[str] = []
     for line in path.read_text(encoding="utf-8").splitlines():
-        line = line.strip()
-        if not line or line.startswith("#"):
-            continue
-        # 支持 @channel 或 t.me/channel 或裸 channel
-        line = line.lstrip("@")
-        if line.startswith("t.me/"):
-            line = line[5:]
-        if line.startswith("https://t.me/"):
-            line = line[13:]
-        channels.append(line)
+        ch = _normalize_channel(line)
+        if ch:
+            channels.append(ch)
     return channels
+
+
+def load_auto_off(path: Path) -> dict[str, date]:
+    """读取被自动注释的频道 {channel: off_date}。"""
+    off: dict[str, date] = {}
+    for line in path.read_text(encoding="utf-8").splitlines():
+        m = AUTO_OFF_RE.match(line)
+        if not m:
+            continue
+        try:
+            off[m.group(2)] = date.fromisoformat(m.group(1))
+        except ValueError:
+            continue
+    return off
+
+
+def due_for_revive(auto_off: dict[str, date], today: date) -> list[str]:
+    return [ch for ch, d in auto_off.items() if (today - d).days >= REVIVE_DAYS]
+
+
+def apply_channel_updates(raw_lines: list[str], to_off: set[str], revived: set[str], today_s: str) -> list[str]:
+    """行级改写频道文件：注释死亡频道、解注释复活频道，其余行原样保留。"""
+    out: list[str] = []
+    for line in raw_lines:
+        m = AUTO_OFF_RE.match(line)
+        if m and m.group(2) in revived:
+            out.append(m.group(2))
+            continue
+        ch = _normalize_channel(line)
+        if ch and ch in to_off:
+            out.append(f"# AUTO-OFF {today_s} {ch}")
+            continue
+        out.append(line)
+    return out
+
+
+def load_tg_health(path: Path) -> dict:
+    if not path.exists():
+        return {}
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except (ValueError, OSError):
+        return {}
+    return data if isinstance(data, dict) else {}
+
+
+def update_tg_health(health: dict, zero_channels: list[str], good_channels: list[str], today_s: str) -> dict:
+    """抓取成功但 0 解析记一次，产出节点清零，抓取失败的不碰。"""
+    new = dict(health)
+    for ch in good_channels:
+        new.pop(ch, None)
+    for ch in zero_channels:
+        zeros = new.get(ch, {}).get("zeros", 0) + 1
+        new[ch] = {"zeros": zeros, "last_zero": today_s}
+        if zeros >= DEAD_THRESHOLD:
+            print(f"[tg-health] WARNING {ch} 连续 {zeros} 次零产出，将自动注释", file=sys.stderr)
+        else:
+            print(f"[tg-health] {ch}: 零产出 {zeros}x", file=sys.stderr)
+    return new
 
 
 def fetch_channel_page(channel: str) -> str:
@@ -539,11 +609,22 @@ def main() -> int:
     if not channels:
         print("ERROR: no channels loaded", file=sys.stderr)
         return 1
+    today = date.today()
+    today_s = today.isoformat()
+    auto_off = load_auto_off(channels_path)
+    revived = [ch for ch in due_for_revive(auto_off, today) if ch not in channels]
+    channels = channels + revived
+    if revived:
+        print(f"[tg] revived {len(revived)} channels: {', '.join(revived)}", file=sys.stderr)
     print(f"[tg] loaded {len(channels)} channels", file=sys.stderr)
+    health_path = Path(args.out).parent / "tg-health.json"
+    health = load_tg_health(health_path)
 
     all_proxies: list[dict] = []
     seen_fp: set[str] = set()
     total_raw = 0
+    zero_channels: list[str] = []
+    good_channels: list[str] = []
 
     for ch in channels:
         try:
@@ -573,12 +654,37 @@ def main() -> int:
             f"  [{ch}] uris={len(uris)} parsed={parsed} dupes={dupes}",
             file=sys.stderr,
         )
+        if parsed == 0:
+            zero_channels.append(ch)
+        else:
+            good_channels.append(ch)
         time.sleep(FETCH_SLEEP)
 
     print(
         f"[tg] total: {total_raw} raw -> {len(all_proxies)} unique proxies",
         file=sys.stderr,
     )
+
+    new_health = update_tg_health(health, zero_channels, good_channels, today_s)
+    to_off = {
+        ch for ch in zero_channels
+        if new_health.get(ch, {}).get("zeros", 0) >= DEAD_THRESHOLD
+    }
+    raw_lines = channels_path.read_text(encoding="utf-8").splitlines()
+    new_lines = apply_channel_updates(raw_lines, to_off, set(revived), today_s)
+    if args.dry_run:
+        if new_lines != raw_lines:
+            print(f"[tg-health] dry-run: would update {channels_path} "
+                  f"(off={sorted(to_off)}, revived={revived})", file=sys.stderr)
+    else:
+        if new_lines != raw_lines:
+            channels_path.write_text("\n".join(new_lines) + "\n", encoding="utf-8")
+            print(f"[tg-health] updated {channels_path} "
+                  f"(off={sorted(to_off)}, revived={revived})", file=sys.stderr)
+        if new_health != health and (new_health or health_path.exists()):
+            health_path.parent.mkdir(parents=True, exist_ok=True)
+            health_path.write_text(
+                json.dumps(new_health, ensure_ascii=False, indent=2), encoding="utf-8")
 
     if not args.no_tcp_check:
         before = len(all_proxies)

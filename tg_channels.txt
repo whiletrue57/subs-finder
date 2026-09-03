@@ -2,46 +2,46 @@
 # 抓取 https://t.me/s/<name> 公开预览页，提取代理协议链接
 # 私有/邀请制频道会失败，死频道只记日志，保留不影响
 
-# --- 高产出频道（run 33759485950 零产出的暂时注释，复活后取消注释）---
+# --- 高产出频道（AUTO-OFF 为机器三振标记，满 14 天自动复活重探）---
 # 注: abc_configs 经核验无公开预览页（t.me/s/ 跳转到联系人页），不可抓，勿加
 v2rayfree
 FreeV2rayn
 LetsGetVPN
-#LetsGetProxy
+# AUTO-OFF 2026-09-03 LetsGetProxy
 persianvpnhub
-#DailyV2RY
+# AUTO-OFF 2026-09-03 DailyV2RY
 FreakConfig
 free4allVPN
 FreeV2rays
-#freev2rayssr
+# AUTO-OFF 2026-09-03 freev2rayssr
 FreeVlessVpn
-#frev2rayng
-#V2rayN_Free
+# AUTO-OFF 2026-09-03 frev2rayng
+# AUTO-OFF 2026-09-03 V2rayN_Free
 V2rayNG3
-#v2rayng_org
-#v2rayngvpn
-#v2RayChannel
+# AUTO-OFF 2026-09-03 v2rayng_org
+# AUTO-OFF 2026-09-03 v2rayngvpn
+# AUTO-OFF 2026-09-03 v2RayChannel
 v2ray_for_free
-#V2Ray_FreedomIran
-#V2RAY_NEW
-#V2RayOxygen
-#V2RAY_VMESS_free
-#vmess_vless_v2rayng
+# AUTO-OFF 2026-09-03 V2Ray_FreedomIran
+# AUTO-OFF 2026-09-03 V2RAY_NEW
+# AUTO-OFF 2026-09-03 V2RayOxygen
+# AUTO-OFF 2026-09-03 V2RAY_VMESS_free
+# AUTO-OFF 2026-09-03 vmess_vless_v2rayng
 VmessProtocol
-#vmessiran
-#ServerNett
+# AUTO-OFF 2026-09-03 vmessiran
+# AUTO-OFF 2026-09-03 ServerNett
 ShadowsocksM
-#ShadowSocks_s
+# AUTO-OFF 2026-09-03 ShadowSocks_s
 PrivateVPNs
 proxystore11
-#config_v2ray
+# AUTO-OFF 2026-09-03 config_v2ray
 configV2rayForFree
 configV2rayNG
 EliV2ray
-#foxrayiran
+# AUTO-OFF 2026-09-03 foxrayiran
 FOX_VPN66
-#God_CONFIG
-#VPN_443
-#VPNCUSTOMIZE
+# AUTO-OFF 2026-09-03 God_CONFIG
+# AUTO-OFF 2026-09-03 VPN_443
+# AUTO-OFF 2026-09-03 VPNCUSTOMIZE
 Easy_Free_VPN
 Outline_Vpn

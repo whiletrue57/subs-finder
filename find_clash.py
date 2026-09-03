@@ -52,7 +52,7 @@ SEARCH_SLEEP = 2.0
 DETAIL_SLEEP = 0.4
 MAX_FILE_BYTES = 5_000_000
 COMMIT_WORKERS = 8  # 并发拉 file-level commit 时间
-TCP_SAMPLE_SIZE = 10  # 每源随机抽几个节点做 TCP 探测
+TCP_SAMPLE_SIZE = 20  # 每源随机抽几个节点做 TCP 探测
 TCP_TIMEOUT = 3  # 秒
 TCP_WORKERS = 10
 TCP_MIN_RATE = 0.40  # 采样通过率低于此值直接淘汰
@@ -359,10 +359,14 @@ def tcp_probe(server: str, port: int) -> bool:
 
 
 def tcp_sample_rate(proxies: list[dict]) -> float:
-    """随机抽样节点做 TCP 探测，返回端口开放比例。"""
-    if not proxies:
-        return 0.0
-    sample = random.sample(proxies, min(TCP_SAMPLE_SIZE, len(proxies)))
+    """随机抽样节点做 TCP 探测，返回端口开放比例。
+
+    hysteria2 走 UDP/QUIC，TCP 探不到，抽样时剔除；纯 UDP 源返回 1.0 不扣分。
+    """
+    tcp_proxies = [p for p in proxies if p.get("type") != "hysteria2"]
+    if not tcp_proxies:
+        return 1.0
+    sample = random.sample(tcp_proxies, min(TCP_SAMPLE_SIZE, len(tcp_proxies)))
     with ThreadPoolExecutor(max_workers=TCP_WORKERS) as ex:
         futs = {ex.submit(tcp_probe, p["server"], p["port"]): p for p in sample}
         alive = sum(1 for f in as_completed(futs) if f.result())

@@ -16,8 +16,10 @@ import base64
 import hashlib
 import json
 import re
+import socket
 import sys
 import time
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from html import unescape
 from pathlib import Path
 from urllib.parse import parse_qs, unquote, urlparse
@@ -36,6 +38,9 @@ PROTOCOL_RE = re.compile(
 FETCH_TIMEOUT = 20
 FETCH_SLEEP = 2.0  # 请求间隔，避免被限流
 MAX_PAGES = 3  # 每频道最多翻几页（首页 + before 翻页）
+
+TCP_TIMEOUT = 3  # 单节点 TCP 探测超时（秒）
+TCP_WORKERS = 20  # TCP 探测并发数
 
 BEFORE_RE = re.compile(r'data-before="(\d+)"')
 
@@ -443,6 +448,34 @@ def proxy_fingerprint(proxy: dict) -> str:
     return hashlib.sha256(payload.encode()).hexdigest()
 
 
+def tcp_probe(server: str, port: int) -> bool:
+    """TCP 握手探测端口是否开放。端口不通的节点下游必死，先剔除。"""
+    try:
+        sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        sock.settimeout(TCP_TIMEOUT)
+        result = sock.connect_ex((server, int(port)))
+        sock.close()
+        return result == 0
+    except Exception:
+        return False
+
+
+def filter_tcp_alive(proxies: list[dict]) -> list[dict]:
+    """并发 TCP 探测，只保留端口开放的节点。
+
+    hysteria2 走 UDP/QUIC，TCP 探不到，直接放行不扣分。
+    """
+    passthrough = [p for p in proxies if p.get("type") == "hysteria2"]
+    rest = [p for p in proxies if p.get("type") != "hysteria2"]
+    alive: list[dict] = list(passthrough)
+    with ThreadPoolExecutor(max_workers=TCP_WORKERS) as ex:
+        futs = {ex.submit(tcp_probe, p["server"], p["port"]): p for p in rest}
+        for f in as_completed(futs):
+            if f.result():
+                alive.append(futs[f])
+    return alive
+
+
 # ---------------------------------------------------------------------------
 # 主流程
 # ---------------------------------------------------------------------------
@@ -452,6 +485,7 @@ def main() -> int:
     p.add_argument("--channels", default=str(DEFAULT_CHANNELS), help="频道列表文件")
     p.add_argument("--out", default=str(DEFAULT_OUT), help="输出 YAML 路径")
     p.add_argument("--dry-run", action="store_true", help="只打印不写盘")
+    p.add_argument("--no-tcp-check", action="store_true", help="跳过 TCP 存活过滤（默认开启）")
     args = p.parse_args()
 
     channels_path = Path(args.channels)
@@ -503,6 +537,14 @@ def main() -> int:
         f"[tg] total: {total_raw} raw -> {len(all_proxies)} unique proxies",
         file=sys.stderr,
     )
+
+    if not args.no_tcp_check:
+        before = len(all_proxies)
+        all_proxies = filter_tcp_alive(all_proxies)
+        print(
+            f"[tg] tcp filter: {before} -> {len(all_proxies)} alive",
+            file=sys.stderr,
+        )
 
     if not all_proxies:
         print("[tg] no proxies found", file=sys.stderr)

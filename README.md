@@ -6,7 +6,7 @@
 
 1. GitHub Actions 每周一凌晨自动运行 [.github/workflows/subs-finder.yml](../.github/workflows/subs-finder.yml)
 2. [find_clash.py](find_clash.py) 通过 GitHub Code Search 用多组 query 召回候选 (按 `type:` 协议字段、`filename:clash.yaml`、完整 Clash 三件套等)
-3. 对每个候选拉最近一次 commit 时间, 过滤超过 30 天未更新的
+3. 对每个候选拉最近一次 commit 时间, 过滤超过 7 天未更新的
 4. 拉 raw 内容, 用 PyYAML 解析, 校验 `proxies` 是合法 list 且至少 5 个含 `type/server/port` 的节点
 5. 按 commit 时间倒序取前 15, 写到 [output/clash-latest.txt](output/clash-latest.txt) 和 `clash-latest.json`
 6. 有变化就自动 commit 回 main
@@ -75,7 +75,7 @@ python subs-finder/block.py list
 |------|------|------|
 | `--top` | 15 | 输出多少条 |
 | `--min-proxies` | 5 | YAML 至少要有几个合法节点才算合格 |
-| `--max-age-days` | 30 | 文件最近一次 commit 不能超过多少天 |
+| `--max-age-days` | 7 | 文件最近一次 commit 不能超过多少天 |
 | `--out-dir` | `subs-finder/output` | 输出目录 |
 | `--dry-run` | off | 只打印结果, 不写文件 |
 

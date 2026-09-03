@@ -19,7 +19,7 @@ import sys
 import time
 import urllib.parse
 from concurrent.futures import ThreadPoolExecutor, as_completed
-from datetime import datetime, timedelta, timezone
+from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
 import requests
@@ -34,6 +34,8 @@ SEARCH_QUERIES = [
     '"proxies:" "type: trojan" language:YAML',
     '"proxies:" "type: vless" language:YAML',
     '"proxies:" "type: hysteria2" language:YAML',
+    '"proxies:" "type: tuic" language:YAML',
+    '"proxies:" "type: wireguard" language:YAML',
     # 按文件名直击常见 Clash 配置
     'filename:clash.yaml "proxies:"',
     'filename:config.yaml "proxies:" "proxy-groups:"',
@@ -47,7 +49,7 @@ SKIP_PATTERNS = [
 ]
 
 PER_PAGE = 50
-MAX_PAGES = 2  # 8 queries x 2 pages x 50 = 800 raw matches max
+MAX_PAGES = 3  # 10 queries x 3 pages x 50 = 1500 raw matches max
 SEARCH_SLEEP = 2.0
 DETAIL_SLEEP = 0.4
 MAX_FILE_BYTES = 5_000_000
@@ -96,6 +98,14 @@ KNOWN_DAILY_SOURCES = [
         "dir": "feed",
         "pattern": r"^clash-(\d{8})\.yaml$",
     },
+]
+
+# 固定大源: 已验证高频更新的聚合仓库，固定文件路径，无需 Code Search 召回。
+# 条目直接并入 candidates，走同一新鲜度/解析/TCP/选源流水线。
+STATIC_SOURCES = [
+    {"owner": "Au1rxx", "repo": "free-vpn-subscriptions", "branch": "main", "path": "output/clash.yaml"},
+    {"owner": "Ruk1ng001", "repo": "freeSub", "branch": "main", "path": "clash.yaml"},
+    {"owner": "SnapdragonLee", "repo": "SystemProxy", "branch": "master", "path": "dist/clash_config.yaml"},
 ]
 
 
@@ -361,9 +371,9 @@ def tcp_probe(server: str, port: int) -> bool:
 def tcp_sample_rate(proxies: list[dict]) -> float:
     """随机抽样节点做 TCP 探测，返回端口开放比例。
 
-    hysteria2 走 UDP/QUIC，TCP 探不到，抽样时剔除；纯 UDP 源返回 1.0 不扣分。
+    hysteria2/tuic 走 UDP/QUIC，TCP 探不到，抽样时剔除；纯 UDP 源返回 1.0 不扣分。
     """
-    tcp_proxies = [p for p in proxies if p.get("type") != "hysteria2"]
+    tcp_proxies = [p for p in proxies if p.get("type") not in ("hysteria2", "tuic")]
     if not tcp_proxies:
         return 1.0
     sample = random.sample(tcp_proxies, min(TCP_SAMPLE_SIZE, len(tcp_proxies)))
@@ -480,6 +490,71 @@ def resolve_daily_sources(headers: dict, block_repos: set[str], block_files: set
         }
         print(f"[daily] {owner}/{repo}: latest -> {path}", file=sys.stderr)
     return found
+
+
+def resolve_static_sources(block_repos: set[str], block_files: set[tuple[str, str, str]]) -> dict:
+    """固定大源直接拼成 candidate entry，不耗搜索配额。"""
+    found: dict[tuple[str, str, str], dict] = {}
+    for src in STATIC_SOURCES:
+        owner, repo, path = src["owner"], src["repo"], src["path"]
+        if is_blocked(owner, repo, path, block_repos, block_files):
+            print(f"[static] {owner}/{repo}/{path}: blocked, skip", file=sys.stderr)
+            continue
+        found[(owner, repo, path)] = {
+            "owner": owner,
+            "repo": repo,
+            "path": path,
+            "default_branch": src.get("branch"),
+        }
+    print(f"[static] {len(found)} fixed sources", file=sys.stderr)
+    return found
+
+
+def static_key(owner: str, repo: str, path: str) -> str:
+    return f"{owner}/{repo}/{path}".lower()
+
+
+def load_static_health(path: Path) -> dict:
+    if not path.exists():
+        return {}
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except (ValueError, OSError):
+        return {}
+    return data if isinstance(data, dict) else {}
+
+
+def should_probe_static(health_entry: dict, today: date) -> bool:
+    """隔离中的源每 7 天重探一次，其余每次都探。"""
+    if not health_entry.get("quarantined"):
+        return True
+    try:
+        last = date.fromisoformat(health_entry.get("last_probe", "2000-01-01"))
+    except ValueError:
+        return True
+    return (today - last).days >= 7
+
+
+def update_static_health(health: dict, static_keys: list[str], valid_keys: set[str], today: date) -> dict:
+    """按本轮结果更新健康状态：进 valid 即健康清零，否则失败 +1，满 3 次隔离。"""
+    new = dict(health)
+    today_s = today.isoformat()
+    for key in static_keys:
+        if key in valid_keys:
+            if key in new:
+                print(f"[static] {key}: recovered, quarantine lifted", file=sys.stderr)
+                del new[key]
+            continue
+        fails = new.get(key, {}).get("fails", 0) + 1
+        new[key] = {"fails": fails, "quarantined": fails >= 3, "last_probe": today_s}
+        if fails >= 3:
+            print(
+                f"[static] WARNING {key} 连续 {fails} 次失效已隔离，拉黑请加: {key}",
+                file=sys.stderr,
+            )
+        else:
+            print(f"[static] {key}: failed {fails}x", file=sys.stderr)
+    return new
 
 
 def collect_candidates(headers: dict, max_age_days: int, block_repos: set[str], block_files: set[tuple[str, str, str]]) -> dict:
@@ -827,7 +902,20 @@ def main() -> int:
     daily = resolve_daily_sources(headers, block_repos, block_files)
     for k, v in daily.items():
         candidates.setdefault(k, v)
-    print(f"[summary] {len(candidates)} unique candidate files ({len(daily)} from daily sources)", file=sys.stderr)
+    static_all = resolve_static_sources(block_repos, block_files)
+    health_path = Path(args.out_dir) / "static-health.json"
+    health = load_static_health(health_path)
+    today = datetime.now(timezone.utc).date()
+    probed_keys: list[str] = []
+    probed = 0
+    for k, v in static_all.items():
+        if not should_probe_static(health.get(static_key(*k), {}), today):
+            print(f"[static] {static_key(*k)}: quarantined, skip", file=sys.stderr)
+            continue
+        candidates.setdefault(k, v)
+        probed_keys.append(static_key(*k))
+        probed += 1
+    print(f"[summary] {len(candidates)} unique candidate files ({len(daily)} from daily sources, {probed} from static sources)", file=sys.stderr)
     if not candidates:
         return 2
     ordered = enrich_commit_dates(candidates, headers, args.max_age_days)
@@ -836,6 +924,11 @@ def main() -> int:
         return 3
     valid = evaluate(ordered, args, headers, feedback)
     print(f"[summary] {len(valid)} validated", file=sys.stderr)
+    valid_keys = {f"{v['repo']}/{v['path']}".lower() for v in valid}
+    new_health = update_static_health(health, probed_keys, valid_keys, today)
+    if new_health != health and (new_health or health_path.exists()):
+        health_path.parent.mkdir(parents=True, exist_ok=True)
+        health_path.write_text(json.dumps(new_health, ensure_ascii=False, indent=2), encoding="utf-8")
     if not valid:
         return 3
     selected = select_sources(valid, args)

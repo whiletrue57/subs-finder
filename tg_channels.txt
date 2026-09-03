@@ -3,6 +3,8 @@
 # 私有/邀请制频道会失败，死频道只记日志，保留不影响
 
 # --- 高产出频道（经 V2rayCollector / Epodonios 验证活跃）---
+# abc_configs: 每几秒一条，极高产（附带同名聚合仓库每 10 分钟更新）
+abc_configs
 v2rayfree
 FreeV2rayn
 LetsGetVPN

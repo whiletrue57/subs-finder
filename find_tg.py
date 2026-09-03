@@ -6,7 +6,7 @@
     python find_tg.py --channels tg_channels.txt --out output/tg-nodes.yaml --dry-run
 
 原理: 抓取 https://t.me/s/<channel> (无需登录/API key)，
-正则提取 vmess://, vless://, ss://, trojan://, hysteria2:// 链接，
+正则提取 vmess://, vless://, ss://, trojan://, hysteria2://, tuic:// 链接，
 解码为 Clash proxy dict，去重后输出 YAML。
 """
 from __future__ import annotations
@@ -31,7 +31,7 @@ DEFAULT_CHANNELS = Path(__file__).parent / "tg_channels.txt"
 DEFAULT_OUT = Path(__file__).parent / "output" / "tg-nodes.yaml"
 
 PROTOCOL_RE = re.compile(
-    r"(?:vmess|vless|ss|trojan|hysteria2|hy2)://[A-Za-z0-9+/=@:.\[\]?&#%_~!$'()*+,;-]+",
+    r"(?:vmess|vless|ss|trojan|hysteria2|hy2|tuic)://[A-Za-z0-9+/=@:.\[\]?&#%_~!$'()*+,;-]+",
     re.ASCII,
 )
 
@@ -41,6 +41,7 @@ MAX_PAGES = 3  # 每频道最多翻几页（首页 + before 翻页）
 
 TCP_TIMEOUT = 3  # 单节点 TCP 探测超时（秒）
 TCP_WORKERS = 20  # TCP 探测并发数
+UDP_TYPES = ("hysteria2", "tuic")  # 走 UDP/QUIC，TCP 探不到，直通不扣分
 
 BEFORE_RE = re.compile(r'data-before="(\d+)"')
 
@@ -360,6 +361,46 @@ def parse_hysteria2(uri: str) -> dict | None:
     return proxy
 
 
+def parse_tuic(uri: str) -> dict | None:
+    """tuic://uuid:password@host:port?params#remark (TUIC v5, UDP, 走 QUIC)。"""
+    try:
+        parsed = urlparse(uri)
+    except Exception:
+        return None
+    uuid = parsed.username or ""
+    password = parsed.password or ""
+    server = parsed.hostname or ""
+    port = parsed.port
+    if not uuid or not server or not port:
+        return None
+    params = parse_qs(parsed.query)
+    proxy: dict = {
+        "name": unquote(parsed.fragment) or f"{server}:{port}",
+        "type": "tuic",
+        "server": server,
+        "port": port,
+        "uuid": uuid,
+    }
+    if password:
+        proxy["password"] = unquote(password)
+    sni = params.get("sni", [""])[0]
+    if sni:
+        proxy["sni"] = sni
+    alpn = params.get("alpn", [""])[0]
+    if alpn:
+        proxy["alpn"] = alpn.split(",")
+    cc = params.get("congestion_control", params.get("congestion-control", [""]))[0]
+    if cc:
+        proxy["congestion-controller"] = cc
+    relay = params.get("udp_relay_mode", params.get("udp-relay-mode", [""]))[0]
+    if relay:
+        proxy["udp-relay-mode"] = relay
+    insecure = params.get("insecure", params.get("allow-insecure", ["0"]))[0]
+    if str(insecure).lower() in ("1", "true"):
+        proxy["skip-cert-verify"] = True
+    return proxy
+
+
 PARSERS = {
     "vmess": parse_vmess,
     "vless": parse_vless,
@@ -367,6 +408,7 @@ PARSERS = {
     "trojan": parse_trojan,
     "hysteria2": parse_hysteria2,
     "hy2": parse_hysteria2,
+    "tuic": parse_tuic,
 }
 
 
@@ -463,10 +505,10 @@ def tcp_probe(server: str, port: int) -> bool:
 def filter_tcp_alive(proxies: list[dict]) -> list[dict]:
     """并发 TCP 探测，只保留端口开放的节点。
 
-    hysteria2 走 UDP/QUIC，TCP 探不到，直接放行不扣分。
+    hysteria2/tuic 走 UDP/QUIC，TCP 探不到，直接放行不扣分。
     """
-    passthrough = [p for p in proxies if p.get("type") == "hysteria2"]
-    rest = [p for p in proxies if p.get("type") != "hysteria2"]
+    passthrough = [p for p in proxies if p.get("type") in UDP_TYPES]
+    rest = [p for p in proxies if p.get("type") not in UDP_TYPES]
     alive: list[dict] = list(passthrough)
     with ThreadPoolExecutor(max_workers=TCP_WORKERS) as ex:
         futs = {ex.submit(tcp_probe, p["server"], p["port"]): p for p in rest}

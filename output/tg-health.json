@@ -82,5 +82,9 @@
   "VPNCUSTOMIZE": {
     "zeros": 3,
     "last_zero": "2026-09-18"
+  },
+  "FOX_VPN66": {
+    "zeros": 1,
+    "last_zero": "2026-09-21"
   }
 }

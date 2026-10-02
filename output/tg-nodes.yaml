@@ -15,30 +15,6 @@ proxies:
   sni: Play.google.com
   obfs: salamander
   obfs-password: V2RayyNGvpn
-- name: 🇩🇪@FreakConfig
-  type: hysteria2
-  server: 2.27.59.206
-  port: 443
-  password: cd74c0a406664a5bc0bac098220a2468
-  sni: de1.sferavpn.pro
-  obfs: salamander
-  obfs-password: 44f1c1e2f8b99e792ceed574627a1eb0
-- name: 🇩🇪@FreakConfig
-  type: hysteria2
-  server: 162.249.125.133
-  port: 443
-  password: QCgqi_I4EkV8UR-OgQ_tG4EnVTEVvIyR2GgRBzrIn2s
-  sni: hy2-new.aspidnet.xyz
-  obfs: salamander
-  obfs-password: c1b4086fea89914496c7e10967a419216566
-- name: 🇩🇪@FreakConfig
-  type: hysteria2
-  server: 168.222.43.35
-  port: 443
-  password: V2RayyNGvpn
-  sni: Play.google.com
-  obfs: salamander
-  obfs-password: V2RayyNGvpn
 - name: Telegram:@v2rayng3
   type: hysteria2
   server: 31.76.80.69
@@ -113,21 +89,67 @@ proxies:
   skip-cert-verify: true
   obfs: salamander
   obfs-password: 44f1c1e2f8b99e792ceed574627a1eb0
+- name: https://t.me/ShadowsocksM20
+  type: hysteria2
+  server: 31.76.80.69
+  port: 443
+  password: 6aab8efdf13945829ae3699c342be406
+  sni: fiproxy1.lockdwn.com
+  obfs-password: uw9b2qq5rx
+- name: '🗳️ConfigV2RayNG '
+  type: hysteria2
+  server: 77.74.123.102
+  port: 8443
+  password: s0_sdK93x9wer_D02Lz9cvK3_Sa014Oakl_C2z
+  sni: grape-test-italy.dynuddns.net
 - name: ' '
   type: vless
-  server: 172.66.44.211
+  server: 104.17.148.22
   port: 2096
-  uuid: 686c62d9-17a7-43c9-a40a-f6747df60a9f
+  uuid: 3f0f36f5-f091-45c5-88c9-4bcc545b922c
   tls: true
-  servername: ca.adobe-connect.top
+  servername: hetz.x-smm.com
   client-fingerprint: chrome
-  alpn:
-  - channel@.networld_vpn-channel@.networld_vpn-channel@.networld_vpn-channel@.networld_vpn-
   network: ws
   ws-opts:
-    path: /
+    path: /45.76.183.217=49292
     headers:
-      Host: ca.adobe-connect.top
+      Host: hetz.x-smm.com
+- name: '@meliproxyy'
+  type: vless
+  server: 167.82.101.148
+  port: 443
+  uuid: 5e29a7df-a5e5-4abb-b82d-a3cc3d1dc993
+  tls: true
+  servername: default.ssl.fastly.net
+  client-fingerprint: firefox
+  alpn:
+  - h2
+  - http/1.1
+  network: xhttp
+- name: دکتر نیک
+  type: vless
+  server: 172.64.153.22
+  port: 8443
+  uuid: e53a92c7-4a78-49cc-ab01-917661058b9a
+  tls: true
+  servername: egaxhxw0p031z8iyfgjt9fyhhb1hwj4vr3gn0xoxqu901o8ruij.zjde5.de5.net
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: egaxhxw0p031z8iyfgjt9fyhhb1hwj4vr3gn0xoxqu901o8ruij.zjde5.de5.net
+- name: '@meliproxyy'
+  type: vless
+  server: chatgpt.com
+  port: 2083
+  uuid: e0c50817-86dd-4ee1-bca3-6e296d85dd59
+  tls: true
+  servername: blouck-de.gozarcloud.ir
+  client-fingerprint: chrome
+  network: grpc
+  grpc-opts:
+    grpc-service-name: Love
 - name: ' '
   type: vless
   server: delilah.ns.cloudflare.com
@@ -155,32 +177,22 @@ proxies:
       Host: hetz.x-smm.com
 - name: ' '
   type: vless
-  server: 104.17.148.22
+  server: 172.66.44.211
   port: 2096
-  uuid: 3f0f36f5-f091-45c5-88c9-4bcc545b922c
+  uuid: 686c62d9-17a7-43c9-a40a-f6747df60a9f
   tls: true
-  servername: hetz.x-smm.com
+  servername: ca.adobe-connect.top
   client-fingerprint: chrome
+  alpn:
+  - channel@.networld_vpn-channel@.networld_vpn-channel@.networld_vpn-channel@.networld_vpn-
   network: ws
   ws-opts:
-    path: /45.76.183.217=49292
+    path: /
     headers:
-      Host: hetz.x-smm.com
-- name: دکتر نیک
-  type: vless
-  server: 172.64.153.22
-  port: 8443
-  uuid: e53a92c7-4a78-49cc-ab01-917661058b9a
-  tls: true
-  servername: egaxhxw0p031z8iyfgjt9fyhhb1hwj4vr3gn0xoxqu901o8ruij.zjde5.de5.net
-  network: ws
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: egaxhxw0p031z8iyfgjt9fyhhb1hwj4vr3gn0xoxqu901o8ruij.zjde5.de5.net
+      Host: ca.adobe-connect.top
 - name: '@meliproxyy'
   type: vless
-  server: chatgpt.com
+  server: grok.com
   port: 2083
   uuid: e0c50817-86dd-4ee1-bca3-6e296d85dd59
   tls: true
@@ -189,23 +201,42 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: Love
+- name: 🚀 @letsgetvpn | 🌍 US | 🆔 63448810 | ⚡ 135ms | 🌟🌟🌟🌟🌟
+  type: vless
+  server: 172.64.158.146
+  port: 8880
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🚀 @letsgetvpn | 🌍 US | 🆔 63444685 | ⚡ 167ms | 🌟🌟🌟🌟
+  type: trojan
+  server: 43.173.90.202
+  port: 443
+  password: sg-trojan-2026
+  sni: sg-proxy.local
+  tls: true
+  servername: sg-proxy.local
 - name: '@meliproxyy'
   type: vless
-  server: 167.82.101.148
-  port: 443
-  uuid: 5e29a7df-a5e5-4abb-b82d-a3cc3d1dc993
+  server: grok.com
+  port: 2083
+  uuid: e0c50817-86dd-4ee1-bca3-6e296d85dd59
   tls: true
-  servername: default.ssl.fastly.net
-  client-fingerprint: firefox
-  alpn:
-  - h2
-  - http/1.1
-  network: xhttp
-- name: 🚀 @letsgetvpn | 🌍 CA | 🆔 56321361 | ⚡ 114ms | 🌟🌟🌟🌟🌟
+  servername: blouck-nl.gozarcloud.ir
+  client-fingerprint: chrome
+  network: grpc
+  grpc-opts:
+    grpc-service-name: Love
+- name: 🚀 @letsgetvpn | 🌍 SG | 🆔 63449145 | ⚡ 135ms | 🌟🌟🌟🌟🌟
   type: vless
   server: 172.64.154.8
-  port: 8080
+  port: 2052
   uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
   network: ws
   ws-opts:
     path: /?ed=2560security=tls
@@ -224,343 +255,134 @@ proxies:
     path: /45.76.183.217=49292
     headers:
       Host: hetz.x-smm.com
-- name: '@meliproxyy'
+- name: 🚀 @letsgetvpn | 🌍 GB | 🆔 63442882 | ⚡ 121ms | 🌟🌟🌟🌟🌟
   type: vless
-  server: grok.com
-  port: 2083
-  uuid: e0c50817-86dd-4ee1-bca3-6e296d85dd59
-  tls: true
-  servername: blouck-de.gozarcloud.ir
-  client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: Love
-- name: '@meliproxyy'
-  type: vless
-  server: grok.com
-  port: 2083
-  uuid: e0c50817-86dd-4ee1-bca3-6e296d85dd59
-  tls: true
-  servername: blouck-nl.gozarcloud.ir
-  client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: Love
-- name: 🚀 @letsgetvpn | 🌍 US | 🆔 63229211 | ⚡ 129ms | 🌟🌟🌟🌟🌟
-  type: vless
-  server: 104.18.34.14
-  port: 2052
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🚀 @letsgetvpn | 🌍 US | 🆔 63212805 | ⚡ 114ms | 🌟🌟🌟🌟🌟
-  type: vless
-  server: 159.89.87.21
-  port: 28190
-  uuid: 14c80e0e-f7ce-4991-94fc-99a1db4a9b1e
-  flow: xtls-rprx-vision
-  tls: true
-  servername: aws.amazon.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: ZJRnFU-1s1JOnO8E9uZ7b00l1fPEh63fGRbdBANFRno
-- name: 🚀 @letsgetvpn | 🌍 US | 🆔 63219516 | ⚡ 129ms | 🌟🌟🌟🌟🌟
-  type: vless
-  server: 137.184.218.169
-  port: 36925
-  uuid: c9fd0fb1-8251-4106-b09a-f4b426736f67
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: lJ9INPpO4rdnm2Tek_yg0PGFyUrBB6MoKyvqt_Mfqm0
-- name: 🚀 @letsgetvpn | 🌍 US | 🆔 63232294 | ⚡ 90ms | 🌟🌟🌟🌟🌟
-  type: vless
-  server: 172.235.38.85
-  port: 42942
-  uuid: bca46025-bf43-40c0-895b-054a6fbcfd32
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.tesla.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: JmkfJoDWpAqt6gj4cbc4_cwItsdryMlV7joAGfNTKQU
-    short-id: a56d7d8da977f860
-- name: 🚀 @letsgetvpn | 🌍 US | 🆔 63221079 | ⚡ 118ms | 🌟🌟🌟🌟🌟
-  type: vless
-  server: 169.40.42.231
+  server: 186.190.211.188
   port: 443
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
-  flow: xtls-rprx-vision
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   tls: true
-  servername: yahoo.com
+  servername: 186.190.211.188
   client-fingerprint: chrome
-  reality-opts:
-    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-    short-id: c39cc7310a
-- name: 🚀 @letsgetvpn | 🌍 KR | 🆔 63223293 | ⚡ 93ms | 🌟🌟🌟🌟🌟
-  type: vless
-  server: 158.247.224.240
-  port: 443
-  uuid: ab61daa1-b7fb-486e-8946-b1da9a444685
-  tls: true
-  servername: cf2us.3rr0r.online
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /proxyip=ProxyIP.KR.CMLiussss.Net
-    headers:
-      Host: cf2us.3rr0r.online
-- name: 🚀 @letsgetvpn | 🌍 ES | 🆔 63217649 | ⚡ 107ms | 🌟🌟🌟🌟🌟
-  type: vless
-  server: 212.227.235.66
-  port: 2053
-  uuid: ead0dd61-d398-40ad-80d6-a0e1e516d7d3
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 7Y6Xb5Ql_03K25x8yKUSOKI2JTOMyv2nyCcFza90uxk
-    short-id: 29e8dcd2b37aaa7f
-- name: 🚀 @letsgetvpn | 🌍 US | 🆔 63236256 | ⚡ 197ms | 🌟🌟🌟🌟🌟
+  alpn:
+  - http/1.1
+- name: 🚀 @letsgetvpn | 🌍 GB | 🆔 63445001 | ⚡ 197ms | 🌟🌟🌟🌟
   type: ss
-  server: 173.244.56.6
+  server: 51.77.225.200
+  port: 8388
+  cipher: chacha20-ietf-poly1305
+  password: zRZNBszYyWo5
+- name: 🚀 @letsgetvpn | 🌍 GB | 🆔 56345950 | ⚡ 169ms | 🌟🌟🌟🌟
+  type: ss
+  server: 158.173.24.73
   port: 443
   cipher: aes-128-gcm
   password: shadowsocks
-- name: 🚀 @letsgetvpn | 🌍 KR | 🆔 63226735 | ⚡ 148ms | 🌟🌟🌟🌟🌟
+- name: 🚀 @letsgetvpn | 🌍 GB | 🆔 63443250 | ⚡ 113ms | 🌟🌟🌟🌟🌟
   type: vless
-  server: 45.93.31.34
+  server: tomaz1337shellbuy.vvzzkontaktezzvv.garden
   port: 443
-  uuid: ab61daa1-b7fb-486e-8946-b1da9a444685
-  tls: true
-  servername: cf2us.3rr0r.online
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /proxyip=ProxyIP.KR.CMLiussss.Net
-    headers:
-      Host: cf2us.3rr0r.online
-- name: 🚀 @letsgetvpn | 🌍 US | 🆔 63238023 | ⚡ 98ms | 🌟🌟🌟🌟🌟
-  type: vless
-  server: 169.40.42.235
-  port: 443
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
+  uuid: 4bdeee92-97e8-414d-bef6-ec1d5e2ab73b
   flow: xtls-rprx-vision
   tls: true
-  servername: yahoo.com
-  client-fingerprint: ios
+  servername: tomaz1337shellbuy.vvzzkontaktezzvv.garden
+  client-fingerprint: chrome
   reality-opts:
-    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-    short-id: c39cc7310a
-- name: 🚀 @letsgetvpn | 🌍 CA | 🆔 63724494 | ⚡ 128ms | 🌟🌟🌟🌟🌟
+    public-key: s0ypPx0AL3k2KOk74tbm-aE-i7eIR_MYVzfLHZeLaUk
+    short-id: 2e124af254a65e7c
+- name: 🚀 @letsgetvpn | 🌍 NL | 🆔 63431022 | ⚡ 172ms | 🌟🌟🌟🌟
+  type: ss
+  server: 193.29.139.179
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+- name: 🚀 @letsgetvpn | 🌍 CA | 🆔 64251022 | ⚡ 117ms | 🌟🌟🌟🌟🌟
   type: vless
   server: 188.114.97.6
-  port: 80
-  uuid: 57bd62cf-5550-4075-8fa3-d4519aae8df0
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoiRURaNEp6YUhMbVlqdzQiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyNjAyOmZjNTk6YjA6NjQ6Ol0iXX0
-    headers:
-      Host: silent-feather-8539.sddadad2233122eew.workers.dev
-- name: 🚀 @letsgetvpn | 🌍 CA | 🆔 63727733 | ⚡ 128ms | 🌟🌟🌟🌟🌟
-  type: vless
-  server: 104.21.63.28
   port: 443
-  uuid: 4c0b7280-76bb-495c-9c8b-f05712ebf805
+  uuid: 07821f66-cdb7-4c70-9de6-e230cffac470
   tls: true
-  servername: youxuanku.kdns.fr
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: youxuanku.kdns.fr
-- name: 🚀 @letsgetvpn | 🌍 GB | 🆔 63225098 | ⚡ 137ms | 🌟🌟🌟🌟🌟
-  type: vless
-  server: 3.9.135.156
-  port: 51847
-  uuid: 391a01e9-b664-407b-9158-610fab3f5920
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.tesla.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: S6noV0L8eNASnTe1gXLutLZNdfENsvKMsOJiGQYi6nc
-    short-id: 0eec442e7b34d2f2
-- name: 🚀 @letsgetvpn | 🌍 IT | 🆔 63217300 | ⚡ 120ms | 🌟🌟🌟🌟🌟
-  type: vless
-  server: 204.216.216.23
-  port: 10086
-  uuid: 9f0285ee-20ca-4953-bcdb-86a920652923
-- name: 🚀 @letsgetvpn | 🌍 CA | 🆔 63722580 | ⚡ 90ms | 🌟🌟🌟🌟🌟
-  type: vless
-  server: 104.21.8.63
-  port: 443
-  uuid: b19419fa-8009-455b-b059-765e2856883a
-  tls: true
-  servername: akbarian34.j9z65ce2uyks.workers.dev
-  client-fingerprint: chrome
+  servername: wgrcqwtkfyqujs43.ghydgdbdbddvv.workers.dev
+  client-fingerprint: unsafe
   alpn:
   - http/1.1
   network: ws
   ws-opts:
-    path: /vl/Q5xRgb8wfW3RTYFIfDA16PzboJrjLuZ9?ed=2560
+    path: /vl/Li1khIHH3DNItJyzraemsPBQvu
     headers:
-      Host: akbarian34.j9z65ce2uyks.workers.dev
-- name: 🚀 @letsgetvpn | 🌍 CA | 🆔 63726134 | ⚡ 138ms | 🌟🌟🌟🌟🌟
+      Host: wgrcqwtkfyqujs43.ghydgdbdbddvv.workers.dev
+- name: 🚀 @letsgetvpn | 🌍 NL | 🆔 63441612 | ⚡ 218ms | 🌟🌟🌟🌟🌟
+  type: ss
+  server: 82.38.31.183
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+- name: 🚀 @letsgetvpn | 🌍 NL | 🆔 63441726 | ⚡ 123ms | 🌟🌟🌟🌟🌟
+  type: ss
+  server: 82.38.31.185
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+- name: 🚀 @letsgetvpn | 🌍 NL | 🆔 63446329 | ⚡ 211ms | 🌟🌟🌟🌟🌟
+  type: ss
+  server: 82.38.31.198
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+- name: 🚀 @letsgetvpn | 🌍 NL | 🆔 63441186 | ⚡ 210ms | 🌟🌟🌟🌟
+  type: ss
+  server: 82.38.31.213
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+- name: 🚀 @letsgetvpn | 🌍 SG | 🆔 64256273 | ⚡ 145ms | 🌟🌟🌟🌟🌟
   type: vless
-  server: 172.67.77.98
-  port: 2053
-  uuid: 73bcd72f-9545-4cb8-8daf-7d004501880d
-  tls: true
-  servername: shanxp.dpdns.org
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: shanxp.dpdns.org
-- name: 🚀 @letsgetvpn | 🌍 CA | 🆔 63734830 | ⚡ 98ms | 🌟🌟🌟🌟🌟
-  type: vless
-  server: 188.114.96.6
-  port: 443
-  uuid: a592b4ac-e209-4a13-3cef-539600000005
-  tls: true
-  servername: 0404.infinityconfig5.workers.dev
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /sync
-    headers:
-      Host: 0404.infinityconfig5.workers.dev
-- name: 🚀 @letsgetvpn | 🌍 CA | 🆔 63194841 | ⚡ 140ms | 🌟🌟🌟🌟🌟
-  type: vless
-  server: 172.64.150.28
-  port: 2082
-  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
-  network: ws
-  ws-opts:
-    path: /fp
-    headers:
-      Host: hhlfy.twiladaphne.ndjp.net
-- name: 🚀 @letsgetvpn | 🌍 SG | 🆔 63208457 | ⚡ 115ms | 🌟🌟🌟🌟🌟
-  type: vless
-  server: 188.114.97.6
-  port: 2082
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: zb1zi.s3nx.dyz.hh.vavava.kdns.fr
-- name: 🚀 @letsgetvpn | 🌍 SE | 🆔 63215755 | ⚡ 141ms | 🌟🌟🌟🌟🌟
-  type: vless
-  server: 193.163.203.170
-  port: 443
-  uuid: 11aabba0-5fd1-4f15-8068-74c1a466cefc
-  flow: xtls-rprx-vision
-  tls: true
-  servername: yandex.ru
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: GCCZ1ZZjB_nj7yxqFi22bIIWWr_G6rnWUzDcssN_40o
-    short-id: b28db60d77c50b4f
-- name: 🚀 @letsgetvpn | 🌍 US | 🆔 63234619 | ⚡ 139ms | 🌟🌟🌟🌟🌟
-  type: vless
-  server: 45.8.173.250
-  port: 443
-  uuid: fdc48be3-a615-41ac-8bd1-ed844c931048
-  tls: true
-  servername: edgetunnel-4uw.pages.dev
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: edgetunnel-4uw.pages.dev
-- name: 🚀 @letsgetvpn | 🌍 US | 🆔 63248912 | ⚡ 123ms | 🌟🌟🌟🌟🌟
-  type: vless
-  server: 169.40.42.173
-  port: 443
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
-  flow: xtls-rprx-vision
-  tls: true
-  servername: yahoo.com
-  client-fingerprint: ios
-  reality-opts:
-    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-    short-id: c39cc7310a
-- name: 🚀 @letsgetvpn | 🌍 US | 🆔 63249197 | ⚡ 127ms | 🌟🌟🌟🌟🌟
-  type: vless
-  server: 185.95.231.233
-  port: 443
-  uuid: 1ffa8e68-3378-4cf4-b8f6-44bf3d46d106
-  flow: xtls-rprx-vision
-  tls: true
-  servername: store.steampowered.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: r4Dp3mztZaizbDk28rEOkLikk7erR9dzzc-Jrsgraho
-    short-id: a1b2c3d4
-- name: 🚀 @letsgetvpn | 🌍 CA | 🆔 63203806 | ⚡ 107ms | 🌟🌟🌟🌟🌟
-  type: vless
-  server: 162.159.43.187
+  server: 172.67.178.142
   port: 2086
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+  uuid: ae0e6518-71ab-4f4b-87d1-7802765f52ba
+  servername: koq90g5av4kdxunfa.liliane-hilpert.workers.dev
+  client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /?ed=2560security=tls
+    path: /vl/vuHASprDE9HV8y2BnO7UV?ed=2560
     headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🚀 @letsgetvpn | 🌍 AT | 🆔 63225943 | ⚡ 131ms | 🌟🌟🌟🌟🌟
+      Host: koq90g5av4kdxunfa.liliane-hilpert.workers.dev
+- name: 🚀 @letsgetvpn | 🌍 GB | 🆔 63448804 | ⚡ 90ms | 🌟🌟🌟🌟🌟
   type: vless
-  server: 152.53.1.40
+  server: 179.254.163.11
   port: 443
-  uuid: edde565e-41f5-400e-84ea-7b87a3e84488
+  uuid: aef06aad-8e97-4452-9257-6142b5b1ceb7
   flow: xtls-rprx-vision
   tls: true
-  servername: at.quattro-tech.ru
+  servername: decemberfest.elfhost.ru
+  client-fingerprint: safari
+  reality-opts:
+    public-key: FvxhTol6CtmTv7BQZANpoRGBRMUIrNSsLbTUe4x8JG8
+    short-id: a4b32f5132c11d9b
+- name: 🚀 @letsgetvpn | 🌍 US | 🆔 64265213 | ⚡ 190ms | 🌟🌟🌟🌟🌟
+  type: ss
+  server: 156.146.38.167
+  port: 443
+  cipher: aes-128-gcm
+  password: shadowsocks
+- name: 🚀 @letsgetvpn | 🌍 CA | 🆔 64265038 | ⚡ 186ms | 🌟🌟🌟🌟
+  type: ss
+  server: 185.156.47.97
+  port: 9443
+  cipher: aes-256-gcm
+  password: eveaaTOb8ji8yntw2Z9yWUG0d6Ir8Ld8m3ymH8THdC5egiTH1mXCiBc0Skr7FibH
+- name: 🚀 @letsgetvpn | 🌍 US | 🆔 63428797 | ⚡ 108ms | 🌟🌟🌟🌟🌟
+  type: vless
+  server: 15.204.97.216
+  port: 23576
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  tls: true
+  servername: fuck.rkn
   client-fingerprint: chrome
   reality-opts:
-    public-key: 10rVZPoOUP1TlQviIAsQ_jAROX0fRQxH0C92nq_zGQc
-    short-id: 43dcff53849b81e6
-- name: 🚀 @letsgetvpn | 🌍 CA | 🆔 63691063 | ⚡ 137ms | 🌟🌟🌟🌟🌟
-  type: vless
-  server: 104.18.34.14
-  port: 8880
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🚀 @letsgetvpn | 🌍 GB | 🆔 63231414 | ⚡ 146ms | 🌟🌟🌟🌟🌟
-  type: vless
-  server: 66.90.104.42
-  port: 2083
-  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
-  servername: /telegram_tm(@azarbayjab1),telegram_tm(@azarbayjab1),telegram_tm(@azarbayjab1),telegram_tm(@azarbayjab1),telegram_tm(@azarbayjab1),telegram_tm(@azarbayjab1),telegram_tm(@azarbayjab1
-  network: grpc
-  grpc-opts:
-    grpc-service-name: vless
-- name: 🚀 @letsgetvpn | 🌍 SG | 🆔 63702857 | ⚡ 130ms | 🌟🌟🌟🌟🌟
-  type: vless
-  server: 172.64.154.8
-  port: 2095
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🚀 @letsgetvpn | 🌍 GB | 🆔 63724703 | ⚡ 117ms | 🌟🌟🌟🌟🌟
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+- name: 🚀 @letsgetvpn | 🌍 GB | 🆔 63454657 | ⚡ 125ms | 🌟🌟🌟🌟🌟
   type: vless
   server: 83.147.18.3
   port: 443
@@ -572,157 +394,31 @@ proxies:
   reality-opts:
     public-key: 3iVJAIGPx6JMlhlRmfpGrHkSmLpHJ4CPvBBH7KsFrFA
     short-id: fd8cf7e1173f0edb
-- name: 🚀 @letsgetvpn | 🌍 JP | 🆔 63202974 | ⚡ 90ms | 🌟🌟🌟🌟🌟
-  type: vless
-  server: 137.220.221.179
-  port: 443
-  uuid: a16a3336-c9ab-489f-9b85-c973f5e2cfa4
-- name: 🚀 @letsgetvpn | 🌍 US | 🆔 63702905 | ⚡ 132ms | 🌟🌟🌟🌟🌟
-  type: vless
-  server: 172.64.157.52
-  port: 443
-  uuid: 5dc15e15-f285-4a9d-959b-0e4fbdd77b63
-  tls: true
-  servername: powered-by-surena.configfarsi695fce27aa549.workers.dev
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /?ed
-    headers:
-      Host: powered-by-surena.configfarsi695fce27aa549.workers.dev
-- name: 🚀 @letsgetvpn | 🌍 HK | 🆔 63704747 | ⚡ 148ms | 🌟🌟🌟🌟🌟
-  type: vless
-  server: lhns3ww2-cxq-gj1vvobkepig4nopkc.hqu4v38hi9iftcp6mzfmx-3bmx.workers.dev
-  port: 443
-  uuid: 38d6b629-64c2-4c31-a10d-26eb3a2a053d
-  tls: true
-  servername: lHNs3ww2-CXQ-Gj1vvOBkEPIg4noPkc.hqu4v38Hi9iFtcp6mZfMX-3bmx.WoRKeRS.dEV
-  client-fingerprint: chrome
-  alpn:
-  - http/1.1
-  network: ws
-  ws-opts:
-    path: /vl/cxl8Wn1ylnsk63nJ0
-    headers:
-      Host: lhns3ww2-cxq-gj1vvobkepig4nopkc.hqu4v38hi9iftcp6mzfmx-3bmx.workers.dev
-- name: 🚀 @letsgetvpn | 🌍 US | 🆔 63241829 | ⚡ 103ms | 🌟🌟🌟🌟🌟
-  type: vless
-  server: 37.221.210.113
-  port: 443
-  uuid: 0250424c-ae75-4b6b-890f-3fe26fae36c3
-  tls: true
-  servername: hk.152568.xyz
-  client-fingerprint: edge
-  network: ws
-  ws-opts:
-    path: /cdn/packages/runtime-core.tar.gz
-    headers:
-      Host: hk.152568.xyz
-- name: 🚀 @letsgetvpn | 🌍 NL | 🆔 56372497 | ⚡ 211ms | 🌟🌟🌟🌟
+- name: 🚀 @letsgetvpn | 🌍 GB | 🆔 63452626 | ⚡ 127ms | 🌟🌟🌟🌟
   type: ss
-  server: 82.38.31.3
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🚀 @letsgetvpn | 🌍 SG | 🆔 63709739 | ⚡ 119ms | 🌟🌟🌟🌟🌟
-  type: vless
-  server: 172.67.195.227
-  port: 2087
-  uuid: 89b3cbba-e6ac-4850-94af-061316b04020
-  tls: true
-  servername: late-frost-9da7.shoameni5.workers.dev
-  client-fingerprint: chrome
-  alpn:
-  - http/1.1
-  network: ws
-  ws-opts:
-    path: /vl/E3eI46wtKMBcpTzObh3meVYDVl?ed=2560
-    headers:
-      Host: late-frost-9da7.shoameni5.workers.dev
-- name: 🚀 @letsgetvpn | 🌍 NL | 🆔 63732996 | ⚡ 136ms | 🌟🌟🌟🌟
-  type: ss
-  server: 82.38.31.17
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🚀 @letsgetvpn | 🌍 NL | 🆔 63729605 | ⚡ 146ms | 🌟🌟🌟🌟
-  type: ss
-  server: 82.38.31.207
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
-- name: 🚀 @letsgetvpn | 🌍 CA | 🆔 63713461 | ⚡ 140ms | 🌟🌟🌟🌟🌟
-  type: vless
-  server: 162.159.43.187
-  port: 2052
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🚀 @letsgetvpn | 🌍 NL | 🆔 63735131 | ⚡ 134ms | 🌟🌟🌟🌟
-  type: ss
-  server: 82.38.31.204
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
-- name: 🚀 @letsgetvpn | 🌍 CA | 🆔 63204266 | ⚡ 106ms | 🌟🌟🌟🌟🌟
-  type: vless
-  server: 134.209.108.21
+  server: 141.98.101.181
   port: 443
-  uuid: ab61daa1-b7fb-486e-8946-b1da9a444685
-  tls: true
-  servername: cf2us.3rr0r.online
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /proxyip=ProxyIP.SG.CMLiussss.Net
-    headers:
-      Host: cf2us.3rr0r.online
-- name: 🚀 @letsgetvpn | 🌍 CA | 🆔 63207368 | ⚡ 147ms | 🌟🌟🌟🌟🌟
+  cipher: aes-128-gcm
+  password: shadowsocks
+- name: 🚀 @letsgetvpn | 🌍 US | 🆔 63427496 | ⚡ 118ms | 🌟🌟🌟🌟🌟
   type: vless
-  server: 54.46.72.234
-  port: 8030
-  uuid: 37665857-8b6e-4daa-8231-3e2927221558
-  tls: true
-  servername: spjd.cbc.qzz.io
-  network: ws
-  ws-opts:
-    path: /proxyip=ProxyIP.US.CMLiussss.netfp=chrome
-    headers:
-      Host: spjd.cbc.qzz.io
-- name: 🚀 @letsgetvpn | 🌍 CA | 🆔 63192117 | ⚡ 135ms | 🌟🌟🌟🌟🌟
-  type: vless
-  server: 116.251.217.65
+  server: 169.40.42.225
   port: 443
-  uuid: ab61daa1-b7fb-486e-8946-b1da9a444685
+  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
+  flow: xtls-rprx-vision
   tls: true
-  servername: cf2us.3rr0r.online
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /proxyip=ProxyIP.SG.CMLiussss.Net
-    headers:
-      Host: cf2us.3rr0r.online
-- name: 'اگه میخوای قطع نشی جوین شو : @farsiproxy'
-  type: trojan
-  server: 167.82.76.7
+  servername: yahoo.com
+  client-fingerprint: ios
+  reality-opts:
+    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
+    short-id: c39cc7310a
+- name: 🚀 @letsgetvpn | 🌍 GB | 🆔 63459631 | ⚡ 146ms | 🌟🌟🌟🌟
+  type: ss
+  server: 149.102.149.207
   port: 443
-  password: mitivpn
-  sni: ssl.fastly.com
-  tls: true
-  servername: ssl.fastly.com
-  client-fingerprint: chrome
-  alpn:
-  - http/1.1
-  network: ws
-  ws-opts:
-    path: /---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/NLSs---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN
-    headers:
-      Host: mitivpn---us--s---mitivpn-11.global.ssl.fastly.net
-- name: 🚀 @letsgetvpn | 🌍 GB | 🆔 63205719 | ⚡ 93ms | 🌟🌟🌟🌟🌟
+  cipher: aes-256-gcm
+  password: LXchLsIwtCeUAUgu
+- name: 🚀 @letsgetvpn | 🌍 GB | 🆔 63459945 | ⚡ 100ms | 🌟🌟🌟🌟🌟
   type: vless
   server: 66.90.105.211
   port: 2083
@@ -730,70 +426,17 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: vless
-- name: 🚀 @letsgetvpn | 🌍 DE | 🆔 63691053 | ⚡ 109ms | 🌟🌟🌟🌟🌟
+- name: 🚀 @letsgetvpn | 🌍 US | 🆔 63438464 | ⚡ 141ms | 🌟🌟🌟🌟🌟
   type: vless
-  server: 144.31.125.60
-  port: 443
-  uuid: 9015f0bc-2053-4ca1-9b9b-a018b97b32d2
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.intel.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: SVgtyuD9khylgHuB0treGekxVSHPOS-wPZTNHUf6zj8
-    short-id: 85c86a9863
-- name: 🚀 @letsgetvpn | 🌍 GB | 🆔 63695105 | ⚡ 210ms | 🌟🌟🌟🌟🌟
-  type: ss
-  server: 141.98.101.181
-  port: 443
-  cipher: aes-128-gcm
-  password: shadowsocks
-- name: 🚀 @letsgetvpn | 🌍 TR | 🆔 63692250 | ⚡ 110ms | 🌟🌟🌟🌟🌟
-  type: vless
-  server: 151.241.226.201
-  port: 2053
-  uuid: 0eed6293-8cf1-4e77-ac10-9c3d50d0b2f8
-  tls: true
-  servername: www.apple.com
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: bYW_MmB_CUHrsyoCAUKviI2LZdHf63yY2yOPXbih104
-    short-id: 9e419c0759b54d6f
-- name: 🚀 @letsgetvpn | 🌍 DE | 🆔 63703812 | ⚡ 96ms | 🌟🌟🌟🌟🌟
-  type: vless
-  server: 199.247.23.162
-  port: 80
-  uuid: 306dcb21-d02d-49dd-8ec7-0005b972b47a
+  server: 188.114.97.6
+  port: 2086
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
   network: ws
   ws-opts:
     path: /
-- name: 🚀 @letsgetvpn | 🌍 GB | 🆔 63705001 | ⚡ 131ms | 🌟🌟🌟🌟🌟
-  type: vless
-  server: 66.90.104.42
-  port: 2083
-  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
-  network: grpc
-  grpc-opts:
-    grpc-service-name: vless
-- name: 🚀 @letsgetvpn | 🌍 NL | 🆔 63717635 | ⚡ 182ms | 🌟🌟🌟🌟🌟
-  type: ss
-  server: 82.38.31.26
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🚀 @letsgetvpn | 🌍 NL | 🆔 63702755 | ⚡ 132ms | 🌟🌟🌟🌟
-  type: ss
-  server: 82.38.31.191
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
-- name: 🚀 @letsgetvpn | 🌍 NL | 🆔 63714555 | ⚡ 165ms | 🌟🌟🌟🌟
-  type: ss
-  server: 82.38.31.155
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🚀 @letsgetvpn | 🌍 FR | 🆔 63714022 | ⚡ 91ms | 🌟🌟🌟🌟🌟
+    headers:
+      Host: zb1zi.s3nx.dyz.hh.vavava.kdns.fr
+- name: 🚀 @letsgetvpn | 🌍 FR | 🆔 63454534 | ⚡ 141ms | 🌟🌟🌟🌟🌟
   type: vless
   server: 62.210.91.10
   port: 23576
@@ -805,94 +448,347 @@ proxies:
   reality-opts:
     public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
     short-id: '01'
-- name: 🚀 @letsgetvpn | 🌍 NL | 🆔 63719058 | ⚡ 174ms | 🌟🌟🌟🌟🌟
-  type: ss
-  server: 82.38.31.162
+- name: 🚀 @letsgetvpn | 🌍 GB | 🆔 63456893 | ⚡ 105ms | 🌟🌟🌟🌟🌟
+  type: vless
+  server: germa12.ggisopi.su
   port: 443
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 'اگه میخوای قطع نشی جوین شو : @farsiproxy'
-  type: vless
-  server: 176.108.241.226
-  port: 9891
-  uuid: 5d16ac22-6eea-426f-b778-6f4c2961faef
+  uuid: d0f0a880-0df1-48c9-bdf1-5669fb9483ce
+  flow: xtls-rprx-vision
   tls: true
-  servername: dl.google.com
+  servername: germa12.ggisopi.su
   client-fingerprint: chrome
   reality-opts:
-    public-key: Dfgu8Ey0M8Hz4gXGZAwQ3H9jLt2HByVsjAOTWiuKDB0
-    short-id: aabb
-  network: grpc
-  grpc-opts:
-    grpc-service-name: grpc-tunnel
-- name: 'اگه میخوای قطع نشی جوین شو : @farsiproxy'
+    public-key: SB1uC0OEveYjSiS_Nuw9Ld-uVVXWqi794OGnldthY3I
+- name: 🚀 @letsgetvpn | 🌍 GB | 🆔 63459710 | ⚡ 199ms | 🌟🌟🌟🌟
+  type: ss
+  server: 149.102.132.184
+  port: 80
+  cipher: aes-256-gcm
+  password: g5h5jleTRSyO3Rk4
+- name: 🚀 @letsgetvpn | 🌍 CA | 🆔 63427434 | ⚡ 130ms | 🌟🌟🌟🌟
+  type: ss
+  server: yyz-ca-01.blncvpn4u.cc
+  port: 9443
+  cipher: aes-256-gcm
+  password: eveaaTOb8ji8yntw2Z9yWUG0d6Ir8Ld8m3ymH8THdC5egiTH1mXCiBc0Skr7FibH
+- name: 🚀 @letsgetvpn | 🌍 NO | 🆔 64256986 | ⚡ 138ms | 🌟🌟🌟🌟🌟
   type: vless
-  server: 176.109.111.7
-  port: 9881
-  uuid: 5d16ac22-6eea-426f-b778-6f4c2961faef
+  server: 89.185.81.95
+  port: 8765
+  uuid: df9f5aca-eda0-428f-a752-e53866153d12
+  flow: xtls-rprx-vision
   tls: true
-  servername: dl.google.com
+  servername: r-b8a34c.vless.monster
   client-fingerprint: chrome
   reality-opts:
-    public-key: Dfgu8Ey0M8Hz4gXGZAwQ3H9jLt2HByVsjAOTWiuKDB0
-    short-id: aa
-  network: grpc
-  grpc-opts:
-    grpc-service-name: grpc-tunnel
-- name: 'اگه میخوای قطع نشی جوین شو : @farsiproxy'
+    public-key: Da_s-Cgqm5kqaIbCgXVJdrq_KF7fCQveRByRhKUzonc
+    short-id: 7bf47eabf939728b
+- name: 🚀 @letsgetvpn | 🌍 SG | 🆔 64196729 | ⚡ 93ms | 🌟🌟🌟🌟🌟
   type: vless
-  server: 176.108.245.167
-  port: 9881
-  uuid: 5d16ac22-6eea-426f-b778-6f4c2961faef
-  tls: true
-  servername: dl.google.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: Dfgu8Ey0M8Hz4gXGZAwQ3H9jLt2HByVsjAOTWiuKDB0
-    short-id: aabbccdd
-  network: grpc
-  grpc-opts:
-    grpc-service-name: grpc-tunnel
-- name: 'اگه میخوای قطع نشی جوین شو : @farsiproxy'
-  type: vless
-  server: 176.108.241.226
-  port: 9882
-  uuid: 5d16ac22-6eea-426f-b778-6f4c2961faef
-  tls: true
-  servername: dl.google.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU
-  network: grpc
-  grpc-opts:
-    grpc-service-name: grpc-tunnel
-- name: 'اگه میخوای قطع نشی جوین شو : @farsiproxy'
-  type: vless
-  server: 176.109.111.154
-  port: 9881
-  uuid: 5d16ac22-6eea-426f-b778-6f4c2961faef
-  tls: true
-  servername: dl.google.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: Dfgu8Ey0M8Hz4gXGZAwQ3H9jLt2HByVsjAOTWiuKDB0
-    short-id: aabbccdd
-  network: grpc
-  grpc-opts:
-    grpc-service-name: grpc-tunnel
-- name: 'اگه میخوای قطع نشی جوین شو : @farsiproxy'
-  type: vless
-  server: 159.112.235.135
-  port: 8080
-  uuid: 50414e45-4c5f-5a45-5553-d1f39f7e3650
+  server: 104.20.28.233
+  port: 80
+  uuid: e081da45-9fae-4687-9376-f9a6a0dbbe83
   network: ws
   ws-opts:
-    path: /stream/PANEL_ZEUS/d1f39f7e3650/loc-1
+    path: /id-amz
     headers:
-      Host: bpzpeuekua4s.ftz5cee5uves.workers.dev
+      Host: e33xr.qzz.io
+- name: 🚀 @letsgetvpn | 🌍 US | 🆔 63425688 | ⚡ 105ms | 🌟🌟🌟🌟🌟
+  type: vless
+  server: 169.40.42.104
+  port: 443
+  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
+  flow: xtls-rprx-vision
+  tls: true
+  servername: yahoo.com
+  client-fingerprint: ios
+  reality-opts:
+    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
+    short-id: c39cc7310a
+- name: 🚀 @letsgetvpn | 🌍 SE | 🆔 64269275 | ⚡ 137ms | 🌟🌟🌟🌟🌟
+  type: vless
+  server: 143.246.194.213
+  port: 443
+  uuid: dc9e93bc-b53a-11f1-91d3-52540030ba36
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.ikea.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: wSjV1yR_rhDUdoNbM9zIXNGLASLp9RorComnyoayo2c
+- name: 🚀 @letsgetvpn | 🌍 TW | 🆔 63428715 | ⚡ 119ms | 🌟🌟🌟🌟🌟
+  type: vless
+  server: 59.125.69.24
+  port: 443
+  uuid: 06e177f7-240d-4687-bd85-235505801a5e
+  tls: true
+  servername: ty986gfazs.cainiaohub.xyz
+  network: ws
+  ws-opts:
+    path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
+    headers:
+      Host: ty986gfazs.cainiaohub.xyz
+- name: 🚀 @letsgetvpn | 🌍 NL | 🆔 64264851 | ⚡ 146ms | 🌟🌟🌟🌟🌟
+  type: vless
+  server: 176.109.111.152
+  port: 9894
+  uuid: 5d16ac22-6eea-426f-b778-6f4c2961faef
+  tls: true
+  servername: dl.google.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: sm3E3hjmT6_Gmg_O9rBz4nfXYrHpnl6-LvcCp6T6_xc
+  network: grpc
+  grpc-opts:
+    grpc-service-name: grpc-tunnel
+- name: 🚀 @letsgetvpn | 🌍 US | 🆔 64221771 | ⚡ 135ms | 🌟🌟🌟🌟🌟
+  type: vless
+  server: 104.18.37.228
+  port: 8880
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: vms.lifetime29.workers.dev
+- name: 🚀 @letsgetvpn | 🌍 US | 🆔 63433021 | ⚡ 125ms | 🌟🌟🌟🌟🌟
+  type: vless
+  server: 169.40.42.173
+  port: 443
+  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
+  flow: xtls-rprx-vision
+  tls: true
+  servername: yahoo.com
+  client-fingerprint: ios
+  reality-opts:
+    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
+    short-id: c39cc7310a
+- name: 🚀 @letsgetvpn | 🌍 DE | 🆔 64267278 | ⚡ 217ms | 🌟🌟🌟🌟
+  type: ss
+  server: 94.249.187.46
+  port: 1080
+  cipher: chacha20-ietf-poly1305
+  password: IXa3ylzS_jBOAsQy071tIQ
+- name: 🚀 @letsgetvpn | 🌍 US | 🆔 56422811 | ⚡ 132ms | 🌟🌟🌟🌟🌟
+  type: vless
+  server: 154.17.228.81
+  port: 59686
+  uuid: 88ee0e1e-a2a2-477e-88ce-4875c058aeba
+  tls: true
+  servername: 123.714541.xyz
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /Ra-vl
+    headers:
+      Host: 123.714541.xyz
+- name: 🚀 @letsgetvpn | 🌍 CA | 🆔 56423807 | ⚡ 143ms | 🌟🌟🌟🌟🌟
+  type: vless
+  server: 172.67.173.26
+  port: 2096
+  uuid: 8d82944e-17b9-473f-a456-dec9a6e21471
+  tls: true
+  servername: peekconfig.peekconf1.workers.dev
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoidnlSRWhQQ3ZCNGZRNHVYMyIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJlZml4IiwicGFuZWxJUHMiOlsiWzJhMDI6ODk4OjE0Njo2NDo6XSJdfQ==
+    headers:
+      Host: peekconfig.peekconf1.workers.dev
+- name: 🚀 @letsgetvpn | 🌍 US | 🆔 63435618 | ⚡ 138ms | 🌟🌟🌟🌟🌟
+  type: vless
+  server: 169.40.42.179
+  port: 443
+  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
+  flow: xtls-rprx-vision
+  tls: true
+  servername: yahoo.com
+  client-fingerprint: ios
+  reality-opts:
+    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
+    short-id: c39cc7310a
+- name: 🚀 @letsgetvpn | 🌍 JP | 🆔 56423559 | ⚡ 140ms | 🌟🌟🌟🌟🌟
+  type: vless
+  server: 162.159.38.127
+  port: 2052
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🚀 @letsgetvpn | 🌍 SG | 🆔 64247676 | ⚡ 98ms | 🌟🌟🌟🌟🌟
+  type: vless
+  server: 172.67.143.139
+  port: 8080
+  uuid: 18907dc3-7e4c-476f-9ed8-b360db563bf9
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiN3FOeFprWFkiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyYTAyOjg5ODoxNDY6NjQ6Ol0iXX0=
+    headers:
+      Host: server8.faway91418.workers.dev
+- name: 🚀 @letsgetvpn | 🌍 JP | 🆔 63431604 | ⚡ 207ms | 🌟🌟🌟🌟
+  type: ss
+  server: 84.247.155.196
+  port: 443
+  cipher: aes-256-gcm
+  password: 3eOFeNssde7PYYMv
+- name: 🚀 @letsgetvpn | 🌍 CA | 🆔 64239661 | ⚡ 194ms | 🌟🌟🌟🌟
+  type: ss
+  server: 15.235.75.71
+  port: 8388
+  cipher: chacha20-ietf-poly1305
+  password: FD3rCuOsxOay
+- name: 🚀 @letsgetvpn | 🌍 GB | 🆔 64199063 | ⚡ 93ms | 🌟🌟🌟🌟🌟
+  type: vless
+  server: 23.81.34.204
+  port: 443
+  uuid: 99955907-9070-46f0-a200-9c7a0b9d74fe
+  flow: xtls-rprx-vision
+  tls: true
+  servername: speed.cloudflare.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: J_p_dxR8dIKaezk1_Ins5MZ7e4dqgrr2n9690vVuQ2s
+    short-id: b19b017d6f453873
+- name: 🚀 @letsgetvpn | 🌍 NL | 🆔 63431999 | ⚡ 173ms | 🌟🌟🌟🌟
+  type: ss
+  server: 82.38.31.36
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+- name: 🚀 @letsgetvpn | 🌍 NL | 🆔 63438442 | ⚡ 204ms | 🌟🌟🌟🌟
+  type: ss
+  server: 82.38.31.13
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+- name: 🚀 @letsgetvpn | 🌍 NL | 🆔 64195436 | ⚡ 209ms | 🌟🌟🌟🌟
+  type: ss
+  server: 193.29.139.202
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+- name: 🚀 @letsgetvpn | 🌍 NL | 🆔 64192956 | ⚡ 219ms | 🌟🌟🌟🌟
+  type: ss
+  server: 82.38.31.156
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+- name: '@FarazV2ray '
+  type: trojan
+  server: 188.42.145.180
+  port: 443
+  password: humanity
+  sni: wWw.Volumeroot.cOm.
+  tls: true
+  servername: wWw.Volumeroot.cOm.
+  client-fingerprint: chrome
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.volumerOot.coM.
+- name: 🚀 @letsgetvpn | 🌍 NL | 🆔 64198704 | ⚡ 208ms | 🌟🌟🌟🌟
+  type: ss
+  server: 82.38.31.69
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+- name: 🚀 @letsgetvpn | 🌍 NO | 🆔 64193658 | ⚡ 182ms | 🌟🌟🌟🌟
+  type: ss
+  server: 185.213.23.63
+  port: 990
+  cipher: chacha20-ietf-poly1305
+  password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=
+- name: Unblocked_ir لطفاً عضو کانال شو نامحدود
+  type: vless
+  server: 199.232.78.159
+  port: 443
+  uuid: ebeb7358-9fc0-4222-a0e5-d8bc274a8856
+  tls: true
+  servername: ssl.fastly.com
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: swissjji.global.ssl.fastly.net.
+- name: 🚀 @letsgetvpn | 🌍 ES | 🆔 56420475 | ⚡ 169ms | 🌟🌟🌟🌟🌟
+  type: ss
+  server: 108.181.121.226
+  port: 8388
+  cipher: chacha20-ietf-poly1305
+  password: WSyL4XTwNsdv
 - name: '@FarazV2ray '
   type: vless
-  server: 169.40.42.182
+  server: 15.204.97.219
+  port: 23576
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  tls: true
+  servername: fuck.rkn
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+- name: Unblocked_ir لطفاً عضو کانال شو نامحدود
+  type: vless
+  server: 15.204.97.206
+  port: 23576
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  tls: true
+  servername: fuck.rkn
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+- name: 🚀 @letsgetvpn | 🌍 DE | 🆔 64233236 | ⚡ 136ms | 🌟🌟🌟🌟🌟
+  type: vless
+  server: 31.76.11.83
+  port: 26070
+  uuid: e676c6c8-44a8-4a1d-82cc-821a1f70f0c0
+- name: '@FarazV2ray '
+  type: vless
+  server: 169.40.42.95
+  port: 443
+  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
+  flow: xtls-rprx-vision
+  tls: true
+  servername: yahoo.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
+    short-id: c39cc7310a
+- name: 🚀 @letsgetvpn | 🌍 PH | 🆔 64191731 | ⚡ 149ms | 🌟🌟🌟🌟
+  type: ss
+  server: 149.104.109.252
+  port: 8882
+  cipher: aes-256-gcm
+  password: kDWvXYZoTBcGkC4
+- name: '@FarazV2ray '
+  type: vless
+  server: 169.40.42.212
+  port: 443
+  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
+  flow: xtls-rprx-vision
+  tls: true
+  servername: yahoo.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
+    short-id: c39cc7310a
+- name: 🚀 @letsgetvpn | 🌍 ES | 🆔 64245309 | ⚡ 120ms | 🌟🌟🌟🌟🌟
+  type: ss
+  server: 140.174.184.5
+  port: 8388
+  cipher: chacha20-ietf-poly1305
+  password: qItG8SueYQcP
+- name: '@FarazV2ray '
+  type: vless
+  server: 169.40.42.16
   port: 443
   uuid: d65cc14c-f53f-4fe2-b262-97856601319c
   flow: xtls-rprx-vision
@@ -904,7 +800,7 @@ proxies:
     short-id: c39cc7310a
 - name: '@FarazV2ray '
   type: vless
-  server: 169.40.42.74
+  server: 169.40.42.231
   port: 443
   uuid: d65cc14c-f53f-4fe2-b262-97856601319c
   flow: xtls-rprx-vision
@@ -914,277 +810,247 @@ proxies:
   reality-opts:
     public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
     short-id: c39cc7310a
-- name: '@FarazV2ray'
-  type: vmess
-  server: 45.80.215.8
-  port: 22324
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-  alterId: 0
-  cipher: auto
+- name: 🚀 @letsgetvpn | 🌍 NL | 🆔 64245339 | ⚡ 171ms | 🌟🌟🌟🌟
+  type: ss
+  server: 82.38.31.215
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+- name: '@mehrosaboran'
+  type: vless
+  server: 199.232.78.159
+  port: 443
+  uuid: f8aba8c3-6ab6-4fa0-8815-17e15f4721b1
+  tls: true
+  servername: global.fastly.com
+  client-fingerprint: firefox
+  network: ws
+  ws-opts:
+    headers:
+      Host: kayko.global.ssl.fastly.net
+- name: '@mehrosaboran'
+  type: vless
+  server: 199.232.78.159
+  port: 443
+  uuid: f8aba8c3-6ab6-4fa0-8815-17e15f4721b1
+  tls: true
+  servername: global.fastly.com
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    headers:
+      Host: skyfarst.global.ssl.fastly.net
+- name: '@mehrosaboran'
+  type: vless
+  server: 199.232.246.236
+  port: 443
+  uuid: f8aba8c3-6ab6-4fa0-8815-17e15f4721b1
+  tls: true
+  servername: global.fastly.com
+  client-fingerprint: firefox
+  network: ws
+  ws-opts:
+    headers:
+      Host: teranko.global.ssl.fastly.net
+- name: 🚀 @letsgetvpn | 🌍 IT | 🆔 64248879 | ⚡ 123ms | 🌟🌟🌟🌟🌟
+  type: vless
+  server: 204.216.216.23
+  port: 10086
+  uuid: 9f0285ee-20ca-4953-bcdb-86a920652923
+- name: '| @ArsalanVPN_Channel |'
+  type: vless
+  server: www.speedtest.net
+  port: 2052
+  uuid: 731fa03b-e4a0-4b4a-b355-3248914bcab2
+  network: httpupgrade
 - name: 'اگه میخوای قطع نشی جوین شو : @farsiproxy'
   type: vless
-  server: 169.40.42.232
+  server: 199.232.78.159
   port: 443
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
-  flow: xtls-rprx-vision
+  uuid: f1fc5eaf-3a63-413a-b758-b152a0017477
   tls: true
-  servername: yahoo.com
-  reality-opts:
-    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-    short-id: c39cc7310a
+  servername: ssl.fastly.com
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 7wwwspeedtestnet.global.ssl.fastly.net
 - name: '@FarazV2ray '
   type: vless
   server: 152.228.139.33
-  port: 35108
-  uuid: 81dc0b61-f9fe-4ad6-8b4e-b8c067b73712
+  port: 51671
+  uuid: 75cc7568-abb0-46a8-88be-8137d3c647d4
   tls: true
-  servername: www.nvidia.com
-  client-fingerprint: chrome
+  servername: www.sony.com
   reality-opts:
-    public-key: X_lOw5Zz4SJBa1cRHV4dAq5msYE-ClY5-WNcBmBWRxg
-    short-id: 52add08b86a5ccea
+    public-key: -5PowNUY37Pi01YKO9fjRTrum1m_9n6XauaPDpmOJzU
+    short-id: 2fed44d8c59f7e71
   network: grpc
   grpc-opts:
-    grpc-service-name: grpc-common3
-- name: '@FarazV2ray '
+    grpc-service-name: grpc_common3
+- name: '@e404ng'
   type: vless
-  server: 31.77.227.10
-  port: 52006
-  uuid: bc659d88-a1e0-4c65-a49a-7b51b26a7a7f
-  flow: xtls-rprx-vision-udp443
-  tls: true
-  servername: fr.setlisting.ru
-  client-fingerprint: chrome
-  alpn:
-  - h2
-  - http/1.1
-- name: '@FarazV2ray '
-  type: vless
-  server: 195.133.73.65
+  server: 31.57.185.92
   port: 443
-  uuid: ebd1c0d6-7ff4-4b9f-8692-237517a27a64
-  flow: xtls-rprx-vision
+  uuid: 78a82010-c288-49a8-a4db-efbd5e75729b
   tls: true
-  servername: anyfile2file.com
+  servername: mediawiki.org
   client-fingerprint: chrome
   reality-opts:
-    public-key: mza5Hn1aolSz65qu-UwvBP3oesxMe25r11o4nxvikF0
-    short-id: 64c1fe36c7846400
+    public-key: Cipx2l8-lR6lyq-FfZMmsYI92783m5VmXHKXetZ7WwE
+    short-id: ec6b
+  network: xhttp
+- name: '@FarazV2ray '
+  type: vless
+  server: 5.253.42.159
+  port: 443
+  uuid: a368752a-32fc-42f3-980a-6b049218b23f
+  flow: xtls-rprx-vision
+  tls: true
+  servername: india.letsconnectpoint.com
+  client-fingerprint: qq
+  reality-opts:
+    public-key: erUEmyU1QK8y2corQh9bOjk0oHl2Mo6Z9WgoyKg_rC0
+    short-id: c1e3d5d4
+- name: هرشب 500 گیگ رایگان میذارم چنل
+  type: vless
+  server: zx3.nimnewssup.com
+  port: 1011
+  uuid: 731fa03b-e4a0-4b4a-b355-3248914bcab2
+  network: xhttp
+- name: 🚀 @letsgetvpn | 🌍 CA | 🆔 64249760 | ⚡ 105ms | 🌟🌟🌟🌟🌟
+  type: vless
+  server: www.5199dy.com
+  port: 443
+  uuid: d342d11e-d224-4463-b982-532309285094
+  tls: true
+  servername: ccc.010304.xyz
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: ccc.010304.xyz
 - name: '@mehrosaboran'
-  type: trojan
-  server: 199.232.78.101
-  port: 443
-  password: mitivpn
-  sni: ssl.fastly.com
-  tls: true
-  servername: ssl.fastly.com
-  client-fingerprint: chrome
-  alpn:
-  - http/1.1
-  network: ws
-  ws-opts:
-    path: '@mehrosaboran'
-    headers:
-      Host: mitivpn---de--s---mitivpn-11.global.ssl.fastly.net
-- name: 'اگه میخوای قطع نشی جوین شو : @farsiproxy'
   type: vless
-  server: 188.114.97.6
-  port: 443
-  uuid: fdc48be3-a615-41ac-8bd1-ed844c931048
+  server: 176.109.104.103
+  port: 9881
+  uuid: 5d16ac22-6eea-426f-b778-6f4c2961faef
   tls: true
-  servername: edgetunnel-4uw.pages.dev
-  alpn:
-  - http/1.1
-  network: ws
-  ws-opts:
-    path: /fp=chrome?ed#TELEGRAM--MARAMBASHI--MARAMBASHI?ed=2560
-    headers:
-      Host: edgetunnel-4uw.pages.dev
-- name: 'اگه میخوای قطع نشی جوین شو : @farsiproxy'
-  type: vless
-  server: tgfree.rush-server.com
-  port: 443
-  uuid: ebd1c0d6-7ff4-4b9f-8692-237517a27a64
-  flow: xtls-rprx-vision
-  tls: true
-  servername: anyfile2file.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: mza5Hn1aolSz65qu-UwvBP3oesxMe25r11o4nxvikF0
-    short-id: 64c1fe36c7846400
-- name: '@bored_vpn'
-  type: trojan
-  server: 199.232.78.101
-  port: 443
-  password: mitivpn
-  sni: ssl.fastly.com
-  tls: true
-  servername: ssl.fastly.com
-  client-fingerprint: chrome
-  alpn:
-  - http/1.1
-  network: ws
-  ws-opts:
-    path: '@bored_vpn'
-    headers:
-      Host: mitivpn---de--s---mitivpn-11.global.ssl.fastly.net
-- name: 'اگه میخوای قطع نشی جوین شو : @farsiproxy'
-  type: vless
-  server: faultpass-panel-production-1b03.up.railway.app
-  port: 443
-  uuid: eb560074-9758-6fd5-5292-9ab95fe38631
-  tls: true
-  servername: faultpass-panel-production-1b03.up.railway.app
-  client-fingerprint: chrome
-  alpn:
-  - http/1.1
-  network: ws
-  ws-opts:
-    path: /ws/eb560074-9758-6fd5-5292-9ab95fe38631
-    headers:
-      Host: faultpass-panel-production-1b03.up.railway.app
-- name: 'اگه میخوای قطع نشی جوین شو : @farsiproxy'
-  type: ss
-  server: 31.56.196.18
-  port: 44925
-  cipher: 2022-blake3-aes-256-gcm
-  password: 4E7elQ/GMfiXO3P+BGEe/t5H2qFT68TVcoYha+Wa8sM=:ti8OqgTqRRCTQH+BfyGvW3kGU52yQStLuEoVgLQGMyI=
-- name: 'اگه میخوای قطع نشی جوین شو : @farsiproxy'
-  type: vless
-  server: 45.131.212.228
-  port: 443
-  uuid: 0ac731ab-0247-4a0f-861c-cefc8bddbc53
-  flow: xtls-rprx-vision
-  tls: true
-  servername: sellflow.org
+  servername: dl.google.com
   client-fingerprint: firefox
   reality-opts:
-    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-- name: 🌟 @MTproxy22_v2ray
-  type: ss
-  server: 5.188.181.201
-  port: 9003
-  cipher: aes-256-cfb
-  password: JdmRK9gMEqFgs8nP
-- name: 🇫🇷 | @RADVPNE 👈 کانال تلگرام
+    public-key: Dfgu8Ey0M8Hz4gXGZAwQ3H9jLt2HByVsjAOTWiuKDB0
+  network: grpc
+  grpc-opts:
+    grpc-service-name: grpc-tunnel
+- name: '| @ArsalanVPN_Channel |'
   type: vless
-  server: 51.44.118.124
-  port: 22224
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-- name: (S104
-  type: vless
-  server: 13.38.184.230
-  port: 22222
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-- name: 🌟 @MTproxy22_v2ray
-  type: ss
-  server: 193.29.139.204
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: (S103
-  type: vless
-  server: 51.44.118.124
-  port: 22222
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-- name: 'اگه میخوای قطع نشی جوین شو : @farsiproxy'
-  type: trojan
-  server: 199.232.78.101
-  port: 443
-  password: mitivpn
-  sni: ssl.fastly.com
+  server: zx5.nimnewssup.com
+  port: 1013
+  uuid: 731fa03b-e4a0-4b4a-b355-3248914bcab2
   tls: true
-  servername: ssl.fastly.com
+  servername: www.myket.ir
   client-fingerprint: chrome
-  alpn:
-  - http/1.1
-  network: ws
-  ws-opts:
-    path: /---@GHOFLSHCAN---@GHOFLSHCAN/---@GHOFLSHCAN---@GHOFLSHCAN/---@GHOFLSHCAN---@GHOFLSHCAN/NLSus---@GHOFLSHCAN---@GHOFLSHCAN/---@GHOFLSHCAN---@GHOFLSHCAN/---@GHOFLSHCAN---@GHOFLSHCAN
-    headers:
-      Host: mitivpn---de--s---mitivpn-11.global.ssl.fastly.net
-- name: 'اگه میخوای قطع نشی جوین شو : @farsiproxy'
-  type: trojan
-  server: 199.232.78.160
-  port: 443
-  password: mitivpn
-  sni: ssl.fastly.com
-  tls: true
-  servername: ssl.fastly.com
-  client-fingerprint: firefox
-  alpn:
-  - http/1.1
-  network: ws
-  ws-opts:
-    path: /---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/D-e1i@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN
-    headers:
-      Host: mitivpn---us--s---mitivpn-11.global.ssl.fastly.net
-- name: 'اگه میخوای قطع نشی جوین شو : @farsiproxy'
-  type: vless
-  server: faultpass-panel-production-1b03.up.railway.app
-  port: 443
-  uuid: efb16fd1-9164-f5d3-9a50-3a6998b15682
-  tls: true
-  servername: faultpass-panel-production-1b03.up.railway.app
-  client-fingerprint: chrome
-  alpn:
-  - http/1.1
-  network: ws
-  ws-opts:
-    path: /ws/efb16fd1-9164-f5d3-9a50-3a6998b15682
-    headers:
-      Host: faultpass-panel-production-1b03.up.railway.app
-- name: '@FarazV2ray '
-  type: vless
-  server: 169.40.42.15
-  port: 443
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
-  flow: xtls-rprx-vision
-  tls: true
-  servername: yahoo.com
-  client-fingerprint: ios
   reality-opts:
-    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-    short-id: c39cc7310a
-- name: 'اگه میخوای قطع نشی جوین شو : @farsiproxy'
-  type: trojan
-  server: 188.114.97.6
-  port: 443
-  password: humanity
-  sni: www.pleadcourt.org
-  tls: true
-  servername: www.pleadcourt.org
-  alpn:
-  - http/1.1
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.pleadcourt.org
-- name: 'اگه میخوای قطع نشی جوین شو : @farsiproxy'
-  type: trojan
-  server: 8.47.69.0
-  port: 443
-  password: humanity
-  sni: www.pleadcourt.org
-  tls: true
-  servername: www.pleadcourt.org
-  alpn:
-  - http/1.1
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.pleadcourt.org
-- name: '@FarazV2ray'
-  type: vmess
-  server: 66.163.113.176
-  port: 22324
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-  alterId: 0
-  cipher: auto
+    public-key: I411tkHW0SOhd9Pfm9kdK78HhClT4VmPj4q3ivBe1jo
+    short-id: c555ff5cea4f40e7
+- name: '| @ArsalanVPN_Channel |'
+  type: vless
+  server: zx9.nimnewssup.com
+  port: 1018
+  uuid: 731fa03b-e4a0-4b4a-b355-3248914bcab2
+  network: xhttp
+- name: '| @ArsalanVPN_Channel |'
+  type: vless
+  server: zx10.nimnewssup.com
+  port: 1019
+  uuid: 731fa03b-e4a0-4b4a-b355-3248914bcab2
+  network: xhttp
 - name: '@prrofile_purple | 𝗙𝗮𝗦𝗧 💚'
   type: vless
+  server: 151.101.215.69
+  port: 443
+  uuid: 07fa06b4-0be2-4c6f-8fa1-5ef7e184cfc0
+  tls: true
+  servername: accounts.fastly.com
+  network: xhttp
+- name: '| @ArsalanVPN1_bot |'
+  type: vless
+  server: zx1.nimnewssup.com
+  port: 1009
+  uuid: 731fa03b-e4a0-4b4a-b355-3248914bcab2
+  network: xhttp
+- name: '@prrofile_purple | 𝗙𝗮𝗦𝗧 💚'
+  type: trojan
+  server: 188.114.97.6
+  port: 443
+  password: humanity
+  sni: www.pleadcourt.org
+  tls: true
+  servername: www.pleadcourt.org
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.pleadcourt.org
+- name: '| @ArsalanVPN1_bot |'
+  type: vless
+  server: zx12.nimnewssup.com
+  port: 1022
+  uuid: 731fa03b-e4a0-4b4a-b355-3248914bcab2
+  network: xhttp
+- name: '@prrofile_purple | 𝗙𝗮𝗦𝗧 💚'
+  type: trojan
+  server: 104.19.242.85
+  port: 443
+  password: 8GXLP3dEzm7T8wP5Jx0Ufg
+  sni: quictest.burncommunity.ru
+  tls: true
+  servername: quictest.burncommunity.ru
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: quictest.burncommunity.ru
+- name: '@prrofile_purple | 𝗙𝗮𝗦𝗧 💚'
+  type: trojan
+  server: 172.67.139.14
+  port: 443
+  password: humanity
+  sni: www.volumeroot.com
+  tls: true
+  servername: www.volumeroot.com
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.volumeroot.com
+- name: گیگی 8 تومن بخر خودتو راحت کن
+  type: vless
+  server: zx11.nimnewssup.com
+  port: 1021
+  uuid: 731fa03b-e4a0-4b4a-b355-3248914bcab2
+  network: xhttp
+- name: '@mehrosaboran'
+  type: vless
+  server: 199.232.246.236
+  port: 443
+  uuid: f8aba8c3-6ab6-4fa0-8815-17e15f4721b1
+  tls: true
+  servername: ssl.fastly.com
+  client-fingerprint: safari
+  network: ws
+  ws-opts:
+    headers:
+      Host: Nonetrap.global.ssl.fastly.net
+- name: 🇳🇱@FreakConfig
+  type: vless
   server: 188.114.97.6
   port: 443
   uuid: fdc48be3-a615-41ac-8bd1-ed844c931048
@@ -1194,82 +1060,32 @@ proxies:
   - http/1.1
   network: ws
   ws-opts:
-    path: /fp=chrome
+    path: /?Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET
     headers:
       Host: edgetunnel-4uw.pages.dev
 - name: 'اگه میخوای قطع نشی جوین شو : @farsiproxy'
   type: vless
-  server: 199.232.78.159
-  port: 443
-  uuid: dc2fa672-c063-4c0d-b995-483d45db7349
+  server: am-ip.nxralns.com
+  port: 100
+  uuid: 0746aefb-be17-456e-9b3c-820afae2d1f4
   tls: true
-  servername: ssl.fastly.com
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: sevenfeshab.global.ssl.fastly.net.
-- name: 'اگه میخوای قطع نشی جوین شو : @farsiproxy'
-  type: vless
-  server: 199.232.78.159
-  port: 443
-  uuid: dc2fa672-c063-4c0d-b995-483d45db7349
-  tls: true
-  servername: ssl.fastly.com
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: looazjboijji.global.ssl.fastly.net.
-- name: '@FarazV2ray '
-  type: vless
-  server: 31.77.13.19
-  port: 2063
-  uuid: b18d5990-96eb-4587-a386-7f8ef7591e6a
-  flow: xtls-rprx-vision
-  tls: true
-  servername: rusbid.de
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: MMpt_jWc4J3oySBdf5sPDVRkiWlZmOObth6A1scM9BM
-- name: '@FarazV2ray '
-  type: vless
-  server: staging.lastilhame.monster
-  port: 443
-  uuid: aded66f1-de12-4c3c-af9e-a21d6e7d9c96
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.foxsports.com
+  servername: in.tradingview.com
   client-fingerprint: chrome
   reality-opts:
-    public-key: FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg
-    short-id: 2a80364e93d9
-- name: 🇩🇪@FreakConfig
+    public-key: FE8YqrVdTcVd8uRAhrM75FnIcrtzrqAKwGtvvIwB9QU
+    short-id: 6b40e710c4004b9b
+- name: 🇨🇦@FreakConfig
   type: vless
-  server: 104.21.91.244
+  server: 104.21.5.115
   port: 443
   uuid: fdc48be3-a615-41ac-8bd1-ed844c931048
   tls: true
   servername: edgetunnel-4uw.pages.dev
   network: ws
   ws-opts:
-    path: /
+    path: /?TELEGRAM--MARAMBASHI--MARAMBASHI?ed=512
     headers:
       Host: edgetunnel-4uw.pages.dev
-- name: '@FarazV2ray'
-  type: vmess
-  server: 66.163.118.73
-  port: 22324
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-  alterId: 0
-  cipher: auto
-- name: '@FarazV2ray'
-  type: vmess
-  server: 89.41.172.85
-  port: 22324
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-  alterId: 0
-  cipher: auto
 - name: 🇩🇪@FreakConfig
   type: vless
   server: 162.159.254.201
@@ -1282,177 +1098,6 @@ proxies:
     path: /
     headers:
       Host: edgetunnel-4uw.pages.dev
-- name: 🇩🇪@FreakConfig
-  type: vless
-  server: 104.21.201.219
-  port: 443
-  uuid: fdc48be3-a615-41ac-8bd1-ed844c931048
-  tls: true
-  servername: edgetunnel-4uw.pages.dev
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: edgetunnel-4uw.pages.dev
-- name: 'اگه میخوای قطع نشی جوین شو : @farsiproxy'
-  type: ss
-  server: 15.235.75.71
-  port: 8388
-  cipher: chacha20-ietf-poly1305
-  password: FD3rCuOsxOay
-- name: 'اگه میخوای قطع نشی جوین شو : @farsiproxy'
-  type: vless
-  server: 95.182.88.129
-  port: 40913
-  uuid: 39d5e728-c358-409a-8367-d5253a9ed825
-  tls: true
-  servername: yt.be
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 0cDEl8J8P1ZAFz34srLX5m_PBFtYtEeBm8PWMM5IvGw
-    short-id: '3675'
-  network: xhttp
-- name: 🚀 @letsgetvpn | 🌍 PL | 🆔 56371193 | ⚡ 144ms | 🌟🌟🌟🌟🌟
-  type: vless
-  server: pl-waw.dontblockmepls.com
-  port: 2063
-  uuid: b18d5990-96eb-4587-a386-7f8ef7591e6a
-  flow: xtls-rprx-vision
-  tls: true
-  servername: rusbid.de
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: MMpt_jWc4J3oySBdf5sPDVRkiWlZmOObth6A1scM9BM
-- name: 🌟 @MTproxy22_v2ray
-  type: vless
-  server: p2real22.greewebservices.ir
-  port: 1320
-  uuid: ea188657-750a-4aba-ac58-d6d114047b4d
-  tls: true
-  servername: play.googleapis.com
-  client-fingerprint: ios
-  reality-opts:
-    public-key: xQnXh5EfPDhcEBB7rRiLca33GYrMEeUa35domLL_yA8
-    short-id: 9b60d3
-- name: 'اگه میخوای قطع نشی جوین شو : @farsiproxy'
-  type: vless
-  server: 0cf703b86ea5a239.ravenlo.ir
-  port: 8080
-  uuid: 50d10e6c-37e1-4512-b35a-2d4e0adfd079
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: play.google.com
-- name: 'اگه میخوای قطع نشی جوین شو : @farsiproxy'
-  type: vmess
-  server: 66.163.118.73
-  port: 443
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: mygptagent.org
-  network: ws
-  ws-opts:
-    path: /linkvws
-    headers:
-      Host: mygptagent.org
-- name: 🏴‍☠️@FreakConfig
-  type: vless
-  server: 188.114.97.6
-  port: 443
-  uuid: 97532b08-357e-4140-a6f0-8e07f2ed3327
-  tls: true
-  servername: yf.962456.xyz
-  alpn:
-  - http/1.1
-  network: ws
-  ws-opts:
-    path: /proxyip=kr.william.us.ci
-    headers:
-      Host: yf.962456.xyz
-- name: '@k2guard  جوین شو 👈🏻'
-  type: vless
-  server: finland-sgood.wopd.butnorwa.butter.melon.shoes.bye.bye.whooisthebest.ir
-  port: 8000
-  uuid: ea8932f2-e630-4bd6-8cdd-57e55d77089c
-  flow: xtls-rprx-vision
-  tls: true
-  servername: storage-p2.googleapis.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: Du5pk4KuMNA1sRcSpmuoLuC0HmxDBmFljFNfUzqxKiM
-    short-id: cd0a1986719e44c8
-- name: 🇫🇮@FreakConfig
-  type: vless
-  server: 87.120.107.246
-  port: 443
-  uuid: 10b78ac4-d4ce-43d2-98c4-c62c96fcbdc2
-  tls: true
-  servername: dl.google.com
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: 20kKpOl77grCupOod4O_X1u74fJT38yc2Nhxy8enywc
-    short-id: fd4f9db207ff64db
-  network: grpc
-  grpc-opts:
-    grpc-service-name: grpc-tunnel_nl
-- name: 🇫🇮@FreakConfig
-  type: vless
-  server: a2.arshia-nova.ir
-  port: 443
-  uuid: 1fac5e18-2ca8-4626-c299-1f3f21c6b55e
-  tls: true
-  servername: ssl.fastly.com
-  client-fingerprint: firefox
-  alpn:
-  - h2
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: c12.com
-- name: 🇨🇦@FreakConfig
-  type: trojan
-  server: 188.114.97.7
-  port: 443
-  password: humanity
-  sni: www.ignitelimit.com
-  tls: true
-  servername: www.ignitelimit.com
-  network: ws
-  ws-opts:
-    path: /assignment
-- name: 🇫🇮@FreakConfig
-  type: vless
-  server: 31.76.80.230
-  port: 8443
-  uuid: d544c858-b1ba-45b2-8868-8197daf2a6ee
-  tls: true
-  servername: fin.luxes.network
-  client-fingerprint: safari
-  alpn:
-  - http/1.1
-  network: ws
-  ws-opts:
-    path: /assets
-- name: 'اگه میخوای قطع نشی جوین شو : @farsiproxy'
-  type: vless
-  server: ip-aelix.berqovo.ir
-  port: 6304
-  uuid: 3df643c6-9f15-4400-a55d-5828998bfd40
-  tls: true
-  servername: play.google.com
-  client-fingerprint: qq
-  reality-opts:
-    public-key: lQbgwNDYw6Zbjdim0JtXUarzb-3GSjDvtX6FJYZD9Qo
-- name: 🇩🇪@FreakConfig
-  type: ss
-  server: p2tun3.greewebservices.ir
-  port: 1030
-  cipher: chacha20-ietf-poly1305
-  password: 2MRyo1ekfJ0exGnAVcKe6g
 - name: 🇬🇧@FreakConfig
   type: trojan
   server: 199.232.78.188
@@ -1480,9 +1125,177 @@ proxies:
   - http/1.1
   network: ws
   ws-opts:
-    path: /?Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET
+    path: /fp=chrome?ed#TELEGRAM--MARAMBASHI--MARAMBASHI?ed=2560
     headers:
       Host: edgetunnel-4uw.pages.dev
+- name: 'اگه میخوای قطع نشی جوین شو : @farsiproxy'
+  type: vless
+  server: az-ip.nxralns.com
+  port: 200
+  uuid: 0746aefb-be17-456e-9b3c-820afae2d1f4
+  tls: true
+  servername: in.tradingview.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: ERUiLzW4InoNj1h4AahRmMPt9R19R1KTi-oB1o1uZTA
+    short-id: 10d48a35c8757160
+- name: 'اگه میخوای قطع نشی جوین شو : @farsiproxy'
+  type: vless
+  server: tr-ip.nxralns.com
+  port: 300
+  uuid: 0746aefb-be17-456e-9b3c-820afae2d1f4
+  tls: true
+  servername: in.tradingview.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 3oswcmBDBnM_uYkFbNgUB_YVOrMd4Ox2RibNSZGoyS0
+    short-id: b81def814bd29d49
+- name: (S103
+  type: vless
+  server: 15.236.56.5
+  port: 22222
+  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+- name: ' '
+  type: ss
+  server: 82.38.31.192
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+- name: (S104
+  type: vless
+  server: 15.224.30.230
+  port: 22222
+  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+- name: ' '
+  type: vless
+  server: 62.77.158.1
+  port: 443
+  uuid: 2eceaf2b-a775-5a9c-9990-dad2b3660fb6
+  flow: xtls-rprx-vision
+  tls: true
+  servername: online.1c.ru
+  client-fingerprint: safari
+  reality-opts:
+    public-key: sVhkyiMXvpofflCdSszxQmsqOXV1kg1Ldxq1a9mOPjs
+    short-id: 6a
+- name: هرشب 500 گیگ رایگان میذارم چنل
+  type: vless
+  server: tr.koomeh.net
+  port: 80
+  uuid: bd2a13a0-2a08-4be9-a12c-acc820ee46e8
+  network: xhttp
+- name: 🏴‍☠️@FreakConfig
+  type: vless
+  server: 188.114.97.6
+  port: 443
+  uuid: 97532b08-357e-4140-a6f0-8e07f2ed3327
+  tls: true
+  servername: yf.962456.xyz
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /proxyip=kr.william.us.ci
+    headers:
+      Host: yf.962456.xyz
+- name: '@prrofile_purple | 𝗙𝗮𝗦𝗧 💚'
+  type: vless
+  server: 176.108.249.189
+  port: 9881
+  uuid: 5d16ac22-6eea-426f-b778-6f4c2961faef
+  tls: true
+  servername: dl.google.com
+  client-fingerprint: random
+  reality-opts:
+    public-key: ycPIUcY6ci2yi7YA_OHc20e4gzxEdJTqpmeShxSuHRU
+    short-id: aabb
+  network: grpc
+  grpc-opts:
+    grpc-service-name: grpc-tunnel
+- name: 'اگه میخوای قطع نشی جوین شو : @farsiproxy'
+  type: vless
+  server: ge-ip.nxralns.com
+  port: 8080
+  uuid: 0746aefb-be17-456e-9b3c-820afae2d1f4
+  tls: true
+  servername: dynu.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: c6YAuv_FhaAZI2h40UktpLKlVOcbHuawoBVHxR4dhAY
+    short-id: 133cf72b08e6be8d
+  network: grpc
+  grpc-opts:
+    grpc-service-name: Grpc=021
+- name: '@prrofile_purple | 𝗙𝗮𝗦𝗧 💚'
+  type: vless
+  server: n2.akan1.ir
+  port: 8443
+  uuid: 55af8466-53cd-46f4-aef9-5378f5ac34a4
+  tls: true
+  servername: home.akan1.ir
+  client-fingerprint: chrome
+  network: xhttp
+- name: 'اگه میخوای قطع نشی جوین شو : @farsiproxy'
+  type: vless
+  server: shop.jarorobo.ir
+  port: 8443
+  uuid: 5039623b-8a43-4da0-82cf-7e54c90470eb
+  tls: true
+  servername: www.github.com
+  client-fingerprint: random
+  reality-opts:
+    public-key: 9LyZjKAQkh2_FwDS21QVW05gfBRR77KjatFS8EtRyU4
+    short-id: 8ed95b
+- name: 'اگه میخوای قطع نشی جوین شو : @farsiproxy'
+  type: vless
+  server: store.qeshmdiyar.ir
+  port: 8443
+  uuid: 5039623b-8a43-4da0-82cf-7e54c90470eb
+  tls: true
+  servername: www.github.com
+  client-fingerprint: random
+  reality-opts:
+    public-key: 9LyZjKAQkh2_FwDS21QVW05gfBRR77KjatFS8EtRyU4
+    short-id: 8ed95b
+- name: 🇨🇦@FreakConfig
+  type: trojan
+  server: 188.114.97.7
+  port: 443
+  password: humanity
+  sni: www.ignitelimit.com
+  tls: true
+  servername: www.ignitelimit.com
+  network: ws
+  ws-opts:
+    path: /assignment
+- name: 🇫🇮@FreakConfig
+  type: vless
+  server: 31.76.80.230
+  port: 8443
+  uuid: d544c858-b1ba-45b2-8868-8197daf2a6ee
+  tls: true
+  servername: fin.luxes.network
+  client-fingerprint: safari
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /assets
+- name: 🇫🇮@FreakConfig
+  type: vless
+  server: a2.arshia-nova.ir
+  port: 443
+  uuid: 1fac5e18-2ca8-4626-c299-1f3f21c6b55e
+  tls: true
+  servername: ssl.fastly.com
+  client-fingerprint: firefox
+  alpn:
+  - h2
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: c12.com
 - name: 🏴‍☠️@FreakConfig
   type: vless
   server: 188.114.97.6
@@ -1499,44 +1312,14 @@ proxies:
       Host: edgetunnel-4uw.pages.dev
 - name: 🇩🇪@FreakConfig
   type: vless
-  server: 199.232.78.159
-  port: 443
-  uuid: 3d9092f3-2ee2-497a-9732-ee7570531c09
-  tls: true
-  servername: ssl.fastly.com
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: pokerrr.global.ssl.fastly.net
-- name: 🇩🇪@FreakConfig
-  type: ss
-  server: p2tun4.greewebservices.ir
-  port: 1040
-  cipher: chacha20-ietf-poly1305
-  password: 2MRyo1ekfJ0exGnAVcKe6g
-- name: 🇺🇸@FreakConfig
-  type: vless
-  server: 199.232.78.159
-  port: 443
-  uuid: 3d9092f3-2ee2-497a-9732-ee7570531c09
-  tls: true
-  servername: ssl.fastly.com
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: sevenfeshab.global.ssl.fastly.net.
-- name: 🇨🇦@FreakConfig
-  type: vless
-  server: 104.21.5.115
+  server: 104.21.201.219
   port: 443
   uuid: fdc48be3-a615-41ac-8bd1-ed844c931048
   tls: true
   servername: edgetunnel-4uw.pages.dev
   network: ws
   ws-opts:
-    path: /?TELEGRAM--MARAMBASHI--MARAMBASHI?ed=512
+    path: /
     headers:
       Host: edgetunnel-4uw.pages.dev
 - name: 🇷🇺@FreakConfig
@@ -1552,6 +1335,107 @@ proxies:
     public-key: Nez2BwVoXyQ5ok5jJA_xdGn_oWRHiD2DipmUhSPCbSU
     short-id: 50f02c2ae7fe34fa
 - name: 🇨🇦@FreakConfig
+  type: vless
+  server: 188.114.97.6
+  port: 443
+  uuid: 090e5985-bbeb-4400-8278-d3a8e9ae5d92
+  tls: true
+  servername: shy-star-7967.311-f0b.workers.dev
+  network: ws
+  ws-opts:
+    path: /pyip=ProxyIP.JP.CMLiussss.net
+    headers:
+      Host: shy-star-7967.311-f0b.workers.dev
+- name: 🇩🇪@FreakConfig
+  type: vless
+  server: 104.21.91.244
+  port: 443
+  uuid: fdc48be3-a615-41ac-8bd1-ed844c931048
+  tls: true
+  servername: edgetunnel-4uw.pages.dev
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: edgetunnel-4uw.pages.dev
+- name: 🇩🇪@FreakConfig
+  type: vless
+  server: s2.zynetraq.ir
+  port: 2087
+  uuid: 7451454d-a345-45b5-d6ed-c35cf38c53dc
+  tls: true
+  servername: s2.zynetraq.ir
+  client-fingerprint: chrome
+  network: xhttp
+- name: 🇨🇳@FreakConfig
+  type: vless
+  server: 179.237.103.152
+  port: 443
+  uuid: e0bd9dfa-0cf9-47c0-92ac-7dba08ebcff8
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.google.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: 8PZTYkhNhSgagVdaI-iqSCPXJwDhHU23IUwZIu08zH4
+    short-id: 9de8ae53dabf1dc2
+- name: 🇫🇮@FreakConfig
+  type: vless
+  server: psf-3.weedly.top
+  port: 80
+  uuid: 6f597b2d-2df5-4f4f-a755-bdb5c10604e9
+  network: ws
+  ws-opts:
+    path: ?ed#Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET
+    headers:
+      Host: homelander.ir
+- name: 🇺🇸@FreakConfig
+  type: trojan
+  server: 199.232.78.160
+  port: 443
+  password: mitivpn
+  sni: ssl.fastly.com
+  tls: true
+  servername: ssl.fastly.com
+  client-fingerprint: firefox
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /---@GHOFLSHCAN---@GHOFLSHCAN/---@GHOFLSHCAN---@GHOFLSHCAN/---@GHOFLSHCAN---@GHOFLSHCAN/D-e1i@GHOFLSHCAN---@GHOFLSHCAN/---@GHOFLSHCAN---@GHOFLSHCAN/---@GHOFLSHCAN---@GHOFLSHCAN
+    headers:
+      Host: mitivpn---us--s---mitivpn-11.global.ssl.fastly.net
+- name: 188.114.97.6:443
+  type: vless
+  server: 188.114.97.6
+  port: 443
+  uuid: fdc48be3-a615-41ac-8bd1-ed844c931048
+  tls: true
+  alpn:
+  - http/1.1
+- name: '| @ArsalanVPN1_bot |'
+  type: vless
+  server: s4.nimhubnet.ir
+  port: 1012
+  uuid: 731fa03b-e4a0-4b4a-b355-3248914bcab2
+  tls: true
+  servername: www.myket.ir
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: GVprfFdHNyH_WZqETALJTK7EcScLDIiBHXAC6USX5Hk
+    short-id: 778512bf3d987a81
+- name: 🇫🇷@FreakConfig
+  type: trojan
+  server: 172.67.149.60
+  port: 443
+  password: humanity
+  sni: www.ignitelimit.com
+  tls: true
+  servername: www.ignitelimit.com
+  network: ws
+  ws-opts:
+    path: /assignment
+- name: 🇫🇷@FreakConfig
   type: trojan
   server: 188.114.97.7
   port: 443
@@ -1562,18 +1446,9 @@ proxies:
   network: ws
   ws-opts:
     path: /assignment?ed#Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET
-- name: 🇩🇪@FreakConfig
-  type: vless
-  server: s2.zynetraq.ir
-  port: 2087
-  uuid: 7451454d-a345-45b5-d6ed-c35cf38c53dc
-  tls: true
-  servername: s2.zynetraq.ir
-  client-fingerprint: chrome
-  network: xhttp
 - name: 🇫🇷@FreakConfig
   type: trojan
-  server: render.com
+  server: 172.67.149.60
   port: 443
   password: humanity
   sni: www.ignitelimit.com
@@ -1582,218 +1457,19 @@ proxies:
   network: ws
   ws-opts:
     path: /assignment?ed#Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET
+- name: 🇫🇷@FreakConfig
+  type: trojan
+  server: www.speedtest.net
+  port: 443
+  password: humanity
+  sni: www.ignitelimit.com
+  tls: true
+  servername: www.ignitelimit.com
+  network: ws
+  ws-opts:
+    path: /assignment
     headers:
       Host: www.ignitelimit.com
-- name: 🇩🇪@FreakConfig
-  type: vless
-  server: g1.sabet1.blazevx.ir
-  port: 31913
-  uuid: d74e7091-297e-4fa1-a100-bc1e753161c1
-  tls: true
-  servername: cdn.eiger.io
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: u8QXW7crvuXyOf305UfxBrr7Pa9epO1fK2rpPxmJ4lc
-    short-id: 9053a51b5337ae12
-  network: xhttp
-- name: 🇩🇪@FreakConfig
-  type: ss
-  server: p2tun2.greewebservices.ir
-  port: 1020
-  cipher: chacha20-ietf-poly1305
-  password: 2MRyo1ekfJ0exGnAVcKe6g
-- name: 188.114.97.6:443
-  type: vless
-  server: 188.114.97.6
-  port: 443
-  uuid: fdc48be3-a615-41ac-8bd1-ed844c931048
-  tls: true
-  alpn:
-  - http/1.1
-- name: 🇳🇱@FreakConfig
-  type: trojan
-  server: 188.114.97.6
-  port: 443
-  password: humanity
-  sni: www.pleadcourt.org
-  tls: true
-  servername: www.pleadcourt.org
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.pleadcourt.org
-- name: 🇨🇦@FreakConfig
-  type: trojan
-  server: 188.114.97.6
-  port: 443
-  password: 018b8e7b-7813-4dcb-84a5-3c98f1521e00
-  sni: id1.nathaya.web.id
-  tls: true
-  servername: id1.nathaya.web.id
-  network: ws
-  ws-opts:
-    path: /trojan
-    headers:
-      Host: id1.nathaya.web.id
-- name: 🇨🇦@FreakConfig
-  type: trojan
-  server: 104.18.32.87
-  port: 443
-  password: 018b8e7b-7813-4dcb-84a5-3c98f1521e00
-  sni: id1.nathaya.web.id
-  tls: true
-  servername: id1.nathaya.web.id
-  network: ws
-  ws-opts:
-    path: /trojan
-    headers:
-      Host: id1.nathaya.web.id
-- name: 🇫🇮@FreakConfig
-  type: vless
-  server: 199.232.78.159
-  port: 443
-  uuid: 940fcf3f-50da-469f-b67a-72de953343e2
-  tls: true
-  servername: ssl.fastly.com
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: looazjboijji.global.ssl.fastly.net.
-- name: 🇷🇺@FreakConfig
-  type: vless
-  server: 185.147.27.120
-  port: 443
-  uuid: 68d89911-b92d-46fe-9007-3645c3b285f0
-  flow: xtls-rprx-vision
-  tls: true
-  servername: youtube.sparxiecn.com
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: boyoshgS6sNQ7xgi36ggKQzv_YtAoiFPxMZj-R6XB38
-    short-id: 3acbb7d765702da3
-- name: 🇩🇪@FreakConfig
-  type: vless
-  server: 199.232.78.159
-  port: 443
-  uuid: a80131f7-df04-49c2-9740-9a3d0639ef7b
-  tls: true
-  servername: ssl.fastly.com
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /?ed#Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET
-    headers:
-      Host: 7wwwspeedtestnet.global.ssl.fastly.net
-- name: 🏴‍☠️@FreakConfig
-  type: vless
-  server: lithuana.hype-serv.xyz
-  port: 443
-  uuid: ac9a573b-67ff-4953-9e13-4cf43576f8f0
-  flow: xtls-rprx-vision
-  tls: true
-  servername: hh.ru
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: 8w1MyEJV4l9QeNWbYMXny5tTLNTw_9nsQ7jOuiQhix4
-    short-id: a1b2c3d4e5f60718
-- name: 🇫🇷@FreakConfig
-  type: vless
-  server: b2n.ir
-  port: 443
-  uuid: 7907dd24-e3f8-4151-a1b2-2608ac4b322e
-  tls: true
-  servername: milan.gorbeh3.ir
-  client-fingerprint: firefox
-  network: xhttp
-- name: 🇸🇬@FreakConfig
-  type: vless
-  server: 18.139.227.162
-  port: 28243
-  uuid: d00d9d18-20cf-4191-be76-6f73d43a27ec
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: IXxfPvq2OkbSuA-ZTBFpMzkDU1uO8dEI1e7s9VfHh1Y
-    short-id: 7996bf4dcf194d18
-- name: 🇸🇬@FreakConfig
-  type: vless
-  server: 18.140.238.157
-  port: 31870
-  uuid: d00d9d18-20cf-4191-be76-6f73d43a27ec
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: HEaa9lsAxLy1r13R-eB0nZWYj9n4kwxAeZFLFTKF4kc
-    short-id: 2fef6c2f
-- name: 🇫🇷@FreakConfig
-  type: vless
-  server: 94.130.178.194
-  port: 443
-  uuid: 9e3132b8-b595-444a-833a-2de44789f9d7
-  tls: true
-  servername: shephe.dpdns.org
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: shephe.dpdns.org
-- name: 🇩🇪@FreakConfig
-  type: vless
-  server: s1d.syslogd.ir
-  port: 443
-  uuid: 5a201de9-624a-4b58-b62e-32756556cdfc
-  tls: true
-  servername: 1fe60fe05d84ecc3.nikpush.ir
-  alpn:
-  - h3
-  - h2
-  network: ws
-  ws-opts:
-    path: /pa-m-v2
-    headers:
-      Host: prx.nikpush.ir
-- name: 🇩🇪@FreakConfig
-  type: vless
-  server: 109.122.198.83
-  port: 8443
-  uuid: 9e3132b8-b595-444a-833a-2de44789f9d7
-  tls: true
-  servername: shephe.dpdns.org
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: shephe.dpdns.org
-- name: 🇫🇷@FreakConfig
-  type: trojan
-  server: 172.67.149.60
-  port: 443
-  password: humanity
-  sni: www.ignitelimit.com
-  tls: true
-  servername: www.ignitelimit.com
-  network: ws
-  ws-opts:
-    path: /assignment
-- name: 🇫🇷@FreakConfig
-  type: trojan
-  server: 172.67.149.60
-  port: 443
-  password: humanity
-  sni: www.ignitelimit.com
-  tls: true
-  servername: www.ignitelimit.com
-  network: ws
-  ws-opts:
-    path: /assignment?ed#Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET
 - name: 🇫🇷@FreakConfig
   type: trojan
   server: 172.67.149.60
@@ -1809,7 +1485,7 @@ proxies:
       Host: www.ignitelimit.com
 - name: 🇫🇷@FreakConfig
   type: trojan
-  server: www.speedtest.net
+  server: render.com
   port: 443
   password: humanity
   sni: www.ignitelimit.com
@@ -1817,9 +1493,33 @@ proxies:
   servername: www.ignitelimit.com
   network: ws
   ws-opts:
-    path: /assignment
+    path: /assignment?ed#Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET
     headers:
       Host: www.ignitelimit.com
+- name: 🇷🇺@FreakConfig
+  type: vless
+  server: 185.147.27.120
+  port: 443
+  uuid: 68d89911-b92d-46fe-9007-3645c3b285f0
+  flow: xtls-rprx-vision
+  tls: true
+  servername: youtube.sparxiecn.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: boyoshgS6sNQ7xgi36ggKQzv_YtAoiFPxMZj-R6XB38
+    short-id: 3acbb7d765702da3
+- name: 🏴‍☠️@FreakConfig
+  type: vless
+  server: lithuana.hype-serv.xyz
+  port: 443
+  uuid: ac9a573b-67ff-4953-9e13-4cf43576f8f0
+  flow: xtls-rprx-vision
+  tls: true
+  servername: hh.ru
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: 8w1MyEJV4l9QeNWbYMXny5tTLNTw_9nsQ7jOuiQhix4
+    short-id: a1b2c3d4e5f60718
 - name: 🇺🇸@FreakConfig
   type: vless
   server: 151.101.56.6
@@ -1878,33 +1578,11 @@ proxies:
   reality-opts:
     public-key: XgdHElYEGdc0A5NTZP4uTya2Y4WTKnfFV4ormD7rLx4
     short-id: debb
-- name: 🏴‍☠️@FreakConfig
-  type: vless
-  server: 201.7.25.126
-  port: 24446
-  uuid: b229d38c-35ec-4a0b-9c86-8fceba243d6c
-  tls: true
-  servername: spry-jolt.cdn.cachefleet.com
-  client-fingerprint: random
-  reality-opts:
-    public-key: esOi15BFVX7pHyci7GQp8_FVlY2EmjSF2-0pPu4lIlk
-    short-id: defeaa98406c7bdf
-  network: grpc
-  grpc-opts:
-    grpc-service-name: telegram-bridge
-- name: 🇨🇦@FreakConfig
-  type: vless
-  server: b2n.ir
-  port: 443
-  uuid: d5af4dfe-eaf1-460c-87aa-fefe930db0ba
-  tls: true
-  servername: chopin.paxr.ir
-  network: xhttp
 - name: 🇩🇪@FreakConfig
   type: vless
   server: 199.232.78.159
   port: 443
-  uuid: cd1956d7-f803-4e5a-b8a4-f1540bd103d1
+  uuid: 3d9092f3-2ee2-497a-9732-ee7570531c09
   tls: true
   servername: ssl.fastly.com
   network: ws
@@ -1912,39 +1590,44 @@ proxies:
     path: /
     headers:
       Host: pokerrr.global.ssl.fastly.net
-- name: 🇩🇪@FreakConfig
+- name: 🇺🇸@FreakConfig
   type: vless
-  server: 13.143.181.220
+  server: 199.232.78.159
   port: 443
-  uuid: 7a8d2c3f-d6dd-0004-81d8-cff23d8364ee
-  flow: xtls-rprx-vision
+  uuid: 3d9092f3-2ee2-497a-9732-ee7570531c09
   tls: true
-  servername: msk1.maxtelemost.com
-  client-fingerprint: safari
-  reality-opts:
-    public-key: QfdR5yEjdbaqSet3-XrkDdVjPO9VTRGlUI-MV-b4p38
-- name: 🇺🇸@FreakConfig
-  type: vless
-  server: 2.26.11.234
-  port: 9543
-  uuid: ff6d2dda-7b90-404e-9951-34b3124bfdfa
-  flow: xtls-rprx-vision
+  servername: ssl.fastly.com
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: sevenfeshab.global.ssl.fastly.net.
+- name: 🇨🇦@FreakConfig
+  type: trojan
+  server: 188.114.97.6
+  port: 443
+  password: 018b8e7b-7813-4dcb-84a5-3c98f1521e00
+  sni: id1.nathaya.web.id
   tls: true
-  servername: storage.yandexcloud.net
-  client-fingerprint: safari
-  reality-opts:
-    public-key: M6Ck7wUfOLhQl4582CBnaXwscPEP6SCpdEkUDzoj4Fc
-    short-id: 123abcdf
-- name: 🇫🇷@FreakConfig
-  type: vless
-  server: francenewspeed1234554321.soft355.ir
-  port: 33017
-  uuid: a54166f2-56c7-44f6-abc5-24dbed940bc3
-- name: 🇺🇸@FreakConfig
-  type: vless
-  server: usanewspeed1234554321.soft355.ir
-  port: 33017
-  uuid: a54166f2-56c7-44f6-abc5-24dbed940bc3
+  servername: id1.nathaya.web.id
+  network: ws
+  ws-opts:
+    path: /trojan
+    headers:
+      Host: id1.nathaya.web.id
+- name: 🇨🇦@FreakConfig
+  type: trojan
+  server: 104.18.32.87
+  port: 443
+  password: 018b8e7b-7813-4dcb-84a5-3c98f1521e00
+  sni: id1.nathaya.web.id
+  tls: true
+  servername: id1.nathaya.web.id
+  network: ws
+  ws-opts:
+    path: /trojan
+    headers:
+      Host: id1.nathaya.web.id
 - name: 🇩🇪@FreakConfig
   type: trojan
   server: 151.101.56.7
@@ -1960,14 +1643,18 @@ proxies:
   ws-opts:
     headers:
       Host: mitivpn---de--s---mitivpn-2.global.ssl.fastly.net
-- name: 🇫🇷@FreakConfig
-  type: vless
-  server: darsadgir.ir
-  port: 443
-  uuid: d5af4dfe-eaf1-460c-87aa-fefe930db0ba
-  tls: true
-  servername: chopin.paxr.ir
-  network: xhttp
+- name: 🇩🇪@FreakConfig
+  type: ss
+  server: p2tun3.greewebservices.ir
+  port: 1030
+  cipher: chacha20-ietf-poly1305
+  password: 2MRyo1ekfJ0exGnAVcKe6g
+- name: 🇩🇪@FreakConfig
+  type: ss
+  server: p2tun2.greewebservices.ir
+  port: 1020
+  cipher: chacha20-ietf-poly1305
+  password: 2MRyo1ekfJ0exGnAVcKe6g
 - name: 🇩🇪@FreakConfig
   type: vless
   server: p11real1.greewebservices.ir
@@ -1979,12 +1666,111 @@ proxies:
   reality-opts:
     public-key: xQnXh5EfPDhcEBB7rRiLca33GYrMEeUa35domLL_yA8
     short-id: 9b60d3
+- name: 🇫🇮@FreakConfig
+  type: vless
+  server: 199.232.78.159
+  port: 443
+  uuid: 940fcf3f-50da-469f-b67a-72de953343e2
+  tls: true
+  servername: ssl.fastly.com
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: looazjboijji.global.ssl.fastly.net.
+- name: 🇩🇪@FreakConfig
+  type: vless
+  server: 199.232.78.159
+  port: 443
+  uuid: a80131f7-df04-49c2-9740-9a3d0639ef7b
+  tls: true
+  servername: ssl.fastly.com
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /?ed#Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET
+    headers:
+      Host: 7wwwspeedtestnet.global.ssl.fastly.net
+- name: 🇫🇷@FreakConfig
+  type: vless
+  server: b2n.ir
+  port: 443
+  uuid: 7907dd24-e3f8-4151-a1b2-2608ac4b322e
+  tls: true
+  servername: milan.gorbeh3.ir
+  client-fingerprint: firefox
+  network: xhttp
 - name: 🇩🇪@FreakConfig
   type: vless
   server: 91.107.185.32
   port: 80
   uuid: 4b3df39e-94a1-4e7e-957a-d3f9befc6b87
   network: xhttp
+- name: 🇸🇬@FreakConfig
+  type: vless
+  server: 18.139.227.162
+  port: 28243
+  uuid: d00d9d18-20cf-4191-be76-6f73d43a27ec
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: IXxfPvq2OkbSuA-ZTBFpMzkDU1uO8dEI1e7s9VfHh1Y
+    short-id: 7996bf4dcf194d18
+- name: 🇸🇬@FreakConfig
+  type: vless
+  server: 18.140.238.157
+  port: 31870
+  uuid: d00d9d18-20cf-4191-be76-6f73d43a27ec
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: HEaa9lsAxLy1r13R-eB0nZWYj9n4kwxAeZFLFTKF4kc
+    short-id: 2fef6c2f
+- name: 🇩🇪@FreakConfig
+  type: vless
+  server: s1d.syslogd.ir
+  port: 443
+  uuid: 5a201de9-624a-4b58-b62e-32756556cdfc
+  tls: true
+  servername: 1fe60fe05d84ecc3.nikpush.ir
+  alpn:
+  - h3
+  - h2
+  network: ws
+  ws-opts:
+    path: /pa-m-v2
+    headers:
+      Host: prx.nikpush.ir
+- name: 🇫🇷@FreakConfig
+  type: vless
+  server: 94.130.178.194
+  port: 443
+  uuid: 9e3132b8-b595-444a-833a-2de44789f9d7
+  tls: true
+  servername: shephe.dpdns.org
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: shephe.dpdns.org
+- name: 🇩🇪@FreakConfig
+  type: vless
+  server: 109.122.198.83
+  port: 8443
+  uuid: 9e3132b8-b595-444a-833a-2de44789f9d7
+  tls: true
+  servername: shephe.dpdns.org
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: shephe.dpdns.org
 - name: Bulgaria WorkTitans
   type: vless
   server: norman.ns.cloudflare.com
@@ -2033,6 +1819,22 @@ proxies:
   reality-opts:
     public-key: hGGVm0PiHJwNL34pBG6NLtbFGYVdcWhDu5zHYDoct08
     short-id: 4360e536
+- name: Singapore cloudflare
+  type: vless
+  server: 104.16.33.150
+  port: 2096
+  uuid: 29187857-4a1f-4d1e-88eb-0016771e0dbb
+  tls: true
+  servername: vless.hubp.de
+  client-fingerprint: chrome
+  alpn:
+  - h2
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /?BIA_TELEGRAM@AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1
+    headers:
+      Host: vless.hubp.de
 - name: Finland Hetzner
   type: vless
   server: 157.180.123.25
@@ -2053,28 +1855,6 @@ proxies:
     path: /vless/
     headers:
       Host: t.me/v2line
-- name: Singapore cloudflare
-  type: vless
-  server: 104.16.33.150
-  port: 2096
-  uuid: 29187857-4a1f-4d1e-88eb-0016771e0dbb
-  tls: true
-  servername: vless.hubp.de
-  client-fingerprint: chrome
-  alpn:
-  - h2
-  - http/1.1
-  network: ws
-  ws-opts:
-    path: /?BIA_TELEGRAM@AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1
-    headers:
-      Host: vless.hubp.de
-- name: Paraguay Sondatech
-  type: ss
-  server: 38.165.233.18
-  port: 990
-  cipher: chacha20-ietf-poly1305
-  password: f8f7aCzcPKbsF8p3
 - name: Kazakhstan NLs Astana Llp
   type: vless
   server: 77.73.232.61
@@ -2086,6 +1866,12 @@ proxies:
   reality-opts:
     public-key: ZO9dTeg1slvTXgVsBsaJ1BDvz_YUImTLJjbHs-GdVyM
     short-id: '2001'
+- name: Paraguay Sondatech
+  type: ss
+  server: 38.165.233.18
+  port: 990
+  cipher: chacha20-ietf-poly1305
+  password: f8f7aCzcPKbsF8p3
 - name: United States Relayed
   type: vless
   server: 15.204.12.101
@@ -2159,19 +1945,6 @@ proxies:
     path: /d9863037
     headers:
       Host: xcf037.facai2024.com
-- name: 🇺🇸美国10 | ⬇️ 4.9MB/s
-  type: vmess
-  server: www.wn03.cc
-  port: 80
-  uuid: 2f38f848-a899-4c87-9807-207a41615e3c
-  alterId: 0
-  cipher: auto
-  servername: us.freeyyds.dpdns.org
-  network: ws
-  ws-opts:
-    path: /rongseven?ed=2048
-    headers:
-      Host: us.freeyyds.dpdns.org
 - name: 🇺🇸美国27 | ⬇️ 1.4MB/s
   type: vmess
   server: time.is
@@ -2186,6 +1959,25 @@ proxies:
     path: /
     headers:
       Host: shs111.kejixiaoqi666.store
+- name: 🇺🇸美国10 | ⬇️ 4.9MB/s
+  type: vmess
+  server: www.wn03.cc
+  port: 80
+  uuid: 2f38f848-a899-4c87-9807-207a41615e3c
+  alterId: 0
+  cipher: auto
+  servername: us.freeyyds.dpdns.org
+  network: ws
+  ws-opts:
+    path: /rongseven?ed=2048
+    headers:
+      Host: us.freeyyds.dpdns.org
+- name: '@@v2rayng3'
+  type: ss
+  server: 217.138.207.106
+  port: 1080
+  cipher: chacha20-ietf-poly1305
+  password: Vr06rU_v1vFPYeXq9zbsAA
 - name: '@v2rayng3'
   type: ss
   server: 37.120.139.234
@@ -2241,12 +2033,6 @@ proxies:
     path: /
     headers:
       Host: t1s1.rittbo.kdns.fr
-- name: '@@v2rayng3'
-  type: ss
-  server: 217.138.207.106
-  port: 1080
-  cipher: chacha20-ietf-poly1305
-  password: Vr06rU_v1vFPYeXq9zbsAA
 - name: '@V2rayng3'
   type: trojan
   server: 45.130.125.112
@@ -2259,6 +2045,12 @@ proxies:
   network: ws
   ws-opts:
     path: /assignment
+- name: fast🇩🇪-test
+  type: ss
+  server: 185.215.228.132
+  port: 2044
+  cipher: chacha20-ietf-poly1305
+  password: 3rfnj11q5xvg72y1
 - name: '@V2rayng3'
   type: vless
   server: 162.159.38.119
@@ -2271,12 +2063,6 @@ proxies:
     path: /rdfgtws
     headers:
       Host: vangoghhh.info
-- name: fast🇩🇪-test
-  type: ss
-  server: 185.215.228.132
-  port: 2044
-  cipher: chacha20-ietf-poly1305
-  password: 3rfnj11q5xvg72y1
 - name: '@V2rayng3'
   type: trojan
   server: 162.159.38.119
@@ -2290,6 +2076,19 @@ proxies:
     path: /assignment
     headers:
       Host: www.creationlong.org
+- name: '@V2rayng3'
+  type: vless
+  server: 104.17.122.18
+  port: 443
+  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+  tls: true
+  servername: t1s1.rittbo.kdns.fr
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /fp
+    headers:
+      Host: t1s1.rittbo.kdns.fr
 - name: '@V2rayng3'
   type: vless
   server: 162.159.38.119
@@ -2307,28 +2106,9 @@ proxies:
   port: 8880
   uuid: 2e622f08-444a-46d0-8dac-6f9709f4d172
   network: httpupgrade
-- name: '@V2rayng3'
-  type: vless
-  server: 104.17.122.18
-  port: 443
-  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
-  tls: true
-  servername: t1s1.rittbo.kdns.fr
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /fp
-    headers:
-      Host: t1s1.rittbo.kdns.fr
 - name: fast🇩🇪-test
   type: ss
   server: page.hsrdnr.ir
-  port: 2044
-  cipher: chacha20-ietf-poly1305
-  password: 3rfnj11q5xvg72y1
-- name: fa
-  type: ss
-  server: tt.hsrdnr.ir
   port: 2044
   cipher: chacha20-ietf-poly1305
   password: 3rfnj11q5xvg72y1
@@ -2356,18 +2136,6 @@ proxies:
   alpn:
   - h2
   network: xhttp
-- name: '@v2rayng3'
-  type: trojan
-  server: www.gossipglove.com
-  port: 443
-  password: humanity
-  sni: www.gossipglove.com
-  tls: true
-  servername: www.gossipglove.com
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /assignment
 - name: '@V2rayng3'
   type: vless
   server: yx.cloudflare.182682.xyz
@@ -2381,19 +2149,30 @@ proxies:
     path: /
     headers:
       Host: t1s1.rittbo.kdns.fr
-- name: '@V2rayng3'
-  type: vless
-  server: cloudflare-ip.mofashi.ltd
+- name: fa
+  type: ss
+  server: tt.hsrdnr.ir
+  port: 2044
+  cipher: chacha20-ietf-poly1305
+  password: 3rfnj11q5xvg72y1
+- name: '@v2rayng3'
+  type: trojan
+  server: www.gossipglove.com
   port: 443
-  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+  password: humanity
+  sni: www.gossipglove.com
   tls: true
-  servername: t1s1.rittbo.kdns.fr
+  servername: www.gossipglove.com
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /
-    headers:
-      Host: t1s1.rittbo.kdns.fr
+    path: /assignment
+- name: '@v2rayng3'
+  type: ss
+  server: 82.38.31.162
+  port: 443
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
 - name: '@v2rayng3'
   type: ss
   server: 188.41.249.20
@@ -2452,6 +2231,19 @@ proxies:
       Host: terazhediii.info
 - name: '@V2rayng3'
   type: vless
+  server: cloudflare-ip.mofashi.ltd
+  port: 443
+  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+  tls: true
+  servername: t1s1.rittbo.kdns.fr
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: t1s1.rittbo.kdns.fr
+- name: '@V2rayng3'
+  type: vless
   server: md.gilangard.ir
   port: 11431
   uuid: 8db764be-f144-4df0-ae5d-21d5f2551290
@@ -2467,17 +2259,6 @@ proxies:
   port: 8080
   cipher: chacha20-ietf-poly1305
   password: QCXDxuDlTTMD7jtgHUjIoj
-- name: '@v2rayng3'
-  type: vless
-  server: qq.utiltools.ru
-  port: 443
-  uuid: eb78e1f0-d921-4ca9-a889-261fcc5a0547
-  flow: xtls-rprx-vision
-  tls: true
-  servername: qq.utiltools.ru
-  client-fingerprint: qq
-  reality-opts:
-    public-key: drY21DHNOr6ezJLA2B10mzTExeJ9-gVBfTBNLwVBtWI
 - name: '@v2rayng3'
   type: vmess
   server: 66.163.117.58
@@ -2505,41 +2286,18 @@ proxies:
       Host: english.havray2025.ir
 - name: '@v2rayng3'
   type: vless
+  server: qq.utiltools.ru
+  port: 443
+  uuid: eb78e1f0-d921-4ca9-a889-261fcc5a0547
+  flow: xtls-rprx-vision
+  tls: true
+  servername: qq.utiltools.ru
+  client-fingerprint: qq
+  reality-opts:
+    public-key: drY21DHNOr6ezJLA2B10mzTExeJ9-gVBfTBNLwVBtWI
+- name: '@v2rayng3'
+  type: vless
   server: 162.159.137.54
-  port: 443
-  uuid: 4d10c997-4781-4cd9-82c3-15453523e12c
-  tls: true
-  servername: support.zoom.us.yxls.eu.cc
-  network: ws
-  ws-opts:
-    path: /sg-melbi
-    headers:
-      Host: support.zoom.us.yxls.eu.cc
-- name: '@v2rayng3'
-  type: vless
-  server: 89.105.197.203
-  port: 443
-  uuid: 631ee34f-4faf-4ad7-b49d-e6f50403cf0e
-  flow: xtls-rprx-vision
-  tls: true
-  servername: anyfile2file.com
-  reality-opts:
-    public-key: mza5Hn1aolSz65qu-UwvBP3oesxMe25r11o4nxvikF0
-    short-id: 64c1fe36c7846400
-- name: '@v2rayng3'
-  type: vless
-  server: 64.49.38.6
-  port: 993
-  uuid: e6d41d6f-d58a-7650-bba4-d7f0dde3ba4d
-  flow: xtls-rprx-vision
-  tls: true
-  servername: download.nvidia.com
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: JeVpfwIwteGa8xfysPJUzrbHgmOPyLGomRqyH8Pi7W0
-- name: '@v2rayng3'
-  type: vless
-  server: 172.66.44.97
   port: 443
   uuid: 4d10c997-4781-4cd9-82c3-15453523e12c
   tls: true
@@ -2560,6 +2318,40 @@ proxies:
   reality-opts:
     public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
     short-id: c39cc7310a
+- name: '@v2rayng3'
+  type: vless
+  server: 172.66.44.97
+  port: 443
+  uuid: 4d10c997-4781-4cd9-82c3-15453523e12c
+  tls: true
+  servername: support.zoom.us.yxls.eu.cc
+  network: ws
+  ws-opts:
+    path: /sg-melbi
+    headers:
+      Host: support.zoom.us.yxls.eu.cc
+- name: '@v2rayng3'
+  type: vless
+  server: 64.49.38.6
+  port: 993
+  uuid: e6d41d6f-d58a-7650-bba4-d7f0dde3ba4d
+  flow: xtls-rprx-vision
+  tls: true
+  servername: download.nvidia.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: JeVpfwIwteGa8xfysPJUzrbHgmOPyLGomRqyH8Pi7W0
+- name: '@v2rayng3'
+  type: vless
+  server: 89.105.197.203
+  port: 443
+  uuid: 631ee34f-4faf-4ad7-b49d-e6f50403cf0e
+  flow: xtls-rprx-vision
+  tls: true
+  servername: anyfile2file.com
+  reality-opts:
+    public-key: mza5Hn1aolSz65qu-UwvBP3oesxMe25r11o4nxvikF0
+    short-id: 64c1fe36c7846400
 - name: '@v2rayng3'
   type: vless
   server: cf-mci.coixconqwe1.ir
@@ -2646,15 +2438,14 @@ proxies:
     short-id: '01'
 - name: '@v2rayng3'
   type: vless
-  server: dey.lnmarketplace.net
-  port: 443
-  uuid: 3536e1fa-0850-44d1-b123-925ce12476cf
-  tls: true
-  servername: dey.lnmarketplace.net
-  client-fingerprint: firefox
-  alpn:
-  - h2
-  network: xhttp
+  server: 185.143.234.238
+  port: 2086
+  uuid: 1ee1f28d-4975-4d7c-95c7-76172c20eed5
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: parsi.parsi.sbs
 - name: Telegram:@v2rayng3
   type: trojan
   server: 104.18.9.83
@@ -2668,14 +2459,15 @@ proxies:
       Host: www.calmlunch.com
 - name: '@v2rayng3'
   type: vless
-  server: 185.143.234.238
-  port: 2086
-  uuid: 1ee1f28d-4975-4d7c-95c7-76172c20eed5
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: parsi.parsi.sbs
+  server: dey.lnmarketplace.net
+  port: 443
+  uuid: 3536e1fa-0850-44d1-b123-925ce12476cf
+  tls: true
+  servername: dey.lnmarketplace.net
+  client-fingerprint: firefox
+  alpn:
+  - h2
+  network: xhttp
 - name: Telegram:@v2rayng3
   type: vless
   server: 185.168.195.211
@@ -2714,12 +2506,29 @@ proxies:
   grpc-opts:
     grpc-service-name: grpc
 - name: Telegram:@v2rayng3
+  type: vless
+  server: 137.220.221.179
+  port: 443
+  uuid: a16a3336-c9ab-489f-9b85-c973f5e2cfa4
+- name: Telegram:@v2rayng3
   type: vmess
   server: 149.88.23.207
   port: 18000
   uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
   alterId: 0
   cipher: auto
+- name: Telegram:@v2rayng3
+  type: vless
+  server: tgfree.rush-server.com
+  port: 443
+  uuid: ebd1c0d6-7ff4-4b9f-8692-237517a27a64
+  flow: xtls-rprx-vision
+  tls: true
+  servername: anyfile2file.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: mza5Hn1aolSz65qu-UwvBP3oesxMe25r11o4nxvikF0
+    short-id: 64c1fe36c7846400
 - name: vless6
   type: vless
   server: 91.107.255.228
@@ -2732,15 +2541,24 @@ proxies:
     public-key: iMi_BgDPs17iBPlwmjXMbwjBmFLc2UpgR4_c-30FXSQ
     short-id: '82'
 - name: Telegram:@v2rayng3
-  type: ss
-  server: 185.156.47.97
-  port: 9443
-  cipher: aes-256-gcm
-  password: eveaaTOb8ji8yntw2Z9yWUG0d6Ir8Ld8m3ymH8THdC5egiTH1mXCiBc0Skr7FibH
+  type: trojan
+  server: 8.47.69.0
+  port: 443
+  password: humanity
+  sni: www.pleadcourt.org
+  tls: true
+  servername: www.pleadcourt.org
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.pleadcourt.org
 - name: Telegram:@v2rayng3
   type: ss
   server: 31.76.11.83
-  port: 11850
+  port: 11750
   cipher: chacha20-poly1305
   password: iku/Gfrt9YeEUUleXr2Ptf3uvs0hszCR0JHPqGSjs+c=
 - name: Telegram:@v2rayng3
@@ -2800,23 +2618,6 @@ proxies:
     short-id: '01'
 - name: Telegram:@v2rayng3
   type: vless
-  server: 65.109.28.164
-  port: 443
-  uuid: 8df2e661-6f46-471b-9133-7fc13a0daa35
-  flow: xtls-rprx-vision
-  tls: true
-  servername: web.eitaa.com
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: jDoORbrtDrvAlFSo19CJbc99C4ev8SAo1MwczSUt9no
-    short-id: 90ec9bba2019
-- name: Telegram:@v2rayng3
-  type: vless
-  server: 31.76.11.83
-  port: 26070
-  uuid: e676c6c8-44a8-4a1d-82cc-821a1f70f0c0
-- name: Telegram:@v2rayng3
-  type: vless
   server: finporkzov.com
   port: 443
   uuid: 7b93e3f1-c5bf-43cd-8fcd-e0e745c92d10
@@ -2827,6 +2628,49 @@ proxies:
   reality-opts:
     public-key: _0N3gACBkKvGKTh0q5-dmt-XqSHB3xfEHSANRXu-U0I
     short-id: f00f58383241c807
+- name: Telegram:@v2rayng3
+  type: vless
+  server: 31.77.227.10
+  port: 52006
+  uuid: bc659d88-a1e0-4c65-a49a-7b51b26a7a7f
+  flow: xtls-rprx-vision-udp443
+  tls: true
+  servername: fr.setlisting.ru
+  client-fingerprint: chrome
+  alpn:
+  - h2
+  - http/1.1
+- name: Telegram:@v2rayng3
+  type: vless
+  server: 2.27.249.133
+  port: 443
+  uuid: 0f4081e7-612b-425f-8def-eebf144aedba
+  flow: xtls-rprx-vision
+  tls: true
+  servername: vault.connectiux.com
+  client-fingerprint: safari
+  reality-opts:
+    public-key: ITd6cmCxudmTvGcwnAzpd0VRe8jS9KJAQ1tmtVN3mCM
+    short-id: 9e15546f267baa64
+- name: Telegram:@v2rayng3
+  type: vless
+  server: 176.108.245.167
+  port: 9881
+  uuid: 5d16ac22-6eea-426f-b778-6f4c2961faef
+  tls: true
+  servername: dl.google.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: Dfgu8Ey0M8Hz4gXGZAwQ3H9jLt2HByVsjAOTWiuKDB0
+    short-id: aabbccdd
+  network: grpc
+  grpc-opts:
+    grpc-service-name: grpc-tunnel
+- name: Telegram:@v2rayng3
+  type: vless
+  server: 31.14.123.220
+  port: 49433
+  uuid: e0ff8a9b-dad3-4671-baf4-c8d466d1eb48
 - name: V2rayNG3
   type: vless
   server: snapp.ir
@@ -2837,16 +2681,6 @@ proxies:
     path: /
     headers:
       Host: beraghsaontop.dracodcodya.ir
-- name: '@V2rayNG3'
-  type: vless
-  server: 185.143.233.5
-  port: 2052
-  uuid: 5f117758-a07f-4b20-82bf-25b7665ee514
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: cd2.sesrsa.com
 - name: V2rayNG3
   type: vless
   server: 185.143.233.200
@@ -2861,7 +2695,7 @@ proxies:
   type: vless
   server: 185.143.233.5
   port: 2052
-  uuid: 982ae5d2-12a6-45a8-b0a2-19302336ea21
+  uuid: 5f117758-a07f-4b20-82bf-25b7665ee514
   network: ws
   ws-opts:
     path: /
@@ -2869,24 +2703,14 @@ proxies:
       Host: cd2.sesrsa.com
 - name: '@V2rayNG3'
   type: vless
-  server: 185.143.233.43
-  port: 8880
-  uuid: 0053c51b-b1f6-4d11-a087-ad795f65bec1
+  server: 185.143.233.5
+  port: 2052
+  uuid: 982ae5d2-12a6-45a8-b0a2-19302336ea21
   network: ws
   ws-opts:
     path: /
     headers:
-      Host: motabarim3.service-panelbaz.ir
-- name: '@V2rayNG3'
-  type: vless
-  server: 185.143.234.235
-  port: 80
-  uuid: 87a09075-f5f0-4ff9-80df-3e81fcdfd10d
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: d.nsa03.com
+      Host: cd2.sesrsa.com
 - name: '@v2rayng3'
   type: vless
   server: chatgpt.com
@@ -2899,6 +2723,26 @@ proxies:
     path: /vless-tls
     headers:
       Host: vpnazadie.store
+- name: '@V2rayNG3'
+  type: vless
+  server: 185.143.234.235
+  port: 80
+  uuid: 87a09075-f5f0-4ff9-80df-3e81fcdfd10d
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: d.nsa03.com
+- name: '@V2rayNG3'
+  type: vless
+  server: 185.143.233.43
+  port: 8880
+  uuid: 0053c51b-b1f6-4d11-a087-ad795f65bec1
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: motabarim3.service-panelbaz.ir
 - name: '@v2rayng3'
   type: vless
   server: 185.143.233.5
@@ -2935,14 +2779,6 @@ proxies:
     path: /
     headers:
       Host: duster.star2feri.ir
-- name: '@V2rayNG3'
-  type: vless
-  server: t1.arshiaspeed.shop
-  port: 2086
-  uuid: 58715b6d-83c2-4695-b536-e5de12913eb6
-  network: ws
-  ws-opts:
-    path: /
 - name: '@v2rayng3'
   type: vless
   server: snapp.ir
@@ -2953,36 +2789,6 @@ proxies:
     path: /
     headers:
       Host: api.shomalnojm.ir
-- name: '@v2rayng3'
-  type: vless
-  server: digipay.ir
-  port: 80
-  uuid: d429f68f-6185-4591-a104-92a399f62774
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: asd.pixserver.ir
-- name: '@v2rayng3'
-  type: vless
-  server: digipay.ir
-  port: 80
-  uuid: b06bdaac-ca63-4dd9-bcf3-a621ab44e46e
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: asd.pixserver.ir
-- name: '@v2rayng3'
-  type: vless
-  server: pg.nexorainnovationhub.ir
-  port: 80
-  uuid: be38206f-131d-4264-b47c-4802ff0b7c83
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: germany.lezzaluxa.ir
 - name: '@v2rayng3'
   type: vless
   server: 185.143.233.233
@@ -2996,6 +2802,44 @@ proxies:
     path: /voip
     headers:
       Host: pishparda.ir
+- name: '@V2rayNG3'
+  type: vless
+  server: t1.arshiaspeed.shop
+  port: 2086
+  uuid: 58715b6d-83c2-4695-b536-e5de12913eb6
+  network: ws
+  ws-opts:
+    path: /
+- name: '@v2rayng3'
+  type: vless
+  server: pg.nexorainnovationhub.ir
+  port: 80
+  uuid: be38206f-131d-4264-b47c-4802ff0b7c83
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: germany.lezzaluxa.ir
+- name: '@v2rayng3'
+  type: vless
+  server: digipay.ir
+  port: 80
+  uuid: b06bdaac-ca63-4dd9-bcf3-a621ab44e46e
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: asd.pixserver.ir
+- name: '@v2rayng3'
+  type: vless
+  server: digipay.ir
+  port: 80
+  uuid: d429f68f-6185-4591-a104-92a399f62774
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: asd.pixserver.ir
 - name: '@v2rayng3'
   type: vless
   server: 185.143.233.5
@@ -3060,16 +2904,6 @@ proxies:
       Host: derakhshan.molvliafor.ir
 - name: '@v2rayng3'
   type: vless
-  server: varzesh3.com
-  port: 80
-  uuid: 2225c6e0-b549-4999-b0cb-5f1d6050e9b9
-  network: ws
-  ws-opts:
-    path: /ws
-    headers:
-      Host: nobody.fasterspeed.ir
-- name: '@v2rayng3'
-  type: vless
   server: snapp.ir
   port: 80
   uuid: b3353fe8-aada-4911-851b-e5c9fb954569
@@ -3078,6 +2912,16 @@ proxies:
     path: /
     headers:
       Host: derakhshan.molvliafor.ir
+- name: '@v2rayng3'
+  type: vless
+  server: varzesh3.com
+  port: 80
+  uuid: 2225c6e0-b549-4999-b0cb-5f1d6050e9b9
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: nobody.fasterspeed.ir
 - name: '@v2rayng3'
   type: vmess
   server: client.cloudafra.top
@@ -3099,7 +2943,7 @@ proxies:
   type: vless
   server: snapp.ir
   port: 80
-  uuid: 2877414f-d5bc-4bcf-8d82-470d92594504
+  uuid: 09fc1b02-c13b-4b54-ab86-21a7786cb38c
   network: ws
   ws-opts:
     path: /
@@ -3109,7 +2953,7 @@ proxies:
   type: vless
   server: snapp.ir
   port: 80
-  uuid: 09fc1b02-c13b-4b54-ab86-21a7786cb38c
+  uuid: 2877414f-d5bc-4bcf-8d82-470d92594504
   network: ws
   ws-opts:
     path: /
@@ -3158,12 +3002,6 @@ proxies:
     path: /
     headers:
       Host: user.neternet.ir
-- name: '@v2rayng3'
-  type: ss
-  server: 82.38.31.35
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
 - name: v2rayng3
   type: vless
   server: npmjs.com
@@ -3180,6 +3018,12 @@ proxies:
     path: /metrics
     headers:
       Host: 6956646388cdb23c971b4ec6.mmdbay.site
+- name: '@v2rayng3'
+  type: ss
+  server: 82.38.31.35
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
 - name: v2rayng3
   type: vless
   server: 63.141.128.45
@@ -3241,13 +3085,6 @@ proxies:
     path: /tr
     headers:
       Host: Koma-YT.PAGeS.Dev
-- name: '@v2rayng3'
-  type: vless
-  server: proxy.wastech.org
-  port: 443
-  uuid: 7131f38f-9a4a-4e38-ae1d-aa9e132265ea
-  tls: true
-  servername: proxy.wastech.org
 - name: v2rayng3
   type: vless
   server: 104.16.80.73
@@ -3295,11 +3132,12 @@ proxies:
     headers:
       Host: sni.111000.dynv6.azazilvpn.sbs
 - name: '@v2rayng3'
-  type: ss
-  server: 82.38.31.214
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
+  type: vless
+  server: proxy.wastech.org
+  port: 443
+  uuid: 7131f38f-9a4a-4e38-ae1d-aa9e132265ea
+  tls: true
+  servername: proxy.wastech.org
 - name: '@v2rayng3'
   type: vless
   server: 162.159.152.120
@@ -3336,18 +3174,6 @@ proxies:
   network: xhttp
 - name: '@v2rayng3'
   type: vless
-  server: 185.221.199.37
-  port: 443
-  uuid: 37253a6a-2a9b-42bb-992c-b5f1b1ef1791
-  flow: xtls-rprx-vision
-  tls: true
-  servername: vruaz.mostserv.xyz
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 3WzSgL8uXA3vE3IHrfdBpJmOO4MYrsWpczDSY_jJRjI
-    short-id: 226509f017e4c36d
-- name: '@v2rayng3'
-  type: vless
   server: 104.17.150.224
   port: 443
   uuid: ae0dd58e-e222-40bf-84ae-365a97532737
@@ -3371,6 +3197,12 @@ proxies:
     path: /friend
     headers:
       Host: pagescm.freen11.cc.cd
+- name: '@v2rayng3'
+  type: ss
+  server: 82.38.31.214
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
 - name: '@v2rayng3'
   type: vless
   server: 172.64.229.81
@@ -3450,6 +3282,18 @@ proxies:
   network: xhttp
 - name: '@v2rayng3'
   type: vless
+  server: 185.221.199.37
+  port: 443
+  uuid: 37253a6a-2a9b-42bb-992c-b5f1b1ef1791
+  flow: xtls-rprx-vision
+  tls: true
+  servername: vruaz.mostserv.xyz
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 3WzSgL8uXA3vE3IHrfdBpJmOO4MYrsWpczDSY_jJRjI
+    short-id: 226509f017e4c36d
+- name: '@v2rayng3'
+  type: vless
   server: 178.236.16.98
   port: 35728
   uuid: a00d89f6-ab7e-4e30-a5e5-54c701d62c93
@@ -3458,6 +3302,18 @@ proxies:
   reality-opts:
     public-key: vhUFNoFcvtZAVMo8y5K5eU2V43m5q6yjmWIhp5RkFng
     short-id: 69a2
+- name: '@v2rayng3'
+  type: vless
+  server: 46.235.186.50
+  port: 443
+  uuid: 9ebab373-19fe-4535-aa95-4e348ea300f1
+  tls: true
+  servername: s28315.cdn.ngenix.net
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: s28315.cdn.ngenix.net
 - name: '@v2rayng3'
   type: vless
   server: 216.24.57.6
@@ -3516,18 +3372,6 @@ proxies:
     path: /
     headers:
       Host: jp.aniua.qzz.io
-- name: '@v2rayng3'
-  type: vless
-  server: 46.235.186.50
-  port: 443
-  uuid: 9ebab373-19fe-4535-aa95-4e348ea300f1
-  tls: true
-  servername: s28315.cdn.ngenix.net
-  network: ws
-  ws-opts:
-    path: /ws
-    headers:
-      Host: s28315.cdn.ngenix.net
 - name: '@v2rayng3'
   type: vless
   server: 94.156.112.71
@@ -3808,6 +3652,12 @@ proxies:
     short-id: 28a059440d3d5ba1
 - name: '@v2rayng3'
   type: vless
+  server: mci.connectingissues.ir
+  port: 80
+  uuid: 8937c203-8ec6-477f-830b-939992cba4eb
+  network: xhttp
+- name: '@v2rayng3'
+  type: vless
   server: 104.16.72.2
   port: 443
   uuid: 14b59caf-a196-4ec2-8c70-c7b388062f5b
@@ -3847,12 +3697,6 @@ proxies:
       Host: shegeftihaaa.net
 - name: '@v2rayng3'
   type: vless
-  server: mci.connectingissues.ir
-  port: 80
-  uuid: 8937c203-8ec6-477f-830b-939992cba4eb
-  network: xhttp
-- name: '@v2rayng3'
-  type: vless
   server: earth.lukelucky.com
   port: 2086
   uuid: 46aeacfa-0b4a-4e35-9a0f-6db76e92d4c6
@@ -3871,12 +3715,6 @@ proxies:
     path: /assignment
     headers:
       Host: www.calmlunch.com
-- name: '@v2rayng3'
-  type: ss
-  server: 82.38.31.198
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
 - name: '@v2rayng3'
   type: trojan
   server: 202.37.33.80
@@ -4048,12 +3886,6 @@ proxies:
     path: /eyJqdW5rIjoiVUl6eXhLZkkwUTJ3ZzkiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W119?ed
 - name: '@V2rayNG3'
   type: vless
-  server: 151.101.25.242
-  port: 80
-  uuid: fbbd87c3-170b-4249-8139-aa6b23ad5133
-  network: xhttp
-- name: '@V2rayNG3'
-  type: vless
   server: 83.222.23.81
   port: 38065
   uuid: 4b9063e0-3288-44e9-9aac-80fbfce323a0
@@ -4063,6 +3895,12 @@ proxies:
   reality-opts:
     public-key: dSSDPTK6AHfAdRAXD9i4rzqcNIY65RxlF25UyCKdiyo
     short-id: fa
+- name: '@V2rayNG3'
+  type: vless
+  server: 151.101.25.242
+  port: 80
+  uuid: fbbd87c3-170b-4249-8139-aa6b23ad5133
+  network: xhttp
 - name: '@V2rayNG3'
   type: vless
   server: 46.62.128.207
@@ -4075,12 +3913,6 @@ proxies:
   reality-opts:
     public-key: gZGVp5PUdafgsmi1gawa1yLuha_XhXRc_W9SvPiGmTY
     short-id: 7cad5040
-- name: '@V2rayNG3'
-  type: ss
-  server: 90.156.203.62
-  port: 5112
-  cipher: chacha20-ietf-poly1305
-  password: VVlAff77CnAU43Aoc5j15Y
 - name: s1
   type: vmess
   server: 104.21.69.44
@@ -4295,6 +4127,12 @@ proxies:
     headers:
       Host: gotohell.waruntilvictory.xyz
 - name: '@V2rayNG3'
+  type: ss
+  server: 90.156.203.62
+  port: 5112
+  cipher: chacha20-ietf-poly1305
+  password: VVlAff77CnAU43Aoc5j15Y
+- name: '@V2rayNG3'
   type: vless
   server: chatgpt.com
   port: 2096
@@ -4464,17 +4302,6 @@ proxies:
     path: /
     headers:
       Host: nb.lovecf.ggff.net
-- name: VMESSPROTOCL
-  type: vless
-  server: 144.31.5.3
-  port: 443
-  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
-  flow: xtls-rprx-vision
-  tls: true
-  servername: pl4.moritech.net
-  client-fingerprint: chrome
-  alpn:
-  - h2
 - name: (@VmessProtocol)برای خرید و اتصال دائمی جوین شو🇩🇪
   type: vless
   server: fr.api-music-fa.com
@@ -4514,17 +4341,6 @@ proxies:
     short-id: f93c9d5127e622e4
 - name: (@VmessProtocol)برای خرید و اتصال دائمی جوین شو🇩🇪
   type: vless
-  server: uk-dedic-new-1.failspace.top
-  port: 443
-  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
-  flow: xtls-rprx-vision
-  tls: true
-  servername: uk-dedic-new-1.failspace.top
-  client-fingerprint: firefox
-  alpn:
-  - h2
-- name: (@VmessProtocol)برای خرید و اتصال دائمی جوین شو🇩🇪
-  type: vless
   server: 91.209.253.250
   port: 443
   uuid: b09dfed1-90fa-4353-8bdf-de1edb2e2d79
@@ -4535,6 +4351,17 @@ proxies:
     path: /
     headers:
       Host: nb.lovecf.ggff.net
+- name: (@VmessProtocol)برای خرید و اتصال دائمی جوین شو🇩🇪
+  type: vless
+  server: uk-dedic-new-1.failspace.top
+  port: 443
+  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+  flow: xtls-rprx-vision
+  tls: true
+  servername: uk-dedic-new-1.failspace.top
+  client-fingerprint: firefox
+  alpn:
+  - h2
 - name: (@VmessProtocol)برای خرید و اتصال دائمی جوین شو🇩🇪
   type: vless
   server: 82.117.245.170
@@ -4571,18 +4398,6 @@ proxies:
   servername: ratatouille.rahmatokaduie.ir
   client-fingerprint: chrome
   network: xhttp
-- name: https://t.me/ShadowsocksM12
-  type: vless
-  server: 199.232.78.159
-  port: 443
-  uuid: 1ee3c7ee-c8dd-44a5-bd22-ac5d3f34eaa9
-  tls: true
-  servername: ssl.fastly.com
-  network: ws
-  ws-opts:
-    path: /TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER
-    headers:
-      Host: pan1.global.ssl.fastly.net
 - name: https://t.me/ShadowsocksM13
   type: vless
   server: 199.232.78.170
@@ -4598,6 +4413,18 @@ proxies:
     path: /
     headers:
       Host: Appxdn.global.ssl.fastly.net
+- name: https://t.me/ShadowsocksM12
+  type: vless
+  server: 199.232.78.159
+  port: 443
+  uuid: 1ee3c7ee-c8dd-44a5-bd22-ac5d3f34eaa9
+  tls: true
+  servername: ssl.fastly.com
+  network: ws
+  ws-opts:
+    path: /TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER
+    headers:
+      Host: pan1.global.ssl.fastly.net
 - name: https://t.me/ShadowsocksM14
   type: vless
   server: 104.16.107.139
@@ -4654,19 +4481,6 @@ proxies:
     public-key: rj8GjMgtHuf5iZ5sWKmV62ihJbQWB6M4E-BJZBk1Z1A
     short-id: 8a2b3c4d5e6f7012
   network: raw
-- name: 31.77.220.190:443
-  type: vless
-  server: 31.77.220.190
-  port: 443
-  uuid: ad181c5d-2998-408a-8706-003969e557a7
-  flow: xtls-rprx-vision
-  tls: true
-  servername: de3.global-cdn.org
-  client-fingerprint: edge
-  reality-opts:
-    public-key: bg_o5_i-5MSy-t3CB3iyqIeI8Uqyy_wTP2kheJCXngg
-    short-id: f7d0420b8ab26060
-  network: raw
 - name: https://t.me/ShadowsocksM2
   type: vless
   server: 150.241.101.17
@@ -4680,18 +4494,18 @@ proxies:
     public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
     short-id: 6ba85179e30d4fc2
   network: raw
-- name: https://t.me/ShadowsocksM18
+- name: 31.77.220.190:443
   type: vless
-  server: est40.shadowq.cc
-  port: 8443
-  uuid: 06914c33-c6e0-464f-8fab-9bee9ee9b6a6
+  server: 31.77.220.190
+  port: 443
+  uuid: ad181c5d-2998-408a-8706-003969e557a7
   flow: xtls-rprx-vision
   tls: true
-  servername: tallinn.ee
-  client-fingerprint: firefox
+  servername: de3.global-cdn.org
+  client-fingerprint: edge
   reality-opts:
-    public-key: B3hJ-HdMFRzN5TlkBgSBMMmD93kllvgPuTOCgWzR9U8
-    short-id: b1a658e3128ee59f
+    public-key: bg_o5_i-5MSy-t3CB3iyqIeI8Uqyy_wTP2kheJCXngg
+    short-id: f7d0420b8ab26060
   network: raw
 - name: https://t.me/ShadowsocksM22
   type: vless
@@ -4708,6 +4522,19 @@ proxies:
     path: /
     headers:
       Host: Appxdn.global.ssl.fastly.net
+- name: https://t.me/ShadowsocksM18
+  type: vless
+  server: est40.shadowq.cc
+  port: 8443
+  uuid: 06914c33-c6e0-464f-8fab-9bee9ee9b6a6
+  flow: xtls-rprx-vision
+  tls: true
+  servername: tallinn.ee
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: B3hJ-HdMFRzN5TlkBgSBMMmD93kllvgPuTOCgWzR9U8
+    short-id: b1a658e3128ee59f
+  network: raw
 - name: https://t.me/ShadowsocksM25
   type: vless
   server: 172.67.130.187
@@ -4795,16 +4622,16 @@ proxies:
   reality-opts:
     public-key: 7JOaNN3Z-PlrHTnW2PmdV-K3CwdFnzKjuSRFgd4E2xg
     short-id: f88fa86f62252dad
-- name: https://t.me/ShadowsocksM4
-  type: vless
-  server: core.dataharbor.ir
-  port: 29109
-  uuid: f0237f07-6578-413a-8c5c-58ce2947333f
-  network: xhttp
 - name: https://t.me/ShadowsocksM6
   type: vless
   server: files.elvarin.ir
   port: 60694
+  uuid: f0237f07-6578-413a-8c5c-58ce2947333f
+  network: xhttp
+- name: https://t.me/ShadowsocksM4
+  type: vless
+  server: core.dataharbor.ir
+  port: 29109
   uuid: f0237f07-6578-413a-8c5c-58ce2947333f
   network: xhttp
 - name: https://t.me/ShadowsocksM5
@@ -4818,6 +4645,18 @@ proxies:
   reality-opts:
     public-key: noC3OHzjLnDTeAHDZ4T9BJ3t9gkW5RWDPcd7g8DTExo
     short-id: cb3a56273ecf7996
+- name: https://t.me/ShadowsocksM9
+  type: vless
+  server: backup.dataharbor.ir
+  port: 48390
+  uuid: f0237f07-6578-413a-8c5c-58ce2947333f
+  network: xhttp
+- name: https://t.me/ShadowsocksM10
+  type: vless
+  server: cloud.elvarin.ir
+  port: 55658
+  uuid: f0237f07-6578-413a-8c5c-58ce2947333f
+  network: xhttp
 - name: https://t.me/ShadowsocksM7
   type: vless
   server: portal.elvarin.ir
@@ -4829,6 +4668,12 @@ proxies:
   reality-opts:
     public-key: pgZ6zCEYatBrNYoTU8-cGqYTqQQXXJOnbYZCpqTjQSY
     short-id: e481892071e5abd8
+- name: https://t.me/ShadowsocksM12
+  type: vless
+  server: img.elvarin.ir
+  port: 40562
+  uuid: f0237f07-6578-413a-8c5c-58ce2947333f
+  network: xhttp
 - name: https://t.me/ShadowsocksM3
   type: vless
   server: freevpn35-266.up.railway.app
@@ -4842,18 +4687,36 @@ proxies:
   network: ws
   ws-opts:
     path: /connect/na0gRkeaL3FJyHqElKZlbzDN
-- name: https://t.me/ShadowsocksM9
+- name: https://t.me/ShadowsocksM11
   type: vless
-  server: backup.dataharbor.ir
-  port: 48390
+  server: crm.elvarin.ir
+  port: 47228
   uuid: f0237f07-6578-413a-8c5c-58ce2947333f
   network: xhttp
-- name: https://t.me/ShadowsocksM10
+- name: https://t.me/ShadowsocksM21
   type: vless
-  server: cloud.elvarin.ir
-  port: 55658
-  uuid: f0237f07-6578-413a-8c5c-58ce2947333f
-  network: xhttp
+  server: download.mehdi-cpp.ir
+  port: 8087
+  uuid: 056fe52c-e28f-43fd-a1f5-e87b14b59d6b
+  tls: true
+  servername: shop-us-en.amd.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: fCYufMkCWiP1pkFPgZI3-PH0PYGCTsTdRck5rLZ_fXI
+    short-id: '2040'
+  network: raw
+- name: https://t.me/ShadowsocksM23
+  type: vless
+  server: download.mehdi-cpp.ir
+  port: 8086
+  uuid: 056fe52c-e28f-43fd-a1f5-e87b14b59d6b
+  tls: true
+  servername: shop-eu-en.amd.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: nnq5J3zXFDHUGvCza7e5CMa34oexEcXUqAfqz_YY7yo
+    short-id: 64523ae2
+  network: raw
 - name: https://t.me/ShadowsocksM9
   type: vless
   server: freevpn35-266.up.railway.app
@@ -4881,18 +4744,19 @@ proxies:
     path: /connect/na0gRkeaL3FJyHqElKZlbzDN
     headers:
       Host: freevpn35-266.up.railway.app
-- name: https://t.me/ShadowsocksM11
+- name: https://t.me/ShadowsocksM4
   type: vless
-  server: crm.elvarin.ir
-  port: 47228
-  uuid: f0237f07-6578-413a-8c5c-58ce2947333f
-  network: xhttp
-- name: https://t.me/ShadowsocksM12
-  type: vless
-  server: img.elvarin.ir
-  port: 40562
-  uuid: f0237f07-6578-413a-8c5c-58ce2947333f
-  network: xhttp
+  server: www.firedance.cn
+  port: 443
+  uuid: 5ba437f3-f2f4-42e6-be33-5c144eb11b83
+  tls: true
+  servername: lukas.irandoc.info
+  client-fingerprint: firefox
+  network: ws
+  ws-opts:
+    path: /api1/update
+    headers:
+      Host: lukashost.irandoc.info
 - name: https://t.me/ShadowsocksM14
   type: vless
   server: 104.20.19.131
@@ -4934,19 +4798,6 @@ proxies:
     path: /api1/update
     headers:
       Host: lukashost.irandoc.info
-- name: https://t.me/ShadowsocksM4
-  type: vless
-  server: www.firedance.cn
-  port: 443
-  uuid: 5ba437f3-f2f4-42e6-be33-5c144eb11b83
-  tls: true
-  servername: lukas.irandoc.info
-  client-fingerprint: firefox
-  network: ws
-  ws-opts:
-    path: /api1/update
-    headers:
-      Host: lukashost.irandoc.info
 - name: https://t.me/ShadowsocksM18
   type: ss
   server: cdn-2d12.giftcardbazarbot.com
@@ -4966,6 +4817,18 @@ proxies:
   - h2
   - http/1.1
   network: xhttp
+- name: https://t.me/ShadowsocksM26
+  type: vless
+  server: 31.76.80.69
+  port: 443
+  uuid: 8975546a-375c-4966-8064-19fc0f66f30a
+  tls: true
+  servername: www.amd.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: zq3gOJkXi6laNuxMohL3lr-wFOKi4Z9oG7QuMMiTDAk
+    short-id: 5caa2ef81132c306
+  network: raw
 - name: https://t.me/ShadowsocksM25
   type: vless
   server: bg3.univesalsrv.com
@@ -4980,18 +4843,6 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: home.v1.ApiService
-- name: https://t.me/ShadowsocksM26
-  type: vless
-  server: 31.76.80.69
-  port: 443
-  uuid: 8975546a-375c-4966-8064-19fc0f66f30a
-  tls: true
-  servername: www.amd.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: zq3gOJkXi6laNuxMohL3lr-wFOKi4Z9oG7QuMMiTDAk
-    short-id: 5caa2ef81132c306
-  network: raw
 - name: https://t.me/ShadowsocksM27
   type: vless
   server: bg5.univesalsrv.com
@@ -5006,45 +4857,28 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: gw.v2.RelayService
-- name: (S101
-  type: vless
-  server: 13.43.144.131
-  port: 22222
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
 - name: (S102
   type: vless
-  server: 18.130.8.150
+  server: 3.10.248.46
   port: 22222
   uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-- name: 𝐏𝐑𝐗𝟏𝟏-𝐂𝐃𝐍𝟏🇩🇪|Prx11-free
+- name: (S101
   type: vless
-  server: ipcf.prx11game.ir
-  port: 443
-  uuid: beca67c2-e0a8-43fe-aaff-fecc842de3d9
-  tls: true
-  servername: mob.persianmobile7c.ir
-  client-fingerprint: random
-  alpn:
-  - http/1.1
-  network: ws
-  ws-opts:
-    path: /prx11
-    headers:
-      Host: mob.persianmobile7c.ir
-- name: ipcf.prx11game.ir:443
+  server: 18.168.67.178
+  port: 22222
+  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+- name: prx11-🇸🇱free🇸🇱
   type: vless
-  server: ipcf.prx11game.ir
-  port: 443
-  uuid: beca67c2-e0a8-43fe-aaff-fecc842de3d9
+  server: 66.33.22.237
+  port: 16523
+  uuid: a3524d93-994e-450b-8512-f8eabf1fb127
   tls: true
-  alpn:
-  - http/1.1
-- name: ✔︎𝐜𝐡𝐚𝐧𝐧𝐞𝐥➪@ConfigV2rayForFree
-  type: ss
-  server: 77.240.38.27
-  port: 8443
-  cipher: chacha20-ietf-poly1305
-  password: fkXtvCEQ1ZU1rzF3fIK0fw==
+  servername: www.dog.ai
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: fP2Z44XRYFCfmKnYTbJZWQEtMxQacWc21Ocl3qr9kXs
+    short-id: 1abab1d586
+  network: xhttp
 - name: ✔︎𝐜𝐡𝐚𝐧𝐧𝐞𝐥➪@ConfigV2rayForFree
   type: trojan
   server: 188.114.96.1
@@ -5121,6 +4955,29 @@ proxies:
   servername: dl1.rahetejarat.com
   client-fingerprint: chrome
   network: xhttp
+- name: 𝐏𝐑𝐗𝟏𝟏-𝐂𝐃𝐍𝟏🇩🇪|Prx11-free
+  type: vless
+  server: ipcf.prx11game.ir
+  port: 443
+  uuid: beca67c2-e0a8-43fe-aaff-fecc842de3d9
+  tls: true
+  servername: mob.persianmobile7c.ir
+  client-fingerprint: random
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /prx11
+    headers:
+      Host: mob.persianmobile7c.ir
+- name: ipcf.prx11game.ir:443
+  type: vless
+  server: ipcf.prx11game.ir
+  port: 443
+  uuid: beca67c2-e0a8-43fe-aaff-fecc842de3d9
+  tls: true
+  alpn:
+  - http/1.1
 - name: 🔰 @ConfigV2RayNG (تلگرام)
   type: vless
   server: 188.114.97.6
@@ -5292,6 +5149,20 @@ proxies:
     path: /
     headers:
       Host: edgetunnel-4uw.pages.dev
+- name: 🔰 @ConfigV2RayNG (تلگرام)
+  type: vless
+  server: 188.114.97.6
+  port: 443
+  uuid: fdc48be3-a615-41ac-8bd1-ed844c931048
+  tls: true
+  servername: edgetunnel-4uw.pages.dev
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /fp=chrome
+    headers:
+      Host: edgetunnel-4uw.pages.dev
 - name: 'Telegram: @ConfigV2RayNG'
   type: trojan
   server: www.speedtest.net
@@ -5322,6 +5193,27 @@ proxies:
     headers:
       Host: mitivpn---de--s---mitivpn-11.global.ssl.fastly.net
 - name: ✔︎𝐜𝐡𝐚𝐧𝐧𝐞𝐥➪@ConfigV2rayForFree
+  type: ss
+  server: 77.240.38.27
+  port: 8443
+  cipher: chacha20-ietf-poly1305
+  password: fkXtvCEQ1ZU1rzF3fIK0fw==
+- name: 'ConfigV2RayNG '
+  type: trojan
+  server: 188.114.97.6
+  port: 443
+  password: humanity
+  sni: www.pleadcourt.org
+  tls: true
+  servername: www.pleadcourt.org
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.pleadcourt.org
+- name: ✔︎𝐜𝐡𝐚𝐧𝐧𝐞𝐥➪@ConfigV2rayForFree
   type: vless
   server: c1.fineartsnet.org
   port: 8443
@@ -5332,6 +5224,190 @@ proxies:
   alpn:
   - h2
   - http/1.1
+  network: xhttp
+- name: '🗳️ConfigV2RayNG '
+  type: trojan
+  server: 167.82.76.7
+  port: 443
+  password: mitivpn
+  sni: ssl.fastly.com
+  tls: true
+  servername: ssl.fastly.com
+  client-fingerprint: chrome
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: mitivpn---us--s---mitivpn-11.global.ssl.fastly.net
+- name: '🗳️ConfigV2RayNG '
+  type: vless
+  server: 91.233.121.32
+  port: 443
+  uuid: 5469c1d9-e949-4553-a146-ac3ad363a705
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.apple.com
+  reality-opts:
+    public-key: Ez3w5uLzFlysA6Owr7SguTK5kzlIFZ09TgalzUHGAR4
+    short-id: 9f51e98fb874846b
+- name: '🗳️ConfigV2RayNG '
+  type: vless
+  server: 62.210.91.2
+  port: 23576
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  tls: true
+  servername: fuck.rkn
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+- name: '🗳️ConfigV2RayNG '
+  type: vless
+  server: 107.189.18.145
+  port: 443
+  uuid: 67a171fb-a31d-49f3-a9d6-98de350763e8
+  tls: true
+  servername: restnet.duckdns.org
+  client-fingerprint: firefox
+- name: '🌟 ConfigV2RayNG '
+  type: vless
+  server: misw-production.up.railway.app
+  port: 443
+  uuid: 0011c9ea-898e-a0d4-8f73-9676a93381d4
+  tls: true
+  servername: misw-production.up.railway.app
+  client-fingerprint: ios
+  alpn:
+  - http/1.1
+  network: ws
+  ws-opts:
+    path: /ws/0011c9ea-898e-a0d4-8f73-9676a93381d4
+    headers:
+      Host: misw-production.up.railway.app
+- name: '🇩🇪ConfigV2RayNG '
+  type: vless
+  server: 169.40.42.168
+  port: 443
+  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
+  flow: xtls-rprx-vision
+  tls: true
+  servername: yahoo.com
+  client-fingerprint: ios
+  reality-opts:
+    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
+    short-id: c39cc7310a
+- name: '🇩🇪ConfigV2RayNG '
+  type: vless
+  server: slowkd.sadiepinki.com
+  port: 443
+  uuid: d4cae7df-50a1-428c-bd62-881c8f3bbd90
+  flow: xtls-rprx-vision
+  tls: true
+  servername: slowkd.sadiepinki.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: z37XIezsPyfMgmdXyFd9qT4C4maDAs1OcRt-wfyrXVo
+    short-id: 9c2378562188c3cb
+- name: '🎭ConfigV2RayNG '
+  type: vless
+  server: 104.20.19.131
+  port: 443
+  uuid: 38b770af-1fba-4ff5-b042-0da522e47e92
+  tls: true
+  servername: 1.ksladoaofkdk.dpdns.org
+  client-fingerprint: chrome
+  alpn:
+  - h3
+  - h2
+  - http/1.1
+  network: xhttp
+- name: '🗳️ConfigV2RayNG '
+  type: trojan
+  server: 199.232.78.160
+  port: 443
+  password: mitivpn
+  sni: ssl.fastly.com
+  tls: true
+  servername: ssl.fastly.com
+  network: ws
+  ws-opts:
+    path: /---@GHOFLSHCAN---@GHOFLSHCAN/---@GHOFLSHCAN---@GHOFLSHCAN/---@GHOFLSHCAN---@GHOFLSHCAN/D-e1i@GHOFLSHCAN---@GHOFLSHCAN/---@GHOFLSHCAN---@GHOFLSHCAN/---@GHOFLSHCAN---@GHOFLSHCAN
+    headers:
+      Host: mitivpn---us--s---mitivpn-11.global.ssl.fastly.net
+- name: '🇩🇪ConfigV2RayNG '
+  type: vless
+  server: 57.129.96.67
+  port: 443
+  uuid: e8b1500b-e9e8-5492-8312-f4eadf7d0767
+  flow: xtls-rprx-vision
+  tls: true
+  servername: nasnet-571299667-direct.mbghalibaf.com
+- name: 'Channel : ConfigV2RayNG '
+  type: vless
+  server: 169.40.42.182
+  port: 443
+  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
+  flow: xtls-rprx-vision
+  tls: true
+  servername: yahoo.com
+  client-fingerprint: ios
+  reality-opts:
+    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
+    short-id: c39cc7310a
+- name: 'Channel : ConfigV2RayNG'
+  type: vmess
+  server: 66.163.118.73
+  port: 22324
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  alterId: 0
+  cipher: auto
+- name: 'TELEGRAM:@ConfigV2RayNG '
+  type: vless
+  server: 199.232.78.159
+  port: 443
+  uuid: bfb1ec97-a326-4cf3-adcf-d2a0e2dc49f8
+  tls: true
+  servername: ssl.fastly.com
+  network: ws
+  ws-opts:
+    headers:
+      Host: pan2e.global.ssl.fastly.net
+- name: 'ConfigV2RayNG '
+  type: vless
+  server: 199.232.78.159
+  port: 443
+  uuid: ebeb7358-9fc0-4222-a0e5-d8bc274a8856
+  tls: true
+  servername: ssl.fastly.com
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: looazjboijji.global.ssl.fastly.net.
+- name: 'ConfigV2RayNG '
+  type: vless
+  server: 5.129.196.56
+  port: 443
+  uuid: baae2743-e2b0-448a-9e97-da3a0fce6269
+  flow: xtls-rprx-vision
+  tls: true
+  servername: ru-c2d937931e.sishka.network
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: uYiZWRgbowvS9uOhVZTe0FBS1pLzA3QMyQ_NfDh4_h8
+    short-id: d40efd6b362b7ec6
+- name: '🇪🇪@ConfigV2RayNG '
+  type: vless
+  server: 143.246.41.6
+  port: 25395
+  uuid: 900e2cca-4798-47f6-b972-5288a77c8093
+  tls: true
+  servername: amd.com
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: NPeupAuDrIhrFEXxPXUnsmuT0zSOkSQByegy5DPJQhU
+    short-id: b4
   network: xhttp
 - name: 🇬🇧@ELiV2Ray
   type: vless
@@ -5345,6 +5421,12 @@ proxies:
   reality-opts:
     public-key: SiSky02wHz-S0TDHKFTdYhnrlT8Y3CfRsekZlcdLXDY
     short-id: fd55b698ee8c3629
+- name: 'ConfigV2RayNG '
+  type: ss
+  server: p2tun3.greewebservices.ir
+  port: 1030
+  cipher: chacha20-ietf-poly1305
+  password: f4Z-ikyuWC0D926rZwbThg
 - name: 🇺🇸@ELiV2Ray
   type: vless
   server: gb2.murhost.network
@@ -5383,6 +5465,24 @@ proxies:
   reality-opts:
     public-key: z37XIezsPyfMgmdXyFd9qT4C4maDAs1OcRt-wfyrXVo
     short-id: 9c2378562188c3cb
+- name: 🇬🇧S2 @ELiV2Ray
+  type: vless
+  server: 66.90.104.42
+  port: 2083
+  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+  network: grpc
+  grpc-opts:
+    grpc-service-name: vless
+- name: 🇳🇱@ELiV2ray
+  type: vless
+  server: 3h-unitedstates1.09vpn.com
+  port: 80
+  uuid: 18cf8db1-9f86-43f7-baa0-382efb7f2dfa
+  network: ws
+  ws-opts:
+    path: /vless/
+    headers:
+      Host: 3h-unitedstates1.09vpn.com
 - name: 🇺🇸 2 | @ELiV2ray
   type: vless
   server: 47.253.226.114
@@ -5394,6 +5494,16 @@ proxies:
   client-fingerprint: chrome
   reality-opts:
     public-key: Svl81isn16RPAFnjtmYw7A6TPnsEPLHuYYaJht65Rzc
+- name: 🇫🇷@ELiV2ray | OVH
+  type: vless
+  server: 104.16.72.41
+  port: 80
+  uuid: dc8eccdb-ecfa-435f-9ac1-5dc4882e7b51
+  network: ws
+  ws-opts:
+    path: /http
+    headers:
+      Host: de.vpnbase.net
 - name: 🇩🇪@ELiV2Ray
   type: vless
   server: arcturus.yokkastars.com
@@ -5406,61 +5516,6 @@ proxies:
   reality-opts:
     public-key: w4AYHvQnQS6olDqoG9ptLOtgehaWOsv9HQhDax5bLA4
     short-id: db46e2946fc466fd
-- name: 🇳🇱@ELiV2ray
-  type: vless
-  server: 3h-unitedstates1.09vpn.com
-  port: 80
-  uuid: 18cf8db1-9f86-43f7-baa0-382efb7f2dfa
-  network: ws
-  ws-opts:
-    path: /vless/
-    headers:
-      Host: 3h-unitedstates1.09vpn.com
-- name: 🇳🇱 2 |@ELiV2ray
-  type: vless
-  server: 78.111.89.171
-  port: 443
-  uuid: 0370b162-baff-4757-86cc-cce4bf07f6f1
-  tls: true
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: lYcMPEgf6ePmF_d8RXR5fsVorycW37v_ECl-fz_H6w4
-    short-id: cfe08c23a85f24
-- name: 🇵🇱@ELiV2Ray
-  type: vless
-  server: 89.218.15.90
-  port: 10002
-  uuid: 392fcc7e-b995-11f1-a6b7-1b2272a86bd5
-  tls: true
-  servername: kz1.vpnjantit.com
-  network: ws
-  ws-opts:
-    path: /vpnjantit
-    headers:
-      Host: kz1.vpnjantit.com
-- name: 🇺🇸 (7)
-  type: vless
-  server: 169.40.42.179
-  port: 443
-  uuid: d65cc14c-f53f-4fe2-b262-97856601319c
-  flow: xtls-rprx-vision
-  tls: true
-  servername: yahoo.com
-  client-fingerprint: ios
-  reality-opts:
-    public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-    short-id: c39cc7310a
-- name: 🇫🇷@ELiV2ray | OVH
-  type: vless
-  server: 104.16.72.41
-  port: 80
-  uuid: dc8eccdb-ecfa-435f-9ac1-5dc4882e7b51
-  network: ws
-  ws-opts:
-    path: /http
-    headers:
-      Host: de.vpnbase.net
 - name: 🇸🇪424Mb | @ELiV2ray
   type: vless
   server: 185.189.45.159
@@ -5473,6 +5528,18 @@ proxies:
   reality-opts:
     public-key: Z2c9dK70_0OWBEZGgeaXJyt9dup9h2-hZlCCvIGLg1Q
     short-id: 496ee75c2f91f51d
+- name: 🇵🇱@ELiV2Ray
+  type: vless
+  server: 89.218.15.90
+  port: 10002
+  uuid: 392fcc7e-b995-11f1-a6b7-1b2272a86bd5
+  tls: true
+  servername: kz1.vpnjantit.com
+  network: ws
+  ws-opts:
+    path: /vpnjantit
+    headers:
+      Host: kz1.vpnjantit.com
 - name: '@Easy_Free_VPN'
   type: ss
   server: 193.29.139.151
@@ -5485,99 +5552,6 @@ proxies:
   port: 443
   cipher: chacha20-ietf-poly1305
   password: aduB9HGxQHjA2SBMRjkHX6
-- name: Free x334 @Outline_Vpn
-  type: vless
-  server: 66.33.22.232
-  port: 34118
-  uuid: 12148993-e326-4061-809d-d2a24a42bcb8
-  tls: true
-  servername: cam.ac.uk
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: hbNyksag-i4fRqV86HG14fhASaXpl4sYv-1zgrrnUSQ
-    short-id: b5126487
-  network: xhttp
-- name: Free x330 @Outline_Vpn
-  type: vless
-  server: web.turbooserver.net.tr
-  port: 8443
-  uuid: 60a2998c-cd85-562e-a3fd-396e4925dd3a
-- name: Free x337 @Outline_Vpn
-  type: vless
-  server: a2.arshia-nova.ir
-  port: 443
-  uuid: bd5bbbac-adc3-4b23-d3ac-8506694c0ef9
-  tls: true
-  servername: ssl.fastly.com
-  client-fingerprint: firefox
-  alpn:
-  - h2
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: c12.com
-- name: Free x339 @Outline_Vpn
-  type: vless
-  server: pl3.moritech.net
-  port: 443
-  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
-  flow: xtls-rprx-vision
-  tls: true
-  servername: pl3.moritech.net
-  client-fingerprint: firefox
-  alpn:
-  - h2
-- name: Free x345 @Outline_Vpn
-  type: vless
-  server: 104.24.0.184
-  port: 443
-  uuid: 44eae030-290b-4083-8102-6f8bab05701b
-  tls: true
-  servername: cfvvv-ev1.pages.dev
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: cfvvv-ev1.pages.dev
-- name: Free x342 @Outline_Vpn
-  type: vless
-  server: web.turbooserver.net.tr
-  port: 8443
-  uuid: turboo-server
-- name: Free x344 @Outline_Vpn
-  type: vless
-  server: 186.246.19.79
-  port: 40443
-  uuid: 5e3f974b-06fc-4555-907a-6681391b7c17
-  flow: xtls-rprx-vision
-  tls: true
-  servername: deepl.com
-  reality-opts:
-    public-key: oc9uweln_cqyaJnlRMnhhhKrGNP7RrYOsuYtaIOIQDE
-    short-id: 2bc0
-- name: Free x346 @Outline_Vpn
-  type: vless
-  server: 83.147.18.3
-  port: 443
-  uuid: 9f61cdf4-810d-4052-bbc7-2da0c8e20104
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.cloudflare.com
-  reality-opts:
-    public-key: 3iVJAIGPx6JMlhlRmfpGrHkSmLpHJ4CPvBBH7KsFrFA
-    short-id: fd8cf7e1173f0edb
-- name: Free x348 @Outline_Vpn
-  type: vless
-  server: 5.253.42.164
-  port: 40443
-  uuid: e99ba96d-dec8-42eb-be53-19e71eef7cab
-  flow: xtls-rprx-vision
-  tls: true
-  servername: deepl.com
-  reality-opts:
-    public-key: g77ZJbm18JEotapmVRjaXi133MzkbhkU2lxhVeXx8zw
-    short-id: 68a8
 - name: Free x352 @Outline_Vpn
   type: vless
   server: 202.181.177.8
@@ -5602,12 +5576,6 @@ proxies:
   network: ws
   ws-opts:
     path: /?TELEGRAM--MARAMBASHI--MARAMBASHI?ed=512
-- name: Free x344 @Outline_Vpn
-  type: ss
-  server: p2tun1.greewebservices.ir
-  port: 1010
-  cipher: chacha20-ietf-poly1305
-  password: gT36tsiPfnd0np5khJqjyQ
 - name: Free x361 @Outline_Vpn
   type: vless
   server: 31.43.179.200
@@ -5620,17 +5588,6 @@ proxies:
     path: /
     headers:
       Host: xi.tbv.ccwu.cc
-- name: Free x359 @Outline_Vpn
-  type: vless
-  server: g1.haxat.bestvbest.ir
-  port: 20610
-  uuid: d65a82af-a403-405e-8b7b-27a68b830511
-  tls: true
-  servername: doctor-yab.ir
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: lcXIrYi2o8yXrYHR321qQ--5lqVT8a6TKbaGpYTq4CI
-    short-id: 1d1a8f9fefeff5e6
 - name: Free x364 @Outline_Vpn
   type: trojan
   server: 8.47.69.0
@@ -5651,6 +5608,23 @@ proxies:
   uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
   alterId: 0
   cipher: auto
+- name: Free x369 @Outline_Vpn
+  type: vless
+  server: 217.163.76.118
+  port: 2086
+  uuid: b7977b65-cfd8-4db9-a029-6ef014a4ae4a
+  network: xhttp
+- name: Free x359 @Outline_Vpn
+  type: vless
+  server: g1.haxat.bestvbest.ir
+  port: 20610
+  uuid: d65a82af-a403-405e-8b7b-27a68b830511
+  tls: true
+  servername: doctor-yab.ir
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: lcXIrYi2o8yXrYHR321qQ--5lqVT8a6TKbaGpYTq4CI
+    short-id: 1d1a8f9fefeff5e6
 - name: Free x363 @Outline_Vpn
   type: vless
   server: 54.37.136.194
@@ -5662,12 +5636,6 @@ proxies:
   reality-opts:
     public-key: Vemd9Jjk5xKO8qSC3g8VVagwcb4J1BcTvp86CswQC0A
     short-id: 50ba05992b05c1c3
-- name: Free x369 @Outline_Vpn
-  type: vless
-  server: 217.163.76.118
-  port: 2086
-  uuid: b7977b65-cfd8-4db9-a029-6ef014a4ae4a
-  network: xhttp
 - name: Free x400 @Outline_Vpn
   type: vless
   server: 157.173.125.214
@@ -5681,6 +5649,16 @@ proxies:
     path: /redirect/china/view?ed=2560
     headers:
       Host: cdn8848.776676.xyz
+- name: Free x408 @Outline_Vpn
+  type: vless
+  server: 199.232.78.159
+  port: 80
+  uuid: 50059c3d-02fa-44a2-8011-14e122fa400b
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: simorghgr.global.ssl.fastly.net
 - name: Free x401 @Outline_Vpn
   type: vless
   server: 164.92.137.46
@@ -5694,16 +5672,6 @@ proxies:
     path: /bt/streaming/ad?ed=2560
     headers:
       Host: cdn8848.776676.xyz
-- name: Free x408 @Outline_Vpn
-  type: vless
-  server: 199.232.78.159
-  port: 80
-  uuid: 50059c3d-02fa-44a2-8011-14e122fa400b
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: simorghgr.global.ssl.fastly.net
 - name: Free x402 @Outline_Vpn
   type: vless
   server: 217.12.206.160
@@ -5738,18 +5706,6 @@ proxies:
     path: /retrieve/txt?ed=2560
     headers:
       Host: cdn8848.776676.xyz
-- name: Free x427 @Outline_Vpn
-  type: vless
-  server: 195.85.23.217
-  port: 443
-  uuid: b09dfed1-90fa-4353-8bdf-de1edb2e2d79
-  tls: true
-  servername: nb.lovecf.ggff.net
-  network: ws
-  ws-opts:
-    path: /proxyip=us.xiabibi.cf
-    headers:
-      Host: nb.lovecf.ggff.net
 - name: Free x421 @Outline_Vpn
   type: vless
   server: 144.31.28.106
@@ -5762,6 +5718,28 @@ proxies:
     path: /trade
     headers:
       Host: cdn8848.776676.xyz
+- name: Free x427 @Outline_Vpn
+  type: vless
+  server: 195.85.23.217
+  port: 443
+  uuid: b09dfed1-90fa-4353-8bdf-de1edb2e2d79
+  tls: true
+  servername: nb.lovecf.ggff.net
+  network: ws
+  ws-opts:
+    path: /proxyip=us.xiabibi.cf
+    headers:
+      Host: nb.lovecf.ggff.net
+- name: Free x430 @Outline_Vpn
+  type: vless
+  server: 172.64.150.28
+  port: 2082
+  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
+  servername: hhlfy.twiladaphne.ndjp.net
+  network: ws
+  ws-opts:
+    headers:
+      Host: hhlfy.twiladaphne.ndjp.net
 - name: Free x420 @Outline_Vpn
   type: vless
   server: milan.adaspoloandco.com
@@ -5774,16 +5752,6 @@ proxies:
     path: /RoBeRt
     headers:
       Host: milan.adaspoloandco.com
-- name: Free x430 @Outline_Vpn
-  type: vless
-  server: 172.64.150.28
-  port: 2082
-  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
-  servername: hhlfy.twiladaphne.ndjp.net
-  network: ws
-  ws-opts:
-    headers:
-      Host: hhlfy.twiladaphne.ndjp.net
 - name: Free x432 @Outline_Vpn
   type: vless
   server: 188.114.97.6
@@ -5806,6 +5774,18 @@ proxies:
   reality-opts:
     public-key: bg_o5_i-5MSy-t3CB3iyqIeI8Uqyy_wTP2kheJCXngg
     short-id: f7d0420b8ab26060
+- name: Free x422 @Outline_Vpn
+  type: vless
+  server: iran-1.veraspeed.ir
+  port: 1001
+  uuid: 4c910f7d-a04a-434d-9f33-974dd21446a8
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.arvancloud.ir
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: HbCS-g9So3i4HAaDxAxCSCtOovG6ZVqhHyHHrM8rTHw
+    short-id: 09f6db81ad984bc6
 - name: Free x434 @Outline_Vpn
   type: vless
   server: 147.90.26.57
@@ -5829,18 +5809,6 @@ proxies:
   alpn:
   - h2
   network: xhttp
-- name: Free x422 @Outline_Vpn
-  type: vless
-  server: iran-1.veraspeed.ir
-  port: 1001
-  uuid: 4c910f7d-a04a-434d-9f33-974dd21446a8
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.arvancloud.ir
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: HbCS-g9So3i4HAaDxAxCSCtOovG6ZVqhHyHHrM8rTHw
-    short-id: 09f6db81ad984bc6
 - name: Free x437 @Outline_Vpn
   type: vless
   server: 77.110.105.102
@@ -6046,17 +6014,6 @@ proxies:
   reality-opts:
     public-key: rCkSHJ7goy7ZvSlau4LfXF-QLloOJMNeMxpeeQtwtVs
     short-id: 4fa44664f6a566d3
-- name: Free x508 @Outline_Vpn
-  type: vless
-  server: 212.46.33.90
-  port: 443
-  uuid: 71091100-c6ed-41fa-84ac-acf7ff9eeb7f
-  flow: xtls-rprx-vision
-  tls: true
-  servername: slowkd.sadiepinki.com
-  reality-opts:
-    public-key: z37XIezsPyfMgmdXyFd9qT4C4maDAs1OcRt-wfyrXVo
-    short-id: 9c2378562188c3cb
 - name: Free x511 @Outline_Vpn
   type: vless
   server: 188.114.97.6
@@ -6084,6 +6041,17 @@ proxies:
     path: /?edTelegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET
     headers:
       Host: c12.com
+- name: Free x508 @Outline_Vpn
+  type: vless
+  server: 212.46.33.90
+  port: 443
+  uuid: 71091100-c6ed-41fa-84ac-acf7ff9eeb7f
+  flow: xtls-rprx-vision
+  tls: true
+  servername: slowkd.sadiepinki.com
+  reality-opts:
+    public-key: z37XIezsPyfMgmdXyFd9qT4C4maDAs1OcRt-wfyrXVo
+    short-id: 9c2378562188c3cb
 - name: Free x510 @Outline_Vpn
   type: vless
   server: 212.46.33.90
@@ -6096,6 +6064,18 @@ proxies:
   reality-opts:
     public-key: z37XIezsPyfMgmdXyFd9qT4C4maDAs1OcRt-wfyrXVo
     short-id: 9c2378562188c3cb
+- name: Free x513 @Outline_Vpn
+  type: vless
+  server: 45.140.204.34
+  port: 8443
+  uuid: a56a3bda-e89a-4182-a671-a1858bb0f47c
+  tls: true
+  servername: web.max.ru
+  client-fingerprint: safari
+  reality-opts:
+    public-key: N4UtYAhibzkb0n_U2Qmqze5-lZMQqDozqg7OCqvufGA
+    short-id: 7c8e3d4a9b1f26d3
+  network: xhttp
 - name: Free x515 @Outline_Vpn
   type: vless
   server: gesmankos.sadiepinki.com
@@ -6122,26 +6102,15 @@ proxies:
     path: /
     headers:
       Host: Appxdn.global.ssl.fastly.net
-- name: Free x523 @Outline_Vpn
+- name: Free x520 @Outline_Vpn
   type: vless
-  server: 137.74.16.237
-  port: 443
-  uuid: aaec4e42-a095-44b6-a239-f16d234a0798
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.icloud.com
-  reality-opts:
-    public-key: 7LSzvilTVKGMtBDuKGeMrLtlhY7tQf5YcG566dEgO0I
-    short-id: b390e0a721d242b0
-- name: Free x522 @Outline_Vpn
-  type: vless
-  server: tgfree.rush-server.com
+  server: 195.133.73.65
   port: 443
   uuid: ebd1c0d6-7ff4-4b9f-8692-237517a27a64
   flow: xtls-rprx-vision
   tls: true
   servername: anyfile2file.com
-  client-fingerprint: ios
+  client-fingerprint: chrome
   reality-opts:
     public-key: mza5Hn1aolSz65qu-UwvBP3oesxMe25r11o4nxvikF0
     short-id: 64c1fe36c7846400
@@ -6162,6 +6131,29 @@ proxies:
   uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
   alterId: 0
   cipher: auto
+- name: Free x522 @Outline_Vpn
+  type: vless
+  server: tgfree.rush-server.com
+  port: 443
+  uuid: ebd1c0d6-7ff4-4b9f-8692-237517a27a64
+  flow: xtls-rprx-vision
+  tls: true
+  servername: anyfile2file.com
+  client-fingerprint: ios
+  reality-opts:
+    public-key: mza5Hn1aolSz65qu-UwvBP3oesxMe25r11o4nxvikF0
+    short-id: 64c1fe36c7846400
+- name: Free x523 @Outline_Vpn
+  type: vless
+  server: 137.74.16.237
+  port: 443
+  uuid: aaec4e42-a095-44b6-a239-f16d234a0798
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.icloud.com
+  reality-opts:
+    public-key: 7LSzvilTVKGMtBDuKGeMrLtlhY7tQf5YcG566dEgO0I
+    short-id: b390e0a721d242b0
 - name: Free x525 @Outline_Vpn
   type: vless
   server: 185.171.202.105
@@ -6178,17 +6170,6 @@ proxies:
   server: 23.137.249.110
   port: 20365
   uuid: 1a524663-4a74-4aad-b530-8618a540d857
-- name: Free x553 @Outline_Vpn
-  type: vless
-  server: dl2.musicworldtg.com
-  port: 2018
-  uuid: 834e5553-d80e-4078-8d7e-482fafe9bbaf
-  tls: true
-  servername: gemini.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: Sn8z3wbt2Zpoo3mO3HLW6TZTjN8231Ylka7apFNb2X0
-    short-id: cd5f260bcdd9c92d
 - name: Free x552 @Outline_Vpn
   type: vless
   server: 94.183.154.216
@@ -6201,6 +6182,17 @@ proxies:
   reality-opts:
     public-key: _3keWobK7ZaY3zcm452rOAQU1cwEhIAMfdSbifhi_UU
     short-id: 051e7b231954ec0b
+- name: Free x553 @Outline_Vpn
+  type: vless
+  server: dl2.musicworldtg.com
+  port: 2018
+  uuid: 834e5553-d80e-4078-8d7e-482fafe9bbaf
+  tls: true
+  servername: gemini.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: Sn8z3wbt2Zpoo3mO3HLW6TZTjN8231Ylka7apFNb2X0
+    short-id: cd5f260bcdd9c92d
 - name: Free x560 @Outline_Vpn
   type: vless
   server: faultpass-panel-production-800a.up.railway.app
@@ -6231,18 +6223,11 @@ proxies:
     path: /ws/dec3bed2-7850-1979-ea9d-46ebe033c305
     headers:
       Host: victoryprovpn-production-7198.up.railway.app
-- name: Free x551 @Outline_Vpn
+- name: Free x556 @Outline_Vpn
   type: vless
-  server: francedobo.paslanmaz.ir
-  port: 4489
-  uuid: 162ff214-21c8-4963-a80a-6200cbad787e
-  flow: xtls-rprx-vision
-  tls: true
-  servername: www.tno.nl
-  client-fingerprint: random
-  reality-opts:
-    public-key: Zb5hC10blFFRMl6raHM7yJS_TWaMy3pMzrBLDm8RC1w
-    short-id: 3cace608cf980b78
+  server: 78.47.197.126
+  port: 8080
+  uuid: a0178cd2-6435-4beb-a5a6-8e50aa797068
 - name: Free x563 @Outline_Vpn
   type: vless
   server: siderail-production-8533.up.railway.app
@@ -6258,11 +6243,6 @@ proxies:
     path: /SideRail/ws-3bo2g-dH
     headers:
       Host: siderail-production-8533.up.railway.app
-- name: Free x556 @Outline_Vpn
-  type: vless
-  server: 78.47.197.126
-  port: 8080
-  uuid: a0178cd2-6435-4beb-a5a6-8e50aa797068
 - name: Free x567 @Outline_Vpn
   type: vless
   server: victoryprovpn-production-f93a.up.railway.app
@@ -6316,17 +6296,6 @@ proxies:
     path: /api/connect
     headers:
       Host: wstg.datasynctrue.online
-- name: Free x573 @Outline_Vpn
-  type: vless
-  server: 62.60.152.1
-  port: 56328
-  uuid: ce230b9c-0531-40da-bc3f-f27a8e059db1
-  flow: xtls-rprx-vision
-  tls: true
-  servername: table.vkroom-it-service.xyz
-  reality-opts:
-    public-key: iI1pc8k9-mIPHL2Dga-4n4h3KoBT68lN434nglpgm2M
-    short-id: f3a9c21e8b6d4571
 - name: Free x576 @Outline_Vpn
   type: vless
   server: nasnet-162191099-direct.mbghalibaf.com
@@ -6397,6 +6366,18 @@ proxies:
   network: ws
   ws-opts:
     path: /
+- name: Free x575 @Outline_Vpn
+  type: vless
+  server: staging.lastilhame.monster
+  port: 443
+  uuid: aded66f1-de12-4c3c-af9e-a21d6e7d9c96
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.foxsports.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg
+    short-id: 2a80364e93d9
 - name: Free x603 @Outline_Vpn
   type: vless
   server: 15.204.97.206
@@ -6449,6 +6430,20 @@ proxies:
   uuid: 959a8caf-4cea-43d0-a548-3628e7ddfafc
   alterId: 0
   cipher: auto
+- name: Free x608 @Outline_Vpn
+  type: vmess
+  server: 66.163.118.73
+  port: 443
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: mygptagent.org
+  network: ws
+  ws-opts:
+    path: /linkvws
+    headers:
+      Host: mygptagent.org
 - name: Free x588 @Outline_Vpn
   type: vless
   server: ru-test.omuservice.tech
@@ -6460,54 +6455,29 @@ proxies:
   reality-opts:
     public-key: yyH7Fyfh1ULPH4L5mFVtqPf_rB1IY6jwDgOuIRY7-wA
     short-id: 9409a3561ba49f30
-- name: Free x160 @Outline_Vpn
+- name: Free x610 @Outline_Vpn
   type: vless
-  server: 87.58.148.202
+  server: 188.245.25.223
+  port: 1085
+  uuid: 0c1b7949-fe09-43d9-863f-2c031f66bfc1
+- name: Free x619 @Outline_Vpn
+  type: vless
+  server: 66.33.22.234
+  port: 26452
+  uuid: e98595be-6464-410d-9404-eed1979fe2c8
+  network: httpupgrade
+- name: Free x612 @Outline_Vpn
+  type: vless
+  server: 212.46.33.5
   port: 443
-  uuid: 479083dc-946b-4c1a-98ca-b9aaa6857e66
+  uuid: d4cae7df-50a1-428c-bd62-881c8f3bbd90
+  flow: xtls-rprx-vision
   tls: true
-  servername: play.google.com
-  client-fingerprint: chrome
+  servername: slowkd.sadiepinki.com
+  client-fingerprint: firefox
   reality-opts:
-    public-key: qwAnwGzDx7sHdZdktrBd6y7VPhlJF5anjntWvCqzlhw
-    short-id: ca9e3c07
-  network: grpc
-- name: Free x164 @Outline_Vpn
-  type: vless
-  server: 143.246.182.63
-  port: 443
-  uuid: 5b45355f-1a9c-4802-90ed-0d1f5dcd4562
-  tls: true
-  servername: uk10.filesnap.tech
-  client-fingerprint: chrome
-  network: xhttp
-- name: Free x168 @Outline_Vpn
-  type: ss
-  server: 51.222.200.165
-  port: 5000
-  cipher: aes-256-gcm
-  password: Y6R9pAtvxxzmGC
-- name: Free x171 @Outline_Vpn
-  type: vless
-  server: 104.21.51.132
-  port: 8080
-  uuid: c55c929d-e9d4-45bc-ba53-de4a2cfcabb5
-  network: httpupgrade
-- name: Free x174 @Outline_Vpn
-  type: ss
-  server: cdn-2d12.giftcardbazarbot.com
-  port: 8243
-  cipher: chacha20-ietf-poly1305
-  password: cXzqTLtMHmVAuueEq2rByw
-- name: Free x173 @Outline_Vpn
-  type: vless
-  server: img.krenholm.com
-  port: 443
-  uuid: 79af209c-dd50-4751-8100-9107b536a022
-  tls: true
-  servername: channel.irandoc.info
-  client-fingerprint: chrome
-  network: httpupgrade
+    public-key: z37XIezsPyfMgmdXyFd9qT4C4maDAs1OcRt-wfyrXVo
+    short-id: 9c2378562188c3cb
 - name: Free x181 @Outline_Vpn
   type: trojan
   server: 199.232.78.160
@@ -6540,6 +6510,17 @@ proxies:
     path: /---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/D-e2@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN
     headers:
       Host: mitivpn-mitivpn-mitivpn--mitivpn-mitivpn--mitivpn.global.ssl.fastly.net
+- name: Free x614 @Outline_Vpn
+  type: vless
+  server: 91.107.191.188
+  port: 8443
+  uuid: 9f44d517-29f2-4c6d-cc06-a1268f13da58
+  tls: true
+  servername: host.taghvimtime.ir
+  client-fingerprint: chrome
+  alpn:
+  - h2
+  network: xhttp
 - name: Free x185 @Outline_Vpn
   type: trojan
   server: 151.101.56.7
@@ -6569,6 +6550,45 @@ proxies:
     path: /---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/D-e2@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN
     headers:
       Host: mitivpn-mitivpn-mitivpn--mitivpn-mitivpn--mitivpn.global.ssl.fastly.net
+- name: Free x616 @Outline_Vpn
+  type: vless
+  server: nasnet-571299667-direct.mbghalibaf.com
+  port: 443
+  uuid: e8b1500b-e9e8-5492-8312-f4eadf7d0767
+  flow: xtls-rprx-vision
+  tls: true
+  servername: nasnet-571299667-direct.mbghalibaf.com
+  client-fingerprint: chrome
+- name: Free x618 @Outline_Vpn
+  type: vless
+  server: de-7db4a237.sishka.network
+  port: 443
+  uuid: baae2743-e2b0-448a-9e97-da3a0fce6269
+  flow: xtls-rprx-vision
+  tls: true
+  servername: de-7db4a237.sishka.network
+  client-fingerprint: edge
+- name: Free x613 @Outline_Vpn
+  type: vless
+  server: 0cf703b86ea5a239.ravenlo.ir
+  port: 8080
+  uuid: 50d10e6c-37e1-4512-b35a-2d4e0adfd079
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: play.google.com
+- name: Free x193 @Outline_Vpn
+  type: vless
+  server: pl3.moritech.net
+  port: 443
+  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+  flow: xtls-rprx-vision
+  tls: true
+  servername: pl3.moritech.net
+  client-fingerprint: firefox
+  alpn:
+  - h2
 - name: Free x194 @Outline_Vpn
   type: vless
   server: nl-xh02.tcp-reset-club.net
@@ -6596,6 +6616,15 @@ proxies:
     path: /
     headers:
       Host: 7wwwspeedtestnet.global.ssl.fastly.net
+- name: Free x208 @Outline_Vpn
+  type: vless
+  server: 151.101.56.7
+  port: 443
+  uuid: 7247b284-c40d-47c7-af4e-c4738f827a3d
+  tls: true
+  servername: default.ssl.fastly.net
+  client-fingerprint: firefox
+  network: xhttp
 - name: Free x206 @Outline_Vpn
   type: vless
   server: 95.85.241.209
@@ -6607,15 +6636,6 @@ proxies:
   client-fingerprint: chrome
   reality-opts:
     public-key: vZ22ThhkpXUd5-tY-v5TTrouLHjgYYmeQgqeLt7HRz0
-- name: Free x208 @Outline_Vpn
-  type: vless
-  server: 151.101.56.7
-  port: 443
-  uuid: 7247b284-c40d-47c7-af4e-c4738f827a3d
-  tls: true
-  servername: default.ssl.fastly.net
-  client-fingerprint: firefox
-  network: xhttp
 - name: Free x215 @Outline_Vpn
   type: trojan
   server: 188.42.145.180
@@ -6632,13 +6652,6 @@ proxies:
     path: /assignment
     headers:
       Host: www.volumeroot.com
-- name: Free x218 @Outline_Vpn
-  type: vless
-  server: 184.107.106.68
-  port: 443
-  uuid: 716426fa-bcb7-4eb9-b460-36399ebf740d
-  tls: true
-  servername: lizca2.footballfantasyforum.com
 - name: Free x217 @Outline_Vpn
   type: vless
   server: www.hxino.com
@@ -6647,17 +6660,6 @@ proxies:
   tls: true
   client-fingerprint: firefox
   network: httpupgrade
-- name: Free x219 @Outline_Vpn
-  type: vless
-  server: private.netraidly.ru
-  port: 40443
-  uuid: 5e3f974b-06fc-4555-907a-6681391b7c17
-  flow: xtls-rprx-vision
-  tls: true
-  servername: deepl.com
-  reality-opts:
-    public-key: oc9uweln_cqyaJnlRMnhhhKrGNP7RrYOsuYtaIOIQDE
-    short-id: 2bc0
 - name: Free x221 @Outline_Vpn
   type: vless
   server: 83.168.71.216
@@ -6669,6 +6671,17 @@ proxies:
   reality-opts:
     public-key: 8h8t5eBWL9oERK7xWHQLFJE5j6sZdgNDQAs3EGnNbho
     short-id: 2f49bccf11150ef2
+- name: Free x219 @Outline_Vpn
+  type: vless
+  server: private.netraidly.ru
+  port: 40443
+  uuid: 5e3f974b-06fc-4555-907a-6681391b7c17
+  flow: xtls-rprx-vision
+  tls: true
+  servername: deepl.com
+  reality-opts:
+    public-key: oc9uweln_cqyaJnlRMnhhhKrGNP7RrYOsuYtaIOIQDE
+    short-id: 2bc0
 - name: Free x223 @Outline_Vpn
   type: vless
   server: 5.152.223.193
@@ -6681,18 +6694,18 @@ proxies:
   reality-opts:
     public-key: SiSky02wHz-S0TDHKFTdYhnrlT8Y3CfRsekZlcdLXDY
     short-id: fd55b698ee8c3629
-- name: Free x226 @Outline_Vpn
-  type: trojan
-  server: jgzt1997.qivfelo.ir
-  port: 1080
-  password: BbNnpOgc1j9WOaWoslbSyeob1r47IRHV
-  sni: maps.google.com
+- name: Free x228 @Outline_Vpn
+  type: vless
+  server: 144.31.125.60
+  port: 443
+  uuid: 9015f0bc-2053-4ca1-9b9b-a018b97b32d2
+  flow: xtls-rprx-vision
   tls: true
-  servername: maps.google.com
+  servername: www.intel.com
   client-fingerprint: chrome
   reality-opts:
-    public-key: 1ZO9Cjhs1IFAU6nZATRhOuD3kq6J-1dZadfEfX734zc
-    short-id: 0d12eb289946de9b
+    public-key: SVgtyuD9khylgHuB0treGekxVSHPOS-wPZTNHUf6zj8
+    short-id: 85c86a9863
 - name: Free x233 @Outline_Vpn
   type: vless
   server: tfast.clnet.site
@@ -6763,13 +6776,6 @@ proxies:
     path: /ws/Ubdvdhdh
     headers:
       Host: service-4be6b1-f7ea97-production.up.railway.app
-- name: Free x246 @Outline_Vpn
-  type: vless
-  server: lizca2.footballfantasyforum.com
-  port: 443
-  uuid: 716426fa-bcb7-4eb9-b460-36399ebf740d
-  tls: true
-  servername: lizca2.footballfantasyforum.com
 - name: Free x248 @Outline_Vpn
   type: vless
   server: 81.90.25.158
@@ -6781,25 +6787,6 @@ proxies:
   reality-opts:
     public-key: evZScHEcyRLcHnrN8fzp3HtC5hQ_smUHdmCRpCqlwkY
     short-id: 0183b7681806bc97
-- name: Free x253 @Outline_Vpn
-  type: vless
-  server: 165.231.99.52
-  port: 8443
-  uuid: 6b03ffdd-6646-410b-b575-6c05eafdaf60
-  flow: xtls-rprx-vision
-  tls: true
-  servername: vusr-6aa2cf2b.adhil.uk
-  client-fingerprint: firefox
-- name: Free x251 @Outline_Vpn
-  type: vless
-  server: uk-tube-01.stre4m.net
-  port: 443
-  uuid: f85ba8bb-a3da-4389-a67a-2b0afde7bbc1
-  flow: xtls-rprx-vision
-  tls: true
-  servername: jobinvest.ru
-  reality-opts:
-    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
 - name: Free x250 @Outline_Vpn
   type: vless
   server: 84.252.100.49
@@ -6811,6 +6798,25 @@ proxies:
   reality-opts:
     public-key: HKKWGVu7xJfscDTH_28WhqSfSnp8fA5jpj7X1eMO-mU
     short-id: 1067b23f928e7618
+- name: Free x251 @Outline_Vpn
+  type: vless
+  server: uk-tube-01.stre4m.net
+  port: 443
+  uuid: f85ba8bb-a3da-4389-a67a-2b0afde7bbc1
+  flow: xtls-rprx-vision
+  tls: true
+  servername: jobinvest.ru
+  reality-opts:
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+- name: Free x253 @Outline_Vpn
+  type: vless
+  server: 165.231.99.52
+  port: 8443
+  uuid: 6b03ffdd-6646-410b-b575-6c05eafdaf60
+  flow: xtls-rprx-vision
+  tls: true
+  servername: vusr-6aa2cf2b.adhil.uk
+  client-fingerprint: firefox
 - name: Free x265 @Outline_Vpn
   type: trojan
   server: 199.232.78.101
@@ -6875,6 +6881,19 @@ proxies:
     path: '---@mehrosaboran'
     headers:
       Host: mitivpn---ss--s---mitivpn-22.global.ssl.fastly.net
+- name: Free x276 @Outline_Vpnx269
+  type: vless
+  server: 170.168.97.8
+  port: 8443
+  uuid: 4350213a-b4e7-262a-0bd7-bd16957cf71a
+  tls: true
+  servername: www.hp.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: QzFNQqkvBnDKIyjXUHJQe9jruaw9G5AV44vDC-qvnlo
+  network: grpc
+  grpc-opts:
+    grpc-service-name: TunService
 - name: Free x279 @Outline_Vpnx269
   type: vless
   server: 199.232.78.159
@@ -6888,13 +6907,6 @@ proxies:
     path: /
     headers:
       Host: BechBad.global.ssl.fastly.net
-- name: Free x269 @Outline_Vpnx269
-  type: vmess
-  server: s1.connect.labex.pro
-  port: 1007
-  uuid: d4c556a2-3d61-4b1d-9550-d6d010ff1d3f
-  alterId: 0
-  cipher: auto
 - name: Free x281 @Outline_Vpnx269
   type: trojan
   server: 199.232.78.160
@@ -6911,18 +6923,13 @@ proxies:
     path: '@bored_vpn'
     headers:
       Host: mitivpn---ss--s---mitivpn-44.global.ssl.fastly.net
-- name: Free x271 @Outline_Vpnx269
-  type: trojan
-  server: 5.75.171.12
-  port: 1080
-  password: BbNnpOgc1j9WOaWoslbSyeob1r47IRHV
-  sni: maps.google.com
-  tls: true
-  servername: maps.google.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 1ZO9Cjhs1IFAU6nZATRhOuD3kq6J-1dZadfEfX734zc
-    short-id: 0d12eb289946de9b
+- name: Free x269 @Outline_Vpnx269
+  type: vmess
+  server: s1.connect.labex.pro
+  port: 1007
+  uuid: d4c556a2-3d61-4b1d-9550-d6d010ff1d3f
+  alterId: 0
+  cipher: auto
 - name: Free x283 @Outline_Vpnx269
   type: trojan
   server: 151.101.56.101
@@ -6950,19 +6957,6 @@ proxies:
   reality-opts:
     public-key: x_sc52Wgwr7bsogvKRA5hHHS5PJpdocqZNW_Up1mty8
     short-id: 59ab2fc39ec55bc7
-- name: Free x276 @Outline_Vpnx269
-  type: vless
-  server: 170.168.97.8
-  port: 8443
-  uuid: 4350213a-b4e7-262a-0bd7-bd16957cf71a
-  tls: true
-  servername: www.hp.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: QzFNQqkvBnDKIyjXUHJQe9jruaw9G5AV44vDC-qvnlo
-  network: grpc
-  grpc-opts:
-    grpc-service-name: TunService
 - name: Free x285 @Outline_Vpnx269
   type: vless
   server: 188.130.208.210
@@ -6980,16 +6974,6 @@ proxies:
   server: 61.245.11.28
   port: 9090
   uuid: Channel%3Atelegram%3ATurboConfigs
-- name: Free x304 @Outline_Vpn
-  type: vless
-  server: undef.network
-  port: 2052
-  uuid: f5267873-5379-409e-b67a-145ea54deb70
-  network: ws
-  ws-opts:
-    path: /@BlueKnight_net--@BlueKnight_net
-    headers:
-      Host: uwu.blueknightnet.qzz.io
 - name: Free x301 @Outline_Vpn
   type: vless
   server: 107.189.26.239
@@ -7001,6 +6985,16 @@ proxies:
   reality-opts:
     public-key: F3XkvPrGmCOrJpNhpPqkVHrZ58YA0Z8VCp6y7s6We2U
     short-id: c09a8eae8476d36c
+- name: Free x304 @Outline_Vpn
+  type: vless
+  server: undef.network
+  port: 2052
+  uuid: f5267873-5379-409e-b67a-145ea54deb70
+  network: ws
+  ws-opts:
+    path: /@BlueKnight_net--@BlueKnight_net
+    headers:
+      Host: uwu.blueknightnet.qzz.io
 - name: Free x300 @Outline_Vpn
   type: vless
   server: 107.161.174.26
@@ -7033,6 +7027,16 @@ proxies:
     path: /TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER
     headers:
       Host: pan1.global.ssl.fastly.net
+- name: Free x314 @Outline_Vpn
+  type: vless
+  server: 159.89.87.21
+  port: 28190
+  uuid: 14c80e0e-f7ce-4991-94fc-99a1db4a9b1e
+  flow: xtls-rprx-vision
+  tls: true
+  servername: aws.amazon.com
+  reality-opts:
+    public-key: ZJRnFU-1s1JOnO8E9uZ7b00l1fPEh63fGRbdBANFRno
 - name: Free x315 @Outline_Vpn
   type: vmess
   server: 129.146.77.248
@@ -7046,22 +7050,6 @@ proxies:
     path: /cctv13.m3u8
     headers:
       Host: 129.146.77.248
-- name: Free x314 @Outline_Vpn
-  type: vless
-  server: 159.89.87.21
-  port: 28190
-  uuid: 14c80e0e-f7ce-4991-94fc-99a1db4a9b1e
-  flow: xtls-rprx-vision
-  tls: true
-  servername: aws.amazon.com
-  reality-opts:
-    public-key: ZJRnFU-1s1JOnO8E9uZ7b00l1fPEh63fGRbdBANFRno
-- name: Free x303 @Outline_Vpn
-  type: ss
-  server: 20.107.184.151
-  port: 443
-  cipher: chacha20-ietf-poly1305
-  password: zziXHDOFXc4qRjoj
 - name: Free x310 @Outline_Vpn
   type: vless
   server: dey.lnmarketplace.net
@@ -7071,12 +7059,6 @@ proxies:
   servername: dey.lnmarketplace.net
   client-fingerprint: firefox
   network: xhttp
-- name: Free x320 @Outline_Vpn
-  type: vless
-  server: 104.21.51.132
-  port: 8080
-  uuid: 28cec4eb-2c82-4089-a69b-d61db4fb8006
-  network: httpupgrade
 - name: Free x318 @Outline_Vpn
   type: vless
   server: 54.37.136.194
@@ -7094,6 +7076,18 @@ proxies:
   uuid: 04621bae-ab36-11ec-b909-0242ac120002
   alterId: 0
   cipher: auto
+- name: Free x320 @Outline_Vpn
+  type: vless
+  server: 104.21.51.132
+  port: 8080
+  uuid: 28cec4eb-2c82-4089-a69b-d61db4fb8006
+  network: httpupgrade
+- name: Free x303 @Outline_Vpn
+  type: ss
+  server: 20.107.184.151
+  port: 443
+  cipher: chacha20-ietf-poly1305
+  password: zziXHDOFXc4qRjoj
 - name: Free x325 @Outline_Vpn
   type: vless
   server: de9.bexait.ir
@@ -7115,28 +7109,104 @@ proxies:
     path: /@BlueKnight_net--@BlueKnight_net
     headers:
       Host: uwu.blueknightnet.qzz.io
-- name: Free x17 @Outline_Vpn
-  type: trojan
-  server: 89.39.70.64
-  port: 443
-  password: PQ05174892
-  sni: actual-aardvark.rooster465.autos
-  tls: true
-  servername: actual-aardvark.rooster465.autos
-  client-fingerprint: chrome
-- name: Free x22 @Outline_Vpn
-  type: trojan
-  server: 188.114.98.0
-  port: 443
-  password: humanity
-  sni: www.calmlunch.com
-  tls: true
-  servername: www.calmlunch.com
+- name: Free x331 @Outline_Vpn
+  type: vless
+  server: 172.64.150.28
+  port: 2082
+  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
   network: ws
   ws-opts:
-    path: /assignment
+    path: /fp
     headers:
-      Host: www.calmlunch.com
+      Host: hhlfy.twiladaphne.ndjp.net
+- name: Free x334 @Outline_Vpn
+  type: vless
+  server: 66.33.22.232
+  port: 34118
+  uuid: 12148993-e326-4061-809d-d2a24a42bcb8
+  tls: true
+  servername: cam.ac.uk
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: hbNyksag-i4fRqV86HG14fhASaXpl4sYv-1zgrrnUSQ
+    short-id: b5126487
+  network: xhttp
+- name: Free x337 @Outline_Vpn
+  type: vless
+  server: a2.arshia-nova.ir
+  port: 443
+  uuid: bd5bbbac-adc3-4b23-d3ac-8506694c0ef9
+  tls: true
+  servername: ssl.fastly.com
+  client-fingerprint: firefox
+  alpn:
+  - h2
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: c12.com
+- name: Free x344 @Outline_Vpn
+  type: ss
+  server: p2tun1.greewebservices.ir
+  port: 1010
+  cipher: chacha20-ietf-poly1305
+  password: gT36tsiPfnd0np5khJqjyQ
+- name: Free x345 @Outline_Vpn
+  type: vless
+  server: 104.24.0.184
+  port: 443
+  uuid: 44eae030-290b-4083-8102-6f8bab05701b
+  tls: true
+  servername: cfvvv-ev1.pages.dev
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: cfvvv-ev1.pages.dev
+- name: Free x344 @Outline_Vpn
+  type: vless
+  server: 186.246.19.79
+  port: 40443
+  uuid: 5e3f974b-06fc-4555-907a-6681391b7c17
+  flow: xtls-rprx-vision
+  tls: true
+  servername: deepl.com
+  reality-opts:
+    public-key: oc9uweln_cqyaJnlRMnhhhKrGNP7RrYOsuYtaIOIQDE
+    short-id: 2bc0
+- name: Free x346 @Outline_Vpn
+  type: vless
+  server: 83.147.18.3
+  port: 443
+  uuid: 9f61cdf4-810d-4052-bbc7-2da0c8e20104
+  flow: xtls-rprx-vision
+  tls: true
+  servername: www.cloudflare.com
+  reality-opts:
+    public-key: 3iVJAIGPx6JMlhlRmfpGrHkSmLpHJ4CPvBBH7KsFrFA
+    short-id: fd8cf7e1173f0edb
+- name: Free x348 @Outline_Vpn
+  type: vless
+  server: 5.253.42.164
+  port: 40443
+  uuid: e99ba96d-dec8-42eb-be53-19e71eef7cab
+  flow: xtls-rprx-vision
+  tls: true
+  servername: deepl.com
+  reality-opts:
+    public-key: g77ZJbm18JEotapmVRjaXi133MzkbhkU2lxhVeXx8zw
+    short-id: 68a8
+- name: Free x30 @Outline_Vpn
+  type: vless
+  server: 172.66.47.69
+  port: 80
+  uuid: 9f8e7d6c-5b4a-4321-8b7a-6c5d4e3f2a1b
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: free-hzr26-cdn.sabzi.name.ng.
 - name: Free x26 @Outline_Vpn
   type: vless
   server: 194.5.65.36
@@ -7159,16 +7229,6 @@ proxies:
     public-key: v_s3GW5_7jvB081tdUeyoDUUTq6fZwqKbVS7CdvLFA0
     short-id: 72cd47c079c0a3df
   network: xhttp
-- name: Free x30 @Outline_Vpn
-  type: vless
-  server: 172.66.47.69
-  port: 80
-  uuid: 9f8e7d6c-5b4a-4321-8b7a-6c5d4e3f2a1b
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: free-hzr26-cdn.sabzi.name.ng.
 - name: Free x39 @Outline_Vpn
   type: vless
   server: it2ws.wba-pn.ru
@@ -7212,6 +7272,12 @@ proxies:
     path: /http
     headers:
       Host: de.vpnbase.net
+- name: Free x54 @Outline_Vpn
+  type: ss
+  server: 154.12.242.150
+  port: 80
+  cipher: aes-256-gcm
+  password: Hi9wk14VntzGq7kq
 - name: Free x52 @Outline_Vpn
   type: ss
   server: 51.79.49.116
@@ -7231,12 +7297,6 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: grpc
-- name: Free x54 @Outline_Vpn
-  type: ss
-  server: 154.12.242.150
-  port: 80
-  cipher: aes-256-gcm
-  password: Hi9wk14VntzGq7kq
 - name: Free x60 @Outline_Vpn
   type: vless
   server: 157.173.7.200
@@ -7248,38 +7308,6 @@ proxies:
   reality-opts:
     public-key: 8C7evg_SSrJbxMTaUqJoylqB9HSNsmBvmUlgs_c5EiU
     short-id: 88d9dc52ef39c8bd
-- name: Free x68 @Outline_Vpn
-  type: vless
-  server: 54.37.136.194
-  port: 2053
-  uuid: 7061b26c-0f6c-49b5-be42-af2c011c04bc
-  tls: true
-  servername: www.apple.com
-  reality-opts:
-    public-key: TtGgrgk1OLMjWBaomJ1JkUOvmtMx7sLJdvvN0bxmZF8
-    short-id: bdc1efeb01044e93
-- name: Free x67 @Outline_Vpn
-  type: vless
-  server: node-fra02.rkitman.ru
-  port: 443
-  uuid: 64774bd8-3116-4eaa-a046-5ea4fc230b81
-  flow: xtls-rprx-vision
-  tls: true
-  servername: node-fra02.rkitman.ru
-  reality-opts:
-    public-key: 8C7evg_SSrJbxMTaUqJoylqB9HSNsmBvmUlgs_c5EiU
-    short-id: 88d9dc52ef39c8bd
-- name: Free x69 @Outline_Vpn
-  type: vless
-  server: 95.154.196.63
-  port: 443
-  uuid: bae47c97-9bc1-48f6-a133-a383ee71c12e
-  flow: xtls-rprx-vision
-  tls: true
-  servername: foodnetwork.com
-  reality-opts:
-    public-key: o3OWFYnKad6q2C-eo6-rA74OCbjQoZfaUFYZsNqJJz0
-    short-id: 1e977d0b52eab755
 - name: Free x62 @Outline_Vpn
   type: vless
   server: node-fra01.rkitman.ru
@@ -7301,6 +7329,27 @@ proxies:
   reality-opts:
     public-key: 8C7evg_SSrJbxMTaUqJoylqB9HSNsmBvmUlgs_c5EiU
     short-id: 88d9dc52ef39c8bd
+- name: Free x69 @Outline_Vpn
+  type: vless
+  server: 95.154.196.63
+  port: 443
+  uuid: bae47c97-9bc1-48f6-a133-a383ee71c12e
+  flow: xtls-rprx-vision
+  tls: true
+  servername: foodnetwork.com
+  reality-opts:
+    public-key: o3OWFYnKad6q2C-eo6-rA74OCbjQoZfaUFYZsNqJJz0
+    short-id: 1e977d0b52eab755
+- name: Free x68 @Outline_Vpn
+  type: vless
+  server: 54.37.136.194
+  port: 2053
+  uuid: 7061b26c-0f6c-49b5-be42-af2c011c04bc
+  tls: true
+  servername: www.apple.com
+  reality-opts:
+    public-key: TtGgrgk1OLMjWBaomJ1JkUOvmtMx7sLJdvvN0bxmZF8
+    short-id: bdc1efeb01044e93
 - name: Free x71 @Outline_Vpn
   type: vmess
   server: 94.156.179.138
@@ -7308,6 +7357,27 @@ proxies:
   uuid: 8e9687fc-a3a7-414a-8676-8e2136797cfe
   alterId: 0
   cipher: auto
+- name: Free x75 @Outline_Vpn
+  type: vless
+  server: rubifen.adaspoloandco.com
+  port: 443
+  uuid: cf39fab0-bb85-42cb-9945-2ad69d78e575
+  tls: true
+  servername: rubifen.adaspoloandco.com
+  network: ws
+  ws-opts:
+    path: /GOrbEh
+- name: Free x67 @Outline_Vpn
+  type: vless
+  server: node-fra02.rkitman.ru
+  port: 443
+  uuid: 64774bd8-3116-4eaa-a046-5ea4fc230b81
+  flow: xtls-rprx-vision
+  tls: true
+  servername: node-fra02.rkitman.ru
+  reality-opts:
+    public-key: 8C7evg_SSrJbxMTaUqJoylqB9HSNsmBvmUlgs_c5EiU
+    short-id: 88d9dc52ef39c8bd
 - name: Free x77 @Outline_Vpn
   type: vless
   server: 31.76.91.72
@@ -7322,16 +7392,6 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: grpc
-- name: Free x75 @Outline_Vpn
-  type: vless
-  server: rubifen.adaspoloandco.com
-  port: 443
-  uuid: cf39fab0-bb85-42cb-9945-2ad69d78e575
-  tls: true
-  servername: rubifen.adaspoloandco.com
-  network: ws
-  ws-opts:
-    path: /GOrbEh
 - name: Free x87 @Outline_Vpn
   type: trojan
   server: 14.1.28.76
@@ -7349,17 +7409,6 @@ proxies:
   reality-opts:
     public-key: EYfpgja4VjpLUnWHtDJQ1XZk6xL5j4rXwf80Sw6keV0
     short-id: 0c13e8822e7f58aa
-- name: Free x92 @Outline_Vpn
-  type: vless
-  server: hys42.wba-pn.ru
-  port: 443
-  uuid: f0d24eb0-a88a-455f-92b8-3a99c38dfb0c
-  tls: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: hys42.wba-pn.ru
 - name: Free x93 @Outline_Vpn
   type: vless
   server: 51.158.206.29
@@ -7371,6 +7420,13 @@ proxies:
   reality-opts:
     public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
     short-id: '01'
+- name: Free x95 @Outline_Vpn
+  type: vmess
+  server: newrelax.relaxedboy.online
+  port: 110
+  uuid: 8e9687fc-a3a7-414a-8676-8e2136797cfe
+  alterId: 0
+  cipher: auto
 - name: Free x102 @Outline_Vpn
   type: ss
   server: 198.98.53.130
@@ -7388,13 +7444,6 @@ proxies:
   reality-opts:
     public-key: m0GsZOAwvAJEaqh9aH6qfOmBKo0KW0jY_tJEC6KaDEU
     short-id: 0e
-- name: Free x95 @Outline_Vpn
-  type: vmess
-  server: newrelax.relaxedboy.online
-  port: 110
-  uuid: 8e9687fc-a3a7-414a-8676-8e2136797cfe
-  alterId: 0
-  cipher: auto
 - name: Free x113 @Outline_Vpn
   type: vless
   server: 188.114.97.6
@@ -7510,16 +7559,6 @@ proxies:
     path: /
     headers:
       Host: c12.com
-- name: Free x139 @Outline_Vpn
-  type: vless
-  server: hys42.wba-pn.ru
-  port: 443
-  uuid: f0d24eb0-a88a-455f-92b8-3a99c38dfb0c
-  tls: true
-  servername: hys42.wba-pn.ru
-  network: ws
-  ws-opts:
-    path: /
 - name: Free x152 @Outline_Vpn
   type: trojan
   server: 199.232.78.160
@@ -7536,15 +7575,6 @@ proxies:
     path: /---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/NLSs---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN
     headers:
       Host: mitivpn-mitivpn-mitivpn---mitivpn--mitivpn.global.ssl.fastly.net
-- name: Free x147 @Outline_Vpn
-  type: vless
-  server: wsnl7.wba-pn.ru
-  port: 443
-  uuid: 053440e6-fc8d-48d9-bb4f-2675e367f64f
-  tls: true
-  network: ws
-  ws-opts:
-    path: /
 - name: Free x154 @Outline_Vpn
   type: trojan
   server: 151.101.56.7
@@ -7561,6 +7591,15 @@ proxies:
     path: /---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/D-e2@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN
     headers:
       Host: mitivpn-mitivpn-mitivpn---mitivpn--mitivpn.global.ssl.fastly.net
+- name: Free x147 @Outline_Vpn
+  type: vless
+  server: wsnl7.wba-pn.ru
+  port: 443
+  uuid: 053440e6-fc8d-48d9-bb4f-2675e367f64f
+  tls: true
+  network: ws
+  ws-opts:
+    path: /
 - name: Free x158 @Outline_Vpn
   type: trojan
   server: 199.232.78.160
@@ -7577,3 +7616,147 @@ proxies:
     path: /---kasibam1---kasibam1---kasibam1---kasibam1---kasibam1---kasibam1---kasibam1
     headers:
       Host: mitivpn-mitivpn-mitivpn---mitivpn--mitivpn.global.ssl.fastly.net
+- name: Free x160 @Outline_Vpn
+  type: vless
+  server: 87.58.148.202
+  port: 443
+  uuid: 479083dc-946b-4c1a-98ca-b9aaa6857e66
+  tls: true
+  servername: play.google.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: qwAnwGzDx7sHdZdktrBd6y7VPhlJF5anjntWvCqzlhw
+    short-id: ca9e3c07
+  network: grpc
+- name: Free x164 @Outline_Vpn
+  type: vless
+  server: 143.246.182.63
+  port: 443
+  uuid: 5b45355f-1a9c-4802-90ed-0d1f5dcd4562
+  tls: true
+  servername: uk10.filesnap.tech
+  client-fingerprint: chrome
+  network: xhttp
+- name: Free x168 @Outline_Vpn
+  type: ss
+  server: 51.222.200.165
+  port: 5000
+  cipher: aes-256-gcm
+  password: Y6R9pAtvxxzmGC
+- name: Free x171 @Outline_Vpn
+  type: vless
+  server: 104.21.51.132
+  port: 8080
+  uuid: c55c929d-e9d4-45bc-ba53-de4a2cfcabb5
+  network: httpupgrade
+- name: Free x174 @Outline_Vpn
+  type: ss
+  server: cdn-2d12.giftcardbazarbot.com
+  port: 8243
+  cipher: chacha20-ietf-poly1305
+  password: cXzqTLtMHmVAuueEq2rByw
+- name: Free x173 @Outline_Vpn
+  type: vless
+  server: img.krenholm.com
+  port: 443
+  uuid: 79af209c-dd50-4751-8100-9107b536a022
+  tls: true
+  servername: channel.irandoc.info
+  client-fingerprint: chrome
+  network: httpupgrade
+- name: 🇺🇸@V2RAY_VMESS_free
+  type: vless
+  server: 122.8.45.2
+  port: 8443
+  uuid: 3ae00194-1bc0-0bf4-9564-3c55b1c6d485
+  tls: true
+  servername: www.hp.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: QzFNQqkvBnDKIyjXUHJQe9jruaw9G5AV44vDC-qvnlo
+  network: grpc
+  grpc-opts:
+    grpc-service-name: TunService
+- name: 🇹🇷@V2RAY_VMESS_free
+  type: vless
+  server: 122.8.45.2
+  port: 8443
+  uuid: 3ae00194-1bc0-0bf4-9564-3c55b1c6d485
+  tls: true
+  servername: download.nvidia.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: D2SXHZRRYM0WcFChGWd57XB-U73aIsGfMpe2-Gq5XSs
+  network: grpc
+  grpc-opts:
+    grpc-service-name: TunService
+- name: 🇹🇷 @V2RAY_VMESS_free
+  type: vless
+  server: 122.8.45.3
+  port: 443
+  uuid: 3ae00194-1bc0-0bf4-9564-3c55b1c6d485
+  tls: true
+  servername: download.nvidia.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: D2SXHZRRYM0WcFChGWd57XB-U73aIsGfMpe2-Gq5XSs
+  network: xhttp
+- name: 🇹🇷@V2RAY_VMESS_free
+  type: vless
+  server: 122.8.45.2
+  port: 443
+  uuid: 3ae00194-1bc0-0bf4-9564-3c55b1c6d485
+  tls: true
+  servername: download.nvidia.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: D2SXHZRRYM0WcFChGWd57XB-U73aIsGfMpe2-Gq5XSs
+  network: xhttp
+- name: 🇺🇸@V2RAY_VMESS_free
+  type: vless
+  server: 122.8.45.3
+  port: 443
+  uuid: 3ae00194-1bc0-0bf4-9564-3c55b1c6d485
+  tls: true
+  servername: www.hp.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: QzFNQqkvBnDKIyjXUHJQe9jruaw9G5AV44vDC-qvnlo
+  network: xhttp
+- name: 🇺🇸@V2RAY_VMESS_free
+  type: vless
+  server: 122.8.45.3
+  port: 8443
+  uuid: 3ae00194-1bc0-0bf4-9564-3c55b1c6d485
+  tls: true
+  servername: www.hp.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: QzFNQqkvBnDKIyjXUHJQe9jruaw9G5AV44vDC-qvnlo
+  network: grpc
+  grpc-opts:
+    grpc-service-name: TunService
+- name: 🇺🇸@V2RAY_VMESS_free
+  type: vless
+  server: 122.8.45.3
+  port: 443
+  uuid: 3ae00194-1bc0-0bf4-9564-3c55b1c6d485
+  tls: true
+  servername: cdn.steamstatic.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: jYD82Xg6TRu2lR0XINMWxKb8dNycDwF-H28ZrtiafUo
+  network: xhttp
+- name: 🇺🇸@V2RAY_VMESS_free
+  type: vless
+  server: 122.8.45.3
+  port: 8443
+  uuid: 3ae00194-1bc0-0bf4-9564-3c55b1c6d485
+  tls: true
+  servername: cdn.steamstatic.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: jYD82Xg6TRu2lR0XINMWxKb8dNycDwF-H28ZrtiafUo
+  network: grpc
+  grpc-opts:
+    grpc-service-name: TunService

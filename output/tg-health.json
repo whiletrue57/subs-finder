@@ -1,74 +1,78 @@
 {
   "LetsGetProxy": {
-    "zeros": 10,
-    "last_zero": "2026-11-16"
+    "zeros": 11,
+    "last_zero": "2026-11-17"
   },
   "DailyV2RY": {
-    "zeros": 10,
-    "last_zero": "2026-11-16"
+    "zeros": 11,
+    "last_zero": "2026-11-17"
   },
   "freev2rayssr": {
-    "zeros": 10,
-    "last_zero": "2026-11-16"
+    "zeros": 11,
+    "last_zero": "2026-11-17"
   },
   "frev2rayng": {
-    "zeros": 10,
-    "last_zero": "2026-11-16"
+    "zeros": 11,
+    "last_zero": "2026-11-17"
   },
   "V2rayN_Free": {
-    "zeros": 10,
-    "last_zero": "2026-11-16"
+    "zeros": 11,
+    "last_zero": "2026-11-17"
   },
   "v2rayng_org": {
-    "zeros": 10,
-    "last_zero": "2026-11-16"
+    "zeros": 11,
+    "last_zero": "2026-11-17"
   },
   "v2RayChannel": {
-    "zeros": 10,
-    "last_zero": "2026-11-16"
+    "zeros": 11,
+    "last_zero": "2026-11-17"
   },
   "V2Ray_FreedomIran": {
-    "zeros": 10,
-    "last_zero": "2026-11-16"
+    "zeros": 11,
+    "last_zero": "2026-11-17"
   },
   "V2RAY_NEW": {
-    "zeros": 10,
-    "last_zero": "2026-11-16"
+    "zeros": 11,
+    "last_zero": "2026-11-17"
   },
   "V2RayOxygen": {
-    "zeros": 10,
-    "last_zero": "2026-11-16"
+    "zeros": 11,
+    "last_zero": "2026-11-17"
   },
   "vmess_vless_v2rayng": {
-    "zeros": 10,
-    "last_zero": "2026-11-16"
+    "zeros": 11,
+    "last_zero": "2026-11-17"
   },
   "vmessiran": {
-    "zeros": 10,
-    "last_zero": "2026-11-16"
+    "zeros": 11,
+    "last_zero": "2026-11-17"
   },
   "ShadowSocks_s": {
-    "zeros": 10,
-    "last_zero": "2026-11-16"
+    "zeros": 11,
+    "last_zero": "2026-11-17"
   },
   "config_v2ray": {
-    "zeros": 10,
-    "last_zero": "2026-11-16"
+    "zeros": 11,
+    "last_zero": "2026-11-17"
   },
   "foxrayiran": {
-    "zeros": 10,
-    "last_zero": "2026-11-16"
+    "zeros": 11,
+    "last_zero": "2026-11-17"
   },
   "God_CONFIG": {
-    "zeros": 10,
-    "last_zero": "2026-11-16"
+    "zeros": 11,
+    "last_zero": "2026-11-17"
   },
   "VPN_443": {
-    "zeros": 10,
-    "last_zero": "2026-11-16"
+    "zeros": 11,
+    "last_zero": "2026-11-17"
   },
   "VPNCUSTOMIZE": {
-    "zeros": 10,
-    "last_zero": "2026-11-16"
+    "zeros": 11,
+    "last_zero": "2026-11-17"
+  },
+  "FOX_VPN66": {
+    "zeros": 1,
+    "last_zero": "2026-11-17"
   }
 }

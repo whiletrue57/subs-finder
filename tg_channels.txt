@@ -7,41 +7,41 @@
 v2rayfree
 FreeV2rayn
 LetsGetVPN
-LetsGetProxy
+# AUTO-OFF 2026-11-17 LetsGetProxy
 persianvpnhub
-DailyV2RY
+# AUTO-OFF 2026-11-17 DailyV2RY
 FreakConfig
 free4allVPN
 FreeV2rays
-freev2rayssr
+# AUTO-OFF 2026-11-17 freev2rayssr
 FreeVlessVpn
-frev2rayng
-V2rayN_Free
+# AUTO-OFF 2026-11-17 frev2rayng
+# AUTO-OFF 2026-11-17 V2rayN_Free
 V2rayNG3
-v2rayng_org
+# AUTO-OFF 2026-11-17 v2rayng_org
 v2rayngvpn
-v2RayChannel
+# AUTO-OFF 2026-11-17 v2RayChannel
 v2ray_for_free
-V2Ray_FreedomIran
-V2RAY_NEW
-V2RayOxygen
+# AUTO-OFF 2026-11-17 V2Ray_FreedomIran
+# AUTO-OFF 2026-11-17 V2RAY_NEW
+# AUTO-OFF 2026-11-17 V2RayOxygen
 V2RAY_VMESS_free
-vmess_vless_v2rayng
+# AUTO-OFF 2026-11-17 vmess_vless_v2rayng
 VmessProtocol
-vmessiran
+# AUTO-OFF 2026-11-17 vmessiran
 ServerNett
 ShadowsocksM
-ShadowSocks_s
+# AUTO-OFF 2026-11-17 ShadowSocks_s
 PrivateVPNs
 proxystore11
-config_v2ray
+# AUTO-OFF 2026-11-17 config_v2ray
 configV2rayForFree
 configV2rayNG
 EliV2ray
-foxrayiran
+# AUTO-OFF 2026-11-17 foxrayiran
 FOX_VPN66
-God_CONFIG
-VPN_443
-VPNCUSTOMIZE
+# AUTO-OFF 2026-11-17 God_CONFIG
+# AUTO-OFF 2026-11-17 VPN_443
+# AUTO-OFF 2026-11-17 VPNCUSTOMIZE
 Easy_Free_VPN
 Outline_Vpn
